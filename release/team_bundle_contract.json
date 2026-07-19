@@ -1,8 +1,8 @@
 {
   "schema_version": "team-share-bundle-contract/v1",
-  "bundle_name": "nifty-options-data-foundation-team-bundle",
+  "bundle_name": "nifty-options-vrp-research-team-bundle",
   "bundle_version": "1.0.0",
-  "archive_prefix": "nifty-options-data-foundation",
+  "archive_prefix": "nifty-options-vrp-research",
   "source_repository": "https://github.com/Kd6669/nifty-options-vrp-research",
   "include_all_tracked_files": true,
   "exclude_prefixes": [

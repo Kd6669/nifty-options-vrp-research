@@ -22,7 +22,7 @@ or use the wrapper:
 
 The default outputs are:
 
-- `dist/nifty-options-data-foundation-team-bundle-v1.0.0.zip`;
+- `dist/nifty-options-vrp-research-team-bundle-v1.0.0.zip`;
 - the matching `.zip.sha256` checksum;
 - the matching `.zip.manifest.json` member manifest.
 
