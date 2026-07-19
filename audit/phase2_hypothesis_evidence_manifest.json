@@ -1,0 +1,335 @@
+{
+  "artifacts": [
+    {
+      "bytes": 38229,
+      "exists": true,
+      "json_type": "dict",
+      "path": "<repository-root>\\audit\\phase2_playable_universe.json",
+      "sha256": "f483703ec57ae344f9a9511a2b45ea8c65d6fde903d311edac2ec3e44f453e51",
+      "stage": "playable_universe"
+    },
+    {
+      "bytes": 486335,
+      "exists": true,
+      "json_type": "dict",
+      "path": "<repository-root>\\audit\\phase2_moneyness_horizon_boundary.json",
+      "sha256": "dbad16c1d01ad7c1a402f437780755fbd9ad4e6a851a8ba4ae7556ed270add58",
+      "stage": "moneyness_horizon"
+    },
+    {
+      "bytes": 438811,
+      "exists": true,
+      "json_type": "dict",
+      "path": "<repository-root>\\audit\\phase2_unconditional_observed_computed.json",
+      "sha256": "b250558c254e23e03a73f89b3a085611f6ccd1aff8ea969cf561ee00f813dcb9",
+      "stage": "unconditional_coverage"
+    },
+    {
+      "bytes": 313457,
+      "exists": true,
+      "path": "<repository-root>\\audit\\phase2_unconditional_start_time_matrix_observed_computed.parquet",
+      "row_groups": 1,
+      "rows": 70754,
+      "sha256": "d79a4d7b2cb9de0b5102912a308dd4544934866e58534fe03a525ad821b43b2a",
+      "stage": "unconditional_coverage"
+    },
+    {
+      "bytes": 5036738,
+      "exists": true,
+      "json_type": "dict",
+      "path": "<repository-root>\\audit\\phase2_unconditional_wings_5_7_9.json",
+      "sha256": "aaaf23ab630f085418d858beb13f7ae52a4e68830a7d0769dc2844f239a6f8db",
+      "stage": "wide_wing_sensitivity"
+    },
+    {
+      "bytes": 33175,
+      "exists": true,
+      "json_type": "dict",
+      "path": "<repository-root>\\audit\\phase2_intraday_volatility.json",
+      "sha256": "a29af6bd9fec2f872d32a985c02a9fde488277759aef95a0c512d58cf39ed7dd",
+      "stage": "intraday_surface"
+    },
+    {
+      "bytes": 122401193,
+      "exists": true,
+      "path": "<repository-root>\\audit\\phase2_intraday_iv_surface.parquet",
+      "row_groups": 1,
+      "rows": 512460,
+      "sha256": "8aaa4f0d1c33f35df7c18e22b84d91a26c0e026b635b3f1210fd42c465bc6367",
+      "stage": "intraday_surface"
+    },
+    {
+      "bytes": 406708752,
+      "exists": true,
+      "path": "<repository-root>\\audit\\phase2_intraday_rv_vrp_labels.parquet",
+      "row_groups": 3,
+      "rows": 3074760,
+      "sha256": "b1bb7dfeae284b5201348db7cb545fd5a66bab0d8ee8ae7d47058f505d53932d",
+      "stage": "intraday_surface"
+    },
+    {
+      "bytes": 150451,
+      "exists": true,
+      "path": "<repository-root>\\audit\\phase2_daily_iv_rv_vrp.parquet",
+      "row_groups": 1,
+      "rows": 1371,
+      "sha256": "45f8cc66e25279315644ac17a9121cfb5d8b71e795fde8809dfbd4608e203b05",
+      "stage": "intraday_surface"
+    },
+    {
+      "bytes": 106873,
+      "exists": true,
+      "json_type": "dict",
+      "path": "<repository-root>\\audit\\phase2_intraday_volatility_regimes.json",
+      "sha256": "ba64c3344ecc94685d1997a10c2fa8bd1d4102281ee60b869d8aa9605b321055",
+      "stage": "volatility_regimes"
+    },
+    {
+      "bytes": 129110931,
+      "exists": true,
+      "path": "<repository-root>\\audit\\phase2_intraday_iv_surface_ranked.parquet",
+      "row_groups": 1,
+      "rows": 512460,
+      "sha256": "2af9f2cce6a49fee4ef9f64efb26a4ef4b6396f6db47b4460f35f9d7d31e9f7a",
+      "stage": "volatility_regimes"
+    },
+    {
+      "bytes": 33551,
+      "exists": true,
+      "json_type": "dict",
+      "path": "<repository-root>\\audit\\phase2_matched_realized_variance.json",
+      "sha256": "894f055ef4c4e843c0a3e05d259432b64be2e1680b34e54928c8b880df95a872",
+      "stage": "matched_variance"
+    },
+    {
+      "bytes": 116005,
+      "exists": true,
+      "path": "<repository-root>\\audit\\phase2_expiry_matched_vrp_1015.parquet",
+      "row_groups": 1,
+      "rows": 1363,
+      "sha256": "af6838de2b7234fd4667dadaa36e30d514c45c84d31e5fe7a5b7752f6ff21517",
+      "stage": "matched_variance"
+    },
+    {
+      "bytes": 164148,
+      "exists": true,
+      "path": "<repository-root>\\audit\\phase2_daily_horizon_rv_vrp_1015.parquet",
+      "row_groups": 1,
+      "rows": 5441,
+      "sha256": "e4ae161ca7a4d20e332854708822126737000d38191610f2e5f160fe512c0f18",
+      "stage": "matched_variance"
+    },
+    {
+      "bytes": 1123822,
+      "exists": true,
+      "json_type": "dict",
+      "path": "<repository-root>\\audit\\phase2_defined_risk_vrp.json",
+      "sha256": "0c64c758e8fc36b11a46a842c056d3b40ceebe2a0b713b986471a97e479622ab",
+      "stage": "defined_risk_paths"
+    },
+    {
+      "bytes": 78041187,
+      "exists": true,
+      "path": "<repository-root>\\audit\\phase2_vrp_state_60m.parquet",
+      "row_groups": 1,
+      "rows": 512460,
+      "sha256": "9167b04fbe49f5d46cff656e597f2ea1064fb606aed4f30cfccdd3b853c3860c",
+      "stage": "defined_risk_paths"
+    },
+    {
+      "bytes": 407227999,
+      "exists": true,
+      "path": "<repository-root>\\audit\\phase2_local_chain_iv.parquet",
+      "row_groups": 11,
+      "rows": 7167177,
+      "sha256": "0f50140e93b058e846b3c260241829099e6f936146ea63181f47cd682d1b1936",
+      "stage": "defined_risk_paths"
+    },
+    {
+      "bytes": 335438382,
+      "exists": true,
+      "path": "<repository-root>\\audit\\phase2_defined_risk_structure_paths.parquet",
+      "row_groups": 4,
+      "rows": 1642248,
+      "sha256": "9b275793099db027bc3ad7856e8d88fa0611b1c533386f4c3e32aa4c7d25807a",
+      "stage": "defined_risk_paths"
+    },
+    {
+      "bytes": 74306,
+      "exists": true,
+      "json_type": "dict",
+      "path": "<repository-root>\\audit\\phase2_defined_risk_vrp_events.json",
+      "sha256": "a34cae5462f65504a9ba79fa9ac8abb6f2cae9a14aae3940484836e6161f4e15",
+      "stage": "event_summary"
+    },
+    {
+      "bytes": 285790,
+      "exists": true,
+      "json_type": "dict",
+      "path": "<repository-root>\\audit\\phase2_vrp_curve_crossings.json",
+      "sha256": "69275eeb9942878c65d772f1c0c1b9e78e2719bea5956377316a81a03318d77c",
+      "stage": "curve_crossings"
+    },
+    {
+      "bytes": 40142693,
+      "exists": true,
+      "path": "<repository-root>\\audit\\phase2_vrp_session_curve_features.parquet",
+      "row_groups": 1,
+      "rows": 410562,
+      "sha256": "f7cb06db9060d2d9a82adc3403bbc7817a7569601efa40524aa5a4e1d62ec356",
+      "stage": "curve_crossings"
+    },
+    {
+      "bytes": 626990,
+      "exists": true,
+      "path": "<repository-root>\\audit\\phase2_vrp_percentile_crossing_events.parquet",
+      "row_groups": 1,
+      "rows": 4744,
+      "sha256": "f4ce88c81295a6f7e788e323fcbf79966020d81044046ac8e2f32b4e503ef18f",
+      "stage": "curve_crossings"
+    },
+    {
+      "bytes": 38058,
+      "exists": true,
+      "json_type": "dict",
+      "path": "<repository-root>\\audit\\phase2_final_hypothesis_closeout.json",
+      "sha256": "c235d04437156404126ad1148c10a28a32d5acf5e7d540e1ec418a8d9bf9b160",
+      "stage": "hypothesis_closeout"
+    }
+  ],
+  "complete": true,
+  "configuration": {
+    "dataset_audit": "<repository-root>\\audit\\gold_dataset_audit.json",
+    "entry_offset_source": "computed",
+    "expiry_calendar": "<repository-root>\\docs\\source_evidence\\nse_rules\\nse_actual_expiry_calendar.parquet",
+    "gold_root": "<external-data-root>\\dhan-data-fetch-and-stream-phase2-3\\reports\\nifty_gold_span_bod_20210101_20260715\\version=1.4.0\\gold",
+    "output_dir": "<repository-root>\\audit",
+    "repo_root": "<repository-root>",
+    "schema_version": "phase2-hypothesis-evidence/v1",
+    "session_mode": "observed"
+  },
+  "created_at_utc": "2026-07-18T08:02:30.943468+00:00",
+  "dataset_audit_sha256": "72851e288cb2015232e2f2d507e1a5dd338fe3b7dc0bd9388c4df160a67cbb37",
+  "dataset_release": "nifty_gold_span_bod_20210101_20260715/version=1.4.0",
+  "expiry_calendar_sha256": "0544036457a713e5b9e24e37dafb45793e8e0c09a5bc5034c2f1d80f331d1801",
+  "inputs_valid": true,
+  "schema_version": "phase2-hypothesis-evidence-manifest/v1",
+  "source_files": [
+    {
+      "path": "docs/research/FINAL_HYPOTHESIS.md",
+      "sha256": "b55b8bc13cb9b499ea711395b7c96f70779bae501304f86beff6008f289a9f52"
+    },
+    {
+      "path": "docs/research/HYPOTHESIS_FORMULATION_MODULE.md",
+      "sha256": "866ef70ecab598208e82e67821643768b88a9ba974328bd286420603f0bf9bb7"
+    },
+    {
+      "path": "docs/research/PHASE2_DEFINED_RISK_VRP.md",
+      "sha256": "6776715060e9857b97edc55db0697204e58a4dfe568a60a06578836e0e1223b7"
+    },
+    {
+      "path": "docs/research/PHASE2_INTRADAY_VOLATILITY.md",
+      "sha256": "76263e537c8eb867358b319e4641614d2d6526f120a392933c344be900877506"
+    },
+    {
+      "path": "docs/research/PHASE2_PLAYABLE_UNIVERSE.md",
+      "sha256": "74a23a38b4978bfcda6453ec966be3fee53ab46036f7ed6041d87b10ee92b8f4"
+    },
+    {
+      "path": "docs/research/PHASE2_PREREGISTERED_HYPOTHESIS.md",
+      "sha256": "4a7b066d192edcb1198b4b33f233684b37d45656d13af932cb958da31700665e"
+    },
+    {
+      "path": "docs/research/PHASE2_VRP_CURVE_CROSSINGS.md",
+      "sha256": "3dfb6de757820e064e1c326b13eed4a9d0f616e1c9eed36ed52a39fc3ba51131"
+    },
+    {
+      "path": "docs/research/PHASE2_WINGS_5_7_9.md",
+      "sha256": "e7444d369ff5091e085dbe97ce6de0b060633461fb75dc5fb1f684635462ff3a"
+    },
+    {
+      "path": "research/phase2/__init__.py",
+      "sha256": "6334590e477aba76e85eda88e8bbe5c9bca88869c51ac6e66d1cc816374a1111"
+    },
+    {
+      "path": "research/phase2/analyze_defined_risk_vrp.py",
+      "sha256": "d94d66dd0015e33b606da4ba1e42d4d5f2eb8712c5745924d6ca888005568e0b"
+    },
+    {
+      "path": "research/phase2/analyze_intraday_volatility.py",
+      "sha256": "f1fed01025e0ad3c18d43c7d43f7bc875d47f9e427128312d787a7e2ffc5c8ef"
+    },
+    {
+      "path": "research/phase2/analyze_matched_realized_variance.py",
+      "sha256": "9d78d663e847a62c009142b2869a75ccd3f12badf6ca80f3140450898e54c30c"
+    },
+    {
+      "path": "research/phase2/analyze_vrp_curve_crossings.py",
+      "sha256": "f2d44d9afbcfea65fd49bdb17e6042b17f47d7b3a1f57d09091579d491907c89"
+    },
+    {
+      "path": "research/phase2/audit_moneyness_horizon_boundary.py",
+      "sha256": "7871d577886818dbba676f85450d968ad81a311d41cfa1b428da0ff5663cbcd8"
+    },
+    {
+      "path": "research/phase2/audit_playable_universe.py",
+      "sha256": "e93663a3dc8d1f6ff06946e0da5207ed56e37a19533d28942df2924d24c34849"
+    },
+    {
+      "path": "research/phase2/audit_unconditional_moneyness_horizon.py",
+      "sha256": "ad10cb7c1c10bf071979d83606ccf8f53d119dcf9aaa218a3f5d974529daf3c7"
+    },
+    {
+      "path": "research/phase2/close_hypothesis_formulation.py",
+      "sha256": "adc1885353625e054f7c5ee173c940046f968649ca9c17032b6b423864858931"
+    },
+    {
+      "path": "research/phase2/extract_wings_5_7_9.py",
+      "sha256": "d60d491430aca2070d4152fe2940401a32706738856130a0d267586fd66b87c9"
+    },
+    {
+      "path": "research/phase2/final_hypothesis.json",
+      "sha256": "defe283918f4db9ff004c931a224a4ca712e7c4ba4a11902bafb8ea34a452f22"
+    },
+    {
+      "path": "research/phase2/hypothesis_formulation.example.json",
+      "sha256": "aeae6baa5255ac24095ae9e7eb77eb072029fdad8031ff0fe1a7d83707681246"
+    },
+    {
+      "path": "research/phase2/summarize_defined_risk_vrp.py",
+      "sha256": "dbd35e9e9b7e61dfb0d623e58fa884351ae8b0ea2cb686a2e9075fa90c3e0377"
+    },
+    {
+      "path": "research/phase2/summarize_intraday_volatility.py",
+      "sha256": "6767a5d191d58a858e75d1ab93b3420e58a1e13e4f892a0a868066daf1f2b269"
+    },
+    {
+      "path": "src/nifty_hypothesis/__init__.py",
+      "sha256": "84f479d68e75f09fb2eede3576c7bc3bdf20e1508cda9550bef4457dcd9d80d0"
+    },
+    {
+      "path": "src/nifty_hypothesis/cli.py",
+      "sha256": "9227ca7e552564e3ab399333d020b7055bb5c63f3e97bcd403820bc8d0aff9b3"
+    },
+    {
+      "path": "src/nifty_hypothesis/config.py",
+      "sha256": "9f9f1b26997980d0dfed9553d3a6ead13d8b799ff1feda260b5c08d2f14fae23"
+    },
+    {
+      "path": "src/nifty_hypothesis/contracts.py",
+      "sha256": "7308e157b5dd2213aa71bdd2eb6b96dca207d363b3096c82afe66cd0db844884"
+    },
+    {
+      "path": "src/nifty_hypothesis/pipeline.py",
+      "sha256": "f649e98d43ef35b1c33ea0c6a60a20cb38d2ecc29f08df4e62290663172b0b64"
+    },
+    {
+      "path": "src/nifty_hypothesis/validation.py",
+      "sha256": "6fab899719b26f7ec0f2f2254f17785faa55c8dd89d2acbf6a18dbc3f553f0c6"
+    },
+    {
+      "path": "tests/test_nifty_hypothesis.py",
+      "sha256": "0394b58544c2e031a7b44c03e95d6d7b791e4c078c1a04c34a3764d8f67f0ffa"
+    }
+  ]
+}

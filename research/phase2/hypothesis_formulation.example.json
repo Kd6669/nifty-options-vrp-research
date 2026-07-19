@@ -1,0 +1,10 @@
+{
+  "schema_version": "phase2-hypothesis-evidence/v1",
+  "repo_root": "../..",
+  "gold_root": "${ENDOVIA_GOLD_ROOT}",
+  "expiry_calendar": "docs/source_evidence/nse_rules/nse_actual_expiry_calendar.parquet",
+  "dataset_audit": "audit/gold_dataset_audit.json",
+  "output_dir": "audit",
+  "session_mode": "observed",
+  "entry_offset_source": "computed"
+}

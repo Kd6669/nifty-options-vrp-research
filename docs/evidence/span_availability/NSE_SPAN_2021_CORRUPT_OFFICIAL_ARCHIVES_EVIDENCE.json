@@ -1,0 +1,357 @@
+{
+  "schema_version": "span-source-corruption-evidence/v1",
+  "evidence_id": "nse-span-2021-four-current-official-public-corrupt-archives",
+  "scope": {
+    "segment": "NSE equity derivatives",
+    "source_host": "nsearchives.nseindia.com",
+    "source_url_pattern": "https://nsearchives.nseindia.com/archives/nsccl/span/nsccl.YYYYMMDD.<suffix>.zip",
+    "affected_cells": [
+      {"trading_date": "2021-10-11", "slot": "EOD", "suffix": "s"},
+      {"trading_date": "2021-11-01", "slot": "ID4", "suffix": "i5"},
+      {"trading_date": "2021-12-01", "slot": "ID4", "suffix": "i5"},
+      {"trading_date": "2021-12-30", "slot": "ID4", "suffix": "i5"}
+    ]
+  },
+  "disposition": {
+    "strict_verdict": "CURRENT_OFFICIAL_PUBLIC_SOURCE_CORRUPTION_PROVEN",
+    "current_official_public_source_corruption_proven": true,
+    "current_official_public_usable_archive_available": false,
+    "static_and_reports_api_payload_equality_proven": true,
+    "historical_nonpublication_proven": false,
+    "historical_original_archive_state_proven": false,
+    "phase1_acceptance": "BLOCKED_FOR_FOUR_CELLS",
+    "classification_action": "DO_NOT_MARK_USABLE_OR_DOWNLOADED",
+    "availability_import_action": "DO_NOT_ALTER_REVIEWED_AVAILABILITY_IMPORT",
+    "reason": "Each exact official static URL currently returns HTTP 200 application/zip bytes beginning with ZIP local-file magic, but Python zipfile rejects the payload because no usable central directory can be read. For each cell, the reports API returns an inner member with exactly the same byte length and SHA-256, while its other five returned slot archives validate. The two current official public delivery paths therefore expose the same unusable payload and cannot repair one another. This proves current official-public source corruption and current usable-archive unavailability, but not whether the archive was originally generated or published valid in 2021 and later replaced, truncated, or damaged."
+  },
+  "observation_times": {
+    "static_range_probes": {
+      "observed_at_utc_first": "2026-07-15T17:50:55.215Z",
+      "observed_at_utc_last": "2026-07-15T17:50:57.760Z"
+    },
+    "static_full_downloads": {
+      "observed_at_utc": null,
+      "timestamp_not_recorded": true,
+      "observation_date_context": "2026-07-15",
+      "limitation": "The read-only full-static probes did not emit exact UTC timestamps. Their exact observation times cannot be recovered and are intentionally not inferred or invented."
+    },
+    "reports_api": {
+      "per_result_timestamp_path": "affected_archive_results[].reports_api_comparison.observed_at_utc_range",
+      "all_exact_timestamps_recorded": true
+    }
+  },
+  "probe_method": {
+    "static_range_request": {
+      "method": "GET",
+      "range": "bytes=0-15",
+      "purpose": "Confirm that the official object exists, advertises ZIP media type and begins with ZIP local-file magic."
+    },
+    "static_full_request": {
+      "method": "GET",
+      "purpose": "Hash the complete current official object and validate it with Python zipfile."
+    },
+    "reports_api_request": {
+      "method": "GET",
+      "url": "https://www.nseindia.com/api/reports",
+      "type": "Archives",
+      "selected_categories": "all six equity-derivatives SPAN categories",
+      "purpose": "Compare the affected inner archive returned by the official reports API with the exact static archive object."
+    }
+  },
+  "affected_archive_results": [
+    {
+      "trading_date": "2021-10-11",
+      "slot": "EOD",
+      "suffix": "s",
+      "static_url": "https://nsearchives.nseindia.com/archives/nsccl/span/nsccl.20211011.s.zip",
+      "observation_time_refs": {
+        "range": "observation_times.static_range_probes",
+        "full": "observation_times.static_full_downloads",
+        "reports_api": "reports_api_comparison.observed_at_utc_range"
+      },
+      "range_response": {
+        "http_status": 206,
+        "content_type": "application/zip",
+        "content_range": "bytes 0-15/7768558",
+        "body_size_bytes": 16,
+        "first_16_bytes_hex": "504b030414000000080036994b53647c"
+      },
+      "full_response": {
+        "http_status": 200,
+        "content_type": "application/zip",
+        "body_size_bytes": 7768558,
+        "body_sha256": "cb0266e876b3ff5f071bd4032a7bb92d395ee15b64d5d7177b2d1b19ef72cc27",
+        "first_16_bytes_hex": "504b030414000000080036994b53647c"
+      },
+      "zipfile_validation": {
+        "is_zipfile": false,
+        "open_succeeded": false,
+        "exception_class": "zipfile.BadZipFile",
+        "failure_stage": "central-directory validation",
+        "truncation_proven": true,
+        "failure_mode": "mid-deflate truncation",
+        "local_file_header_member_name": "nsccl.20211011.s.spn",
+        "local_file_header_crc32": "9b8b7c64",
+        "local_file_header_compressed_size": 10591472,
+        "local_file_header_uncompressed_size": 57650192,
+        "declared_compressed_data_end_offset_exclusive": 10591550,
+        "observed_body_end_offset_exclusive": 7768558,
+        "bytes_short_of_declared_data_end": 2822992,
+        "central_directory_signature_in_last_128_bytes": false,
+        "end_of_central_directory_signature_in_last_128_bytes": false
+      },
+      "reports_api_comparison": {
+        "observed_at_utc_range": {
+          "first": "2026-07-15T17:36:49.945Z",
+          "last": "2026-07-15T17:37:25.767Z"
+        },
+        "outer_http_status": 200,
+        "outer_content_type": "application/zip",
+        "outer_body_size_bytes": 60578676,
+        "outer_body_sha256": "21ef77a9e20e2574033ada694c45d519378e21e3c42e13e7954430783f7f300b",
+        "inner_member_name": "nsccl.20211011.s.zip",
+        "inner_member_size_bytes": 7768558,
+        "inner_member_sha256": "cb0266e876b3ff5f071bd4032a7bb92d395ee15b64d5d7177b2d1b19ef72cc27",
+        "outer_member_crc32": "a0fddc49",
+        "matches_static_body_size": true,
+        "matches_static_body_sha256": true,
+        "other_returned_slot_archives_count": 5,
+        "other_returned_slot_archives_valid": true
+      }
+    },
+    {
+      "trading_date": "2021-11-01",
+      "slot": "ID4",
+      "suffix": "i5",
+      "static_url": "https://nsearchives.nseindia.com/archives/nsccl/span/nsccl.20211101.i5.zip",
+      "observation_time_refs": {
+        "range": "observation_times.static_range_probes",
+        "full": "observation_times.static_full_downloads",
+        "reports_api": "reports_api_comparison.observed_at_utc_range"
+      },
+      "range_response": {
+        "http_status": 206,
+        "content_type": "application/zip",
+        "content_range": "bytes 0-15/7768558",
+        "body_size_bytes": 16,
+        "first_16_bytes_hex": "504b03041400000008005d7c61538d35"
+      },
+      "full_response": {
+        "http_status": 200,
+        "content_type": "application/zip",
+        "body_size_bytes": 7768558,
+        "body_sha256": "05e8970fc52e81e1f14b579490dfa28e5c489a150f730df5f32e378b8031a8b9",
+        "first_16_bytes_hex": "504b03041400000008005d7c61538d35"
+      },
+      "zipfile_validation": {
+        "is_zipfile": false,
+        "open_succeeded": false,
+        "exception_class": "zipfile.BadZipFile",
+        "failure_stage": "central-directory validation",
+        "truncation_proven": true,
+        "failure_mode": "mid-deflate truncation",
+        "local_file_header_member_name": "nsccl.20211101.i05.spn",
+        "local_file_header_crc32": "f460358d",
+        "local_file_header_compressed_size": 11745450,
+        "local_file_header_uncompressed_size": 63907705,
+        "declared_compressed_data_end_offset_exclusive": 11745530,
+        "observed_body_end_offset_exclusive": 7768558,
+        "bytes_short_of_declared_data_end": 3976972,
+        "central_directory_signature_in_last_128_bytes": false,
+        "end_of_central_directory_signature_in_last_128_bytes": false
+      },
+      "reports_api_comparison": {
+        "observed_at_utc_range": {
+          "first": "2026-07-15T17:38:30.968Z",
+          "last": "2026-07-15T17:39:05.633Z"
+        },
+        "outer_http_status": 200,
+        "outer_content_type": "application/zip",
+        "outer_body_size_bytes": 66724880,
+        "outer_body_sha256": "2658ccad6c72918d114c23ecc9d5c7a62d1599bdf769ce09c8c91278a03e4336",
+        "inner_member_name": "nsccl.20211101.i5.zip",
+        "inner_member_size_bytes": 7768558,
+        "inner_member_sha256": "05e8970fc52e81e1f14b579490dfa28e5c489a150f730df5f32e378b8031a8b9",
+        "outer_member_crc32": "e004d7ee",
+        "matches_static_body_size": true,
+        "matches_static_body_sha256": true,
+        "other_returned_slot_archives_count": 5,
+        "other_returned_slot_archives_valid": true
+      }
+    },
+    {
+      "trading_date": "2021-12-01",
+      "slot": "ID4",
+      "suffix": "i5",
+      "static_url": "https://nsearchives.nseindia.com/archives/nsccl/span/nsccl.20211201.i5.zip",
+      "observation_time_refs": {
+        "range": "observation_times.static_range_probes",
+        "full": "observation_times.static_full_downloads",
+        "reports_api": "reports_api_comparison.observed_at_utc_range"
+      },
+      "range_response": {
+        "http_status": 206,
+        "content_type": "application/zip",
+        "content_range": "bytes 0-15/3851638",
+        "body_size_bytes": 16,
+        "first_16_bytes_hex": "504b0304140000000800497d81536bf4"
+      },
+      "full_response": {
+        "http_status": 200,
+        "content_type": "application/zip",
+        "body_size_bytes": 3851638,
+        "body_sha256": "9c91e58ad48b3ff1e3ba34b0b4c54cc612cc0b169a1f70b4dd023e399cc59173",
+        "first_16_bytes_hex": "504b0304140000000800497d81536bf4"
+      },
+      "zipfile_validation": {
+        "is_zipfile": false,
+        "open_succeeded": false,
+        "exception_class": "zipfile.BadZipFile",
+        "failure_stage": "central-directory validation",
+        "truncation_proven": true,
+        "failure_mode": "mid-deflate truncation",
+        "local_file_header_member_name": "nsccl.20211201.i05.spn",
+        "local_file_header_crc32": "6df2f46b",
+        "local_file_header_compressed_size": 11764387,
+        "local_file_header_uncompressed_size": 64567558,
+        "declared_compressed_data_end_offset_exclusive": 11764467,
+        "observed_body_end_offset_exclusive": 3851638,
+        "bytes_short_of_declared_data_end": 7912829,
+        "central_directory_signature_in_last_128_bytes": false,
+        "end_of_central_directory_signature_in_last_128_bytes": false
+      },
+      "reports_api_comparison": {
+        "observed_at_utc_range": {
+          "first": "2026-07-15T17:40:09.854Z",
+          "last": "2026-07-15T17:40:29.135Z"
+        },
+        "outer_http_status": 200,
+        "outer_content_type": "application/zip",
+        "outer_body_size_bytes": 62797799,
+        "outer_body_sha256": "f839cefdb7ccd4a91b820d6d12c562f5ed97aebdeef5288807caec4e49f0f19d",
+        "inner_member_name": "nsccl.20211201.i5.zip",
+        "inner_member_size_bytes": 3851638,
+        "inner_member_sha256": "9c91e58ad48b3ff1e3ba34b0b4c54cc612cc0b169a1f70b4dd023e399cc59173",
+        "outer_member_crc32": "f398b4c5",
+        "matches_static_body_size": true,
+        "matches_static_body_sha256": true,
+        "other_returned_slot_archives_count": 5,
+        "other_returned_slot_archives_valid": true
+      }
+    },
+    {
+      "trading_date": "2021-12-30",
+      "slot": "ID4",
+      "suffix": "i5",
+      "static_url": "https://nsearchives.nseindia.com/archives/nsccl/span/nsccl.20211230.i5.zip",
+      "observation_time_refs": {
+        "range": "observation_times.static_range_probes",
+        "full": "observation_times.static_full_downloads",
+        "reports_api": "reports_api_comparison.observed_at_utc_range"
+      },
+      "range_response": {
+        "http_status": 206,
+        "content_type": "application/zip",
+        "content_range": "bytes 0-15/6005944",
+        "body_size_bytes": 16,
+        "first_16_bytes_hex": "504b0304140000000800597c9e531e0b"
+      },
+      "full_response": {
+        "http_status": 200,
+        "content_type": "application/zip",
+        "body_size_bytes": 6005944,
+        "body_sha256": "220eec6fe7359e8b20b9548431e6fb6f9c424d4f4c87a0bc6be694cde932e676",
+        "first_16_bytes_hex": "504b0304140000000800597c9e531e0b"
+      },
+      "zipfile_validation": {
+        "is_zipfile": false,
+        "open_succeeded": false,
+        "exception_class": "zipfile.BadZipFile",
+        "failure_stage": "central-directory validation",
+        "truncation_proven": true,
+        "failure_mode": "mid-deflate truncation",
+        "local_file_header_member_name": "nsccl.20211230.i05.spn",
+        "local_file_header_crc32": "a5cd0b1e",
+        "local_file_header_compressed_size": 10222972,
+        "local_file_header_uncompressed_size": 61154616,
+        "declared_compressed_data_end_offset_exclusive": 10223052,
+        "observed_body_end_offset_exclusive": 6005944,
+        "bytes_short_of_declared_data_end": 4217108,
+        "central_directory_signature_in_last_128_bytes": false,
+        "end_of_central_directory_signature_in_last_128_bytes": false
+      },
+      "reports_api_comparison": {
+        "observed_at_utc_range": {
+          "first": "2026-07-15T17:41:20.579Z",
+          "last": "2026-07-15T17:41:42.651Z"
+        },
+        "outer_http_status": 200,
+        "outer_content_type": "application/zip",
+        "outer_body_size_bytes": 56014418,
+        "outer_body_sha256": "ed1d33006dd9f5afdbdc90745ffcdd843044bb0bffe31388eb666aa55b13c635",
+        "inner_member_name": "nsccl.20211230.i5.zip",
+        "inner_member_size_bytes": 6005944,
+        "inner_member_sha256": "220eec6fe7359e8b20b9548431e6fb6f9c424d4f4c87a0bc6be694cde932e676",
+        "outer_member_crc32": "f4022844",
+        "matches_static_body_size": true,
+        "matches_static_body_sha256": true,
+        "other_returned_slot_archives_count": 5,
+        "other_returned_slot_archives_valid": true
+      }
+    }
+  ],
+  "valid_sibling_controls": {
+    "count": 20,
+    "validation_contract": {
+      "static_http_status": 200,
+      "static_and_reports_api_inner_size_equal": true,
+      "static_and_reports_api_inner_sha256_equal": true,
+      "zipfile_is_zipfile": true,
+      "zipfile_testzip_result": null,
+      "expected_single_spn_member": true,
+      "xml_root": "spanFile"
+    },
+    "archives": [
+      {"trading_date": "2021-10-11", "suffix": "i1", "size_bytes": 10591728, "sha256": "a32aa05fcf73b6b162d497dbad2654526093e391c2347333a87472eed672e871"},
+      {"trading_date": "2021-10-11", "suffix": "i2", "size_bytes": 10554896, "sha256": "9891ae189ed20722f4969d417919d7ae6d839720e4dec401789f049c1b20a438"},
+      {"trading_date": "2021-10-11", "suffix": "i3", "size_bytes": 10547045, "sha256": "76e6f195142077e5a611f2d7262e27a3f7a682a2e6d0bd47d8270dd58949501f"},
+      {"trading_date": "2021-10-11", "suffix": "i4", "size_bytes": 10556940, "sha256": "27c0fd2954abbecf0605ac5f00d7076204cf77f85e638b28f42fb5837c2d3259"},
+      {"trading_date": "2021-10-11", "suffix": "i5", "size_bytes": 10558781, "sha256": "030377f9d79134b943b90299cdcf9e0c513816f80dcd9201756a15f4b88d2f5e"},
+      {"trading_date": "2021-11-01", "suffix": "i1", "size_bytes": 11848511, "sha256": "0b936acea50bf671633854067f2d9549069005483ce73732b73841c30c5d7fd3"},
+      {"trading_date": "2021-11-01", "suffix": "i2", "size_bytes": 11793838, "sha256": "19ab597e1574c3e3f5ac482a9d610a07f98b961b39c82c3e814a1e872ef1d9df"},
+      {"trading_date": "2021-11-01", "suffix": "i3", "size_bytes": 11777745, "sha256": "7001dd9aa8a543069230a13047b5b9c147eba49c3f9200d0515b772002698258"},
+      {"trading_date": "2021-11-01", "suffix": "i4", "size_bytes": 11755852, "sha256": "cd5c7f4928a833cd687ba524c2d9297f7f60d18758c7f18402564228fda864bc"},
+      {"trading_date": "2021-11-01", "suffix": "s", "size_bytes": 11779648, "sha256": "c38ed39e62455ed8a5e6cf4709e39117307e4d84b9603ddb20738024ec1b0410"},
+      {"trading_date": "2021-12-01", "suffix": "i1", "size_bytes": 11855084, "sha256": "5b32bdc9c503609148054790a8ccb88703e569769a78bbf05aa3df12754bf4d3"},
+      {"trading_date": "2021-12-01", "suffix": "i2", "size_bytes": 11782131, "sha256": "da689897d9ed469954e4e1c9a6254c2ad020938304294a03c094272796d235e2"},
+      {"trading_date": "2021-12-01", "suffix": "i3", "size_bytes": 11778970, "sha256": "1fd2b978415dabb603d84e1735253ffba827f5894b63cde515d18ec5fbda61f3"},
+      {"trading_date": "2021-12-01", "suffix": "i4", "size_bytes": 11778240, "sha256": "3d239a6053f47007e33b644beceab904103ec41ab521891e35fed510ced369f4"},
+      {"trading_date": "2021-12-01", "suffix": "s", "size_bytes": 11751008, "sha256": "3f1d1898cc93ec26e4f826cc545b9cf9411491d2f555ef6831cdb0aa1aab31d9"},
+      {"trading_date": "2021-12-30", "suffix": "i1", "size_bytes": 10291868, "sha256": "0ca2f1c29e79c78ac8f5e61a84f21ce3ab21396aa424c05e265732b919bbaa14"},
+      {"trading_date": "2021-12-30", "suffix": "i2", "size_bytes": 10242154, "sha256": "7f0f6ac1f6a037e257e7431647d748d4594b22c4524427ec9c3912859cf7e061"},
+      {"trading_date": "2021-12-30", "suffix": "i3", "size_bytes": 10234516, "sha256": "2d7b627b3c47a6bd566b44dc31b2a29131f1bba4968d2f480f5c583d23987f84"},
+      {"trading_date": "2021-12-30", "suffix": "i4", "size_bytes": 10230864, "sha256": "97d43e52f8ef972a27334bfb7fa172810dc0ef4b56c3066d6be438169bb1ef81"},
+      {"trading_date": "2021-12-30", "suffix": "s", "size_bytes": 9008344, "sha256": "9f5becb8bfb229440d7ed34279acf930603f0961ee8fca198226df61df4c74d0"}
+    ]
+  },
+  "inference_boundary": {
+    "proven": [
+      "Each exact current official static URL returns HTTP 200 application/zip with ZIP local-file magic.",
+      "Each full static response has the recorded deterministic byte length and SHA-256 but fails Python zipfile validation.",
+      "For each cell, the official reports API inner archive has exactly the same byte length and SHA-256 as the static response.",
+      "For each reports API response, the other five returned SPAN slot archives validate.",
+      "Neither current official public path supplies a usable archive for the four affected cells."
+    ],
+    "not_proven": [
+      "That the archive was never generated.",
+      "That the archive was never published in 2021.",
+      "That the archive was already malformed when first published.",
+      "That no valid copy exists in a member-only official channel or an independently retained member archive."
+    ],
+    "required_for_cell_closure": [
+      "A valid archive supplied or republished by NSE Clearing, or",
+      "A byte-verifiable valid copy recovered from the member Extranet or a member-retained archive with authoritative provenance, or",
+      "Written NSE Clearing confirmation that no valid archive is recoverable together with an approved source-boundary treatment."
+    ]
+  }
+}

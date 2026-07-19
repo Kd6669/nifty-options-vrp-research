@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+<rect width="100%" height="100%" fill="white"/><text x="70" y="25" font-family="Arial" font-size="18" font-weight="bold" fill="#0f172a">Net P&L versus slippage multiplier</text>
+<line x1="70" y1="45" x2="70" y2="310" stroke="#64748b"/><line x1="70" y1="310" x2="875" y2="310" stroke="#64748b"/>
+<polyline fill="none" stroke="#dc2626" stroke-width="2.5" points="70.0,45.0 204.2,89.2 338.3,133.3 472.5,155.4 606.7,177.5 740.8,221.7 875.0,310.0"/>
+<text x="8" y="50" font-family="Arial" font-size="11" fill="#475569">131,135</text><text x="8" y="310" font-family="Arial" font-size="11" fill="#475569">64,681</text>
+<text x="70" y="342" font-family="Arial" font-size="11" fill="#475569">0.0</text><text x="780" y="342" font-family="Arial" font-size="11" fill="#475569">3.0</text></svg>

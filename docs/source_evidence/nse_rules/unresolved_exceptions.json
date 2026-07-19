@@ -1,0 +1,26 @@
+{
+  "exceptions": [
+    {
+      "exception_id": "DHAN_EXPIRY_CODE_DOCUMENT_DISCOVERY_DISCREPANCY",
+      "reason": "A search/redirect snippet described code 1 inconsistently. The currently linked official DhanHQ v2 Annexure is controlling and explicitly defines 0=current/near, 1=next, 2=far; code 1 is therefore never labelled near in these artifacts.",
+      "source_id": "DHAN_V2_ANNEXURE",
+      "status": "resolved_by_controlling_v2_source"
+    },
+    {
+      "exception_id": "DISTINCT_CONTRACT_MULTIPLIER",
+      "reason": "Official NSE materials identify market lot/contract size and trading in market lots; no separate NIFTY point-value multiplier was found. Do not invent one.",
+      "status": "blocked_not_distinct_in_evidence"
+    },
+    {
+      "exception_id": "HISTORICAL_TICK_SIZE_SCHEDULE",
+      "reason": "The current NSE NIFTY page proves a current option tick of Re.0.05 and says futures price steps are index-level based, but it does not provide a point-in-time historical schedule. Historical dimension tick_size remains null absent archived effective-dated contract-master evidence.",
+      "status": "blocked"
+    },
+    {
+      "exception_id": "EXHAUSTIVE_EXCEPTIONAL_SESSION_AUDIT",
+      "reason": "Bhavcopies prove actual listed expiries and regular close-based cutoff. Exceptional shortened/special sessions were not exhaustively circular-audited; any such date needs a session override before using 15:30.",
+      "status": "blocked_outside_bhavcopy_proof"
+    }
+  ],
+  "schema_version": "1.0.0"
+}

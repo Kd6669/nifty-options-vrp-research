@@ -1,0 +1,27 @@
+{
+  "checkpoint": 3,
+  "resolved_at": "2026-07-18",
+  "sources": [
+    {
+      "models": ["Groww F&O statutory/public charges", "Groww basket-margin reserve", "SPAN Model-A margin"],
+      "repository": "Goyal-Dedhia-Capital/groww-margin-charges-model",
+      "branch_observed": "main",
+      "commit": "b9de06a2b6f6d7e13489c1e42ba4ddfc8621bb6b",
+      "files": [
+        {"path": "src/robs_live/broker_accounting/groww_charges.py", "sha256": "cbf3f04f8ecb31716cbe3598a4061b55517fafc4a8e81360a9a01b0d56f9ac49", "local_path": "src/nifty_span/broker_accounting/groww_charges.py", "integration": "byte-identical"},
+        {"path": "src/robs_live/oms/prices.py", "sha256": "e5fb10adbf8885e9ebaf6ed2dec33cef3b63110e7e9989a2d9329c55c9a8165f", "local_path": "src/nifty_span/oms/prices.py", "integration": "byte-identical"},
+        {"path": "src/robs_live/span/margin_model_a.py", "sha256": "6b7db5d6691c04245e7555e985bd8473f4df5d62ab500deb01919527f7715137", "local_path": "src/nifty_span/span/margin_model_a.py", "integration": "byte-identical"},
+        {"path": "src/robs_live/span/groww_margin_parity.py", "sha256": "c56d8bd283a3f405f5fea797f06a3e1e98a9c285c2375876a6714b0d7f991439", "local_path": "src/nifty_span/span/groww_margin_parity.py", "integration": "namespace-only adaptation from robs_live to nifty_span"}
+      ]
+    },
+    {
+      "models": ["NIFTY volume/OI slippage"],
+      "repository": "Goyal-Dedhia-Capital/deployment-live-model",
+      "branch_observed": "master",
+      "commit": "dc3f56d1a1d602d15e11463521b3604e1c997411",
+      "files": [
+        {"path": "Deployment_live_model/scripts/build_groww_non_span_enrichment.py", "sha256": "800d92b74691e1bb40ef905be0957d6f91dd74a04ea4aae4205998b288664be1", "source_symbol": "_compute_slippage and NIFTY constants", "local_path": "src/nifty_execution/slippage.py", "integration": "formula-preserving modular adaptation with component audit fields"}
+      ]
+    }
+  ]
+}

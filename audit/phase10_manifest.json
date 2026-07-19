@@ -1,0 +1,64 @@
+{
+  "code": {
+    "path": "<repository-root>\\research\\phase10\\run_sizing_exploration.py",
+    "sha256": "0b5ff8cac186cf8a28a5beed233bd0cedbbe14a38da70522b3ea58c23e35636c"
+  },
+  "impact_model": {
+    "name": "additive_ladder_participation_v2",
+    "parameters": {
+      "ladder_parity_lots": 60.0,
+      "oi_participation_weight": 1.0,
+      "participation_exponent": 0.5,
+      "volume_participation_weight": 1.0
+    }
+  },
+  "inputs": [
+    {
+      "path": "<repository-root>\\audit\\phase9_scored_events.csv",
+      "sha256": "fa4e3a9792a7e0b1bd2c0d0283dd13855f38867c2af0193dc22ebdeb142ea9c5"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase4_cost_aware_observations.parquet",
+      "sha256": "2a29f3eefdfba80e0619a76349f93f97ba394598a3be639ef5585d3d8c1b1f05"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase4_cost_aware_tradebook.csv",
+      "sha256": "55dace280d247592aea3bb980f51f2fe466c313b262956e54bc6155236d392a9"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "<repository-root>\\audit\\phase10_fly_cost_surface.parquet",
+      "sha256": "b49ccbbb7fe85bce757cc68d26cfbdae9ca63d2023defdfae8295dab81cda85b"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase10_cost_reserve.csv",
+      "sha256": "cd7e56bd863a7a97ded108ac51ca7d73413f01e81b230f51a39d01169fff0947"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase10_sizing_grid.csv",
+      "sha256": "8426d4afa2b3c544fc02e94d0fa31d73ed720b92c0c601d8f0d87de16f34652c"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase10_selected_profiles.csv",
+      "sha256": "cfc752b66b3c1e2ccbab435ef57b42f0e5c0dbf479bc271c196dd3db7963a446"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase10_dimension_summary.csv",
+      "sha256": "de426ab020fb9518f701d4817c3a4f3e9bd29de9b3a68c617205fa419a25875d"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase10_selected_profile_tradebook.csv",
+      "sha256": "2dda28a03e9474d150a55a7eb2a03107594b3c98e3b6165432b67a9388c5f369"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase10_tearsheet.json",
+      "sha256": "cd1eddc095a269087001ef4f50ed5199ad5abd76e3b73b2736e33c32ed01e013"
+    },
+    {
+      "path": "<repository-root>\\docs\\research\\PHASE10_SIZING_EXPLORATION.md",
+      "sha256": "bd550b9f754ef1d2a1166e1e1a98d1d1d32551ca9fc072081f9f42ffe3e80810"
+    }
+  ],
+  "schema_version": "phase10-sizing-exploration-manifest/v1"
+}

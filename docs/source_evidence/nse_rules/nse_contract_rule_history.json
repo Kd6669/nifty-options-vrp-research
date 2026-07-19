@@ -1,0 +1,219 @@
+{
+  "coverage": {
+    "observation_from": "2021-01-01",
+    "observation_through": "2026-07-15",
+    "symbol": "NIFTY"
+  },
+  "generated_at": "2026-07-15T20:00:10.568849+00:00",
+  "global_contract_fields": {
+    "contract_multiplier": null,
+    "contract_multiplier_status": "blocked_no_distinct_multiplier_found_in_primary_evidence",
+    "expiry_time_ist": "15:30:00",
+    "option_tick_size_rupees": 0.05,
+    "security_descriptor": {
+      "futures": "FUTIDX/NIFTY",
+      "options": "OPTIDX/NIFTY/CE-or-PE/strike/expiry"
+    },
+    "trading_unit": "one market lot"
+  },
+  "rules": [
+    {
+      "contract_scope": [
+        "weekly",
+        "monthly",
+        "quarterly",
+        "half_yearly"
+      ],
+      "effective_from": "2021-01-01",
+      "effective_to": "2025-08-31",
+      "holiday_rule": "previous_trading_day",
+      "instrument_scope": [
+        "FUTIDX",
+        "OPTIDX"
+      ],
+      "mapping_confidence": "high",
+      "notes": "FAOP/65336 explicitly says no NIFTY change; the proposed Monday change was deferred and never took effect; FAOP/68747 preserves contracts through 2025-08-31.",
+      "rule_id": "NIFTY_EXPIRY_THURSDAY_2021_2025",
+      "rule_type": "expiry_weekday",
+      "scheduled_weekday": "Thursday",
+      "source_ids": [
+        "NSE_FAOP_65336",
+        "NSE_FAOP_66938",
+        "NSE_FAOP_67338",
+        "NSE_FAOP_68747"
+      ]
+    },
+    {
+      "contract_scope": [
+        "weekly",
+        "monthly",
+        "quarterly",
+        "half_yearly"
+      ],
+      "effective_from": "2025-09-01",
+      "effective_to": null,
+      "holiday_rule": "previous_trading_day",
+      "instrument_scope": [
+        "FUTIDX",
+        "OPTIDX"
+      ],
+      "mapping_confidence": "high",
+      "rule_id": "NIFTY_EXPIRY_TUESDAY_FROM_2025_09",
+      "rule_type": "expiry_weekday",
+      "scheduled_weekday": "Tuesday",
+      "source_ids": [
+        "NSE_FAOP_68589",
+        "NSE_FAOP_68685",
+        "NSE_FAOP_68747"
+      ]
+    },
+    {
+      "contract_scope": [
+        "weekly"
+      ],
+      "effective_from": "2024-11-20",
+      "effective_to": null,
+      "instrument_scope": [
+        "OPTIDX"
+      ],
+      "mapping_confidence": "high",
+      "rule_id": "NIFTY_WEEKLY_ONLY_NSE_BENCHMARK_FROM_2024_11_20",
+      "rule_type": "weekly_availability",
+      "source_ids": [
+        "NSE_FAOP_64506"
+      ],
+      "status": "NIFTY weekly continued; BANKNIFTY, MIDCPNIFTY and FINNIFTY weekly discontinued"
+    },
+    {
+      "effective_from": "2021-04-30",
+      "effective_to": null,
+      "instrument_scope": [
+        "FUTIDX",
+        "OPTIDX"
+      ],
+      "mapping_confidence": "high",
+      "new_market_lot": 50,
+      "old_market_lot": 75,
+      "rule_id": "NIFTY_LOT_75_TO_50_2021",
+      "rule_type": "market_lot_transition",
+      "source_ids": [
+        "NSE_FAOP_47854"
+      ],
+      "transition_by_contract": {
+        "long_term_options": "existing contracts over three months changed to 50 after June 2021 expiry (2021-06-25 per circular)",
+        "monthly": "May and June 2021 remain 75; July 2021 monthly and later are 50",
+        "weekly": "weekly expiries in August 2021 and later are 50"
+      }
+    },
+    {
+      "effective_from": "2024-04-26",
+      "effective_to": null,
+      "instrument_scope": [
+        "FUTIDX",
+        "OPTIDX"
+      ],
+      "mapping_confidence": "high",
+      "new_market_lot": 25,
+      "old_market_lot": 50,
+      "rule_id": "NIFTY_LOT_50_TO_25_2024",
+      "rule_type": "market_lot_transition",
+      "source_ids": [
+        "NSE_FAOP_61415"
+      ],
+      "transition_by_contract": {
+        "all_contracts_available_from_trade_date": "2024-04-26 use 25 except the expressly preserved April monthly expiry",
+        "first_new_monthly": "2024-05-30",
+        "first_new_weekly": "2024-05-02",
+        "last_old_monthly": "2024-04-25"
+      }
+    },
+    {
+      "effective_from": "2024-11-20",
+      "effective_to": null,
+      "instrument_scope": [
+        "FUTIDX",
+        "OPTIDX"
+      ],
+      "mapping_confidence": "high",
+      "new_market_lot": 75,
+      "old_market_lot": 25,
+      "rule_id": "NIFTY_LOT_25_TO_75_2024_2025",
+      "rule_type": "market_lot_transition",
+      "source_ids": [
+        "NSE_FAOP_64625"
+      ],
+      "transition_by_contract": {
+        "monthly": {
+          "first_new": "2025-02-27",
+          "last_old": "2025-01-30"
+        },
+        "quarterly_half_yearly_existing": "revised at 2024-12-26 EOD",
+        "weekly": {
+          "first_new": "2025-01-02",
+          "last_old": "2024-12-19"
+        }
+      }
+    },
+    {
+      "effective_from": "2025-10-28T15:30:00+05:30",
+      "effective_to": null,
+      "instrument_scope": [
+        "FUTIDX",
+        "OPTIDX"
+      ],
+      "mapping_confidence": "high",
+      "new_market_lot": 65,
+      "old_market_lot": 75,
+      "rule_id": "NIFTY_LOT_75_TO_65_2025_2026",
+      "rule_type": "market_lot_transition",
+      "source_ids": [
+        "NSE_FAOP_70616"
+      ],
+      "transition_by_contract": {
+        "monthly": {
+          "first_new": "2026-01-27",
+          "last_old": "2025-12-30"
+        },
+        "quarterly_half_yearly_existing": "revised at 2025-12-30 EOD",
+        "weekly": {
+          "first_new": "2026-01-06",
+          "last_old": "2025-12-23"
+        }
+      }
+    },
+    {
+      "effective_from": "2021-01-01",
+      "effective_to": null,
+      "instrument_scope": [
+        "OPTIDX"
+      ],
+      "mapping_confidence": "medium",
+      "notes": "Current official product specification states Re.0.05. No within-range change circular was found; exhaustive historical contract-master proof remains an explicit exception.",
+      "rule_id": "NIFTY_OPTION_TICK_0_05",
+      "rule_type": "tick_size",
+      "source_ids": [
+        "NSE_NIFTY50_PRODUCT_PAGE"
+      ],
+      "tick_size_rupees": 0.05
+    },
+    {
+      "actual_expiry_time_ist": "15:30:00",
+      "effective_from": "2021-01-01",
+      "effective_to": null,
+      "instrument_scope": [
+        "FUTIDX",
+        "OPTIDX"
+      ],
+      "mapping_confidence": "high",
+      "notes": "NSE Equity Derivatives normal market closes 15:30; NSE Clearing says expiry exercise is at close of trading hours and final index settlement uses the underlying index close on the last trading day.",
+      "rule_id": "NIFTY_EXPIRY_TIMESTAMP_1530_IST",
+      "rule_type": "pricing_cutoff",
+      "source_ids": [
+        "NSE_MARKET_TIMINGS",
+        "NSE_CLEARING_SETTLEMENT_MECHANISM",
+        "NSE_CLEARING_SETTLEMENT_PRICE"
+      ]
+    }
+  ],
+  "schema_version": "1.0.0"
+}

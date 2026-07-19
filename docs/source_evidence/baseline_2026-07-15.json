@@ -1,0 +1,45 @@
+{
+  "captured_date": "2026-07-15",
+  "repository": "Goyal-Dedhia-Capital/dhan-data-fetch-and-stream",
+  "branch": "kd-codex/dhan-phase2-3",
+  "local_head_before_changes": "61c11b51e061dc4503fd4c91b3c3c005a28d6b60",
+  "remote_main_head": "61c11b51e061dc4503fd4c91b3c3c005a28d6b60",
+  "pinned_reference": "61c11b51e061dc4503fd4c91b3c3c005a28d6b60",
+  "expected_checkout_present": false,
+  "clean_clone": "<external-data-root>/dhan-data-fetch-and-stream",
+  "untouched_test_result": {
+    "command": "$env:PYTHONPATH='src'; py -m pytest -q",
+    "passed": 6,
+    "failed": 0,
+    "duration_seconds": 1.73
+  },
+  "untouched_compile_result": {
+    "command": "py -m py_compile <package and test Python files>",
+    "status": "passed"
+  },
+  "untouched_lint_result": {
+    "command": "ruff check src tests",
+    "status": "failed",
+    "findings": [
+      "src/dhan_data_fetch_stream/core.py:5 F401 unused dataclasses.asdict"
+    ]
+  },
+  "makefile": "absent",
+  "existing_cli_commands": [
+    "fetch-historical-full-chain",
+    "capture-rest-redis",
+    "capture-tbt-redis",
+    "export-redis-stream-parquet"
+  ],
+  "runtime": {
+    "python": "3.13.1",
+    "dhanhq": "2.2.0",
+    "pyarrow": "21.0.0",
+    "redis": "5.0.8",
+    "pytest": "9.0.2"
+  },
+  "credentials": {
+    "state": "valid_transient_credential_later_used_for_bounded_probes_and_resumable_scrapes",
+    "values_recorded": false
+  }
+}

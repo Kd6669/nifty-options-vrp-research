@@ -1,0 +1,371 @@
+{
+  "complete_case_pnl": [
+    {
+      "cost_hurdle_points": {
+        "count": 249,
+        "cvar05": 3.3478393171254237,
+        "mean": 6.2824565479148635,
+        "median": 5.551350150895547,
+        "p05": 3.622114580634088,
+        "p95": 10.31538108695511,
+        "sum": 1564.331680430801,
+        "win_rate": 1.0
+      },
+      "gross_points": {
+        "count": 249,
+        "cvar05": -34.392307692307696,
+        "mean": -0.13574297188755055,
+        "median": -1.54999999999999,
+        "p05": -25.05999999999999,
+        "p95": 28.20999999999999,
+        "sum": -33.80000000000009,
+        "win_rate": 0.40562248995983935
+      },
+      "hold_sessions": 1,
+      "net_rupees": {
+        "count": 249,
+        "cvar05": -2589.4487175388294,
+        "mean": -338.7229004018826,
+        "median": -385.95751766391686,
+        "p05": -1639.2843602140865,
+        "p95": 1452.8988600679745,
+        "sum": -84342.00220006877,
+        "win_rate": 0.18473895582329317
+      },
+      "signal_family": "lower10_down",
+      "structure": "long_iron_condor"
+    },
+    {
+      "cost_hurdle_points": {
+        "count": 181,
+        "cvar05": 3.594439245411234,
+        "mean": 6.2727558848057114,
+        "median": 5.717307343842692,
+        "p05": 3.7961620205617472,
+        "p95": 10.203339068600137,
+        "sum": 1135.3688151498338,
+        "win_rate": 1.0
+      },
+      "gross_points": {
+        "count": 181,
+        "cvar05": -41.660000000000004,
+        "mean": -0.40110497237569026,
+        "median": -1.9000000000000057,
+        "p05": -34.24999999999997,
+        "p95": 27.19999999999996,
+        "sum": -72.59999999999994,
+        "win_rate": 0.47513812154696133
+      },
+      "hold_sessions": 2,
+      "net_rupees": {
+        "count": 181,
+        "cvar05": -2866.5061867503264,
+        "mean": -355.31892711668127,
+        "median": -382.9161207182761,
+        "p05": -2431.226881515675,
+        "p95": 1218.6121621849443,
+        "sum": -64312.725808119314,
+        "win_rate": 0.30386740331491713
+      },
+      "signal_family": "lower10_down",
+      "structure": "long_iron_condor"
+    },
+    {
+      "cost_hurdle_points": {
+        "count": 140,
+        "cvar05": 3.7412918854446042,
+        "mean": 6.439201248164522,
+        "median": 5.8260856514413355,
+        "p05": 4.0299071629266185,
+        "p95": 10.16198018474037,
+        "sum": 901.4881747430331,
+        "win_rate": 1.0
+      },
+      "gross_points": {
+        "count": 140,
+        "cvar05": -51.22142857142858,
+        "mean": 0.9449999999999997,
+        "median": 3.7499999999999787,
+        "p05": -33.78250000000001,
+        "p95": 28.419999999999984,
+        "sum": 132.29999999999995,
+        "win_rate": 0.5571428571428572
+      },
+      "hold_sessions": 3,
+      "net_rupees": {
+        "count": 140,
+        "cvar05": -3413.820776944329,
+        "mean": -299.1890542441636,
+        "median": -147.74040639200234,
+        "p05": -2540.2944477436304,
+        "p95": 1247.0147869833547,
+        "sum": -41886.4675941829,
+        "win_rate": 0.42142857142857143
+      },
+      "signal_family": "lower10_down",
+      "structure": "long_iron_condor"
+    },
+    {
+      "cost_hurdle_points": {
+        "count": 46,
+        "cvar05": 3.8425123117127717,
+        "mean": 6.337581619188903,
+        "median": 5.963116997911305,
+        "p05": 4.150419090701587,
+        "p95": 9.430280672795153,
+        "sum": 291.5287544826895,
+        "win_rate": 1.0
+      },
+      "gross_points": {
+        "count": 46,
+        "cvar05": -5.816666666666677,
+        "mean": 8.46521739130434,
+        "median": 7.024999999999977,
+        "p05": -3.462500000000034,
+        "p95": 31.749999999999996,
+        "sum": 389.39999999999964,
+        "win_rate": 0.8478260869565217
+      },
+      "hold_sessions": 5,
+      "net_rupees": {
+        "count": 46,
+        "cvar05": -599.778787564063,
+        "mean": 133.06765516053048,
+        "median": -8.89792643962602,
+        "p05": -550.3165088206556,
+        "p95": 844.9048532659077,
+        "sum": 6121.112137384403,
+        "win_rate": 0.5
+      },
+      "signal_family": "lower10_down",
+      "structure": "long_iron_condor"
+    },
+    {
+      "cost_hurdle_points": {
+        "count": 116,
+        "cvar05": 3.385458226225998,
+        "mean": 5.942842217426867,
+        "median": 5.3088774345776875,
+        "p05": 3.7259932976710592,
+        "p95": 9.818160949173947,
+        "sum": 689.3696972215166,
+        "win_rate": 1.0
+      },
+      "gross_points": {
+        "count": 116,
+        "cvar05": -67.63333333333334,
+        "mean": -12.54396551724138,
+        "median": -2.849999999999987,
+        "p05": -60.42499999999999,
+        "p95": 32.1625,
+        "sum": -1455.1000000000001,
+        "win_rate": 0.4224137931034483
+      },
+      "hold_sessions": 1,
+      "net_rupees": {
+        "count": 116,
+        "cvar05": -3927.5583313545635,
+        "mean": -958.1840227785832,
+        "median": -611.8233739400446,
+        "p05": -3620.770097270538,
+        "p95": 1824.8958400333597,
+        "sum": -111149.34664231565,
+        "win_rate": 0.25862068965517243
+      },
+      "signal_family": "upper85_up",
+      "structure": "short_iron_condor"
+    },
+    {
+      "cost_hurdle_points": {
+        "count": 84,
+        "cvar05": 3.589802818668319,
+        "mean": 6.331880178091448,
+        "median": 5.685106294293469,
+        "p05": 3.937740999210111,
+        "p95": 10.001564780463678,
+        "sum": 531.8779349596816,
+        "win_rate": 1.0
+      },
+      "gross_points": {
+        "count": 84,
+        "cvar05": -69.82,
+        "mean": -16.663690476190478,
+        "median": -16.12499999999999,
+        "p05": -63.78249999999997,
+        "p95": 27.985000000000007,
+        "sum": -1399.7500000000002,
+        "win_rate": 0.32142857142857145
+      },
+      "hold_sessions": 2,
+      "net_rupees": {
+        "count": 84,
+        "cvar05": -4092.422609297675,
+        "mean": -1265.5627273382747,
+        "median": -1183.4079938564903,
+        "p05": -3897.438445720724,
+        "p95": 1463.2971029121143,
+        "sum": -106307.26909641507,
+        "win_rate": 0.2619047619047619
+      },
+      "signal_family": "upper85_up",
+      "structure": "short_iron_condor"
+    },
+    {
+      "cost_hurdle_points": {
+        "count": 59,
+        "cvar05": 3.405770317639229,
+        "mean": 5.996596748954476,
+        "median": 5.258734628987409,
+        "p05": 3.737541409593462,
+        "p95": 10.112414505636577,
+        "sum": 353.7992081883141,
+        "win_rate": 1.0
+      },
+      "gross_points": {
+        "count": 59,
+        "cvar05": -80.2333333333333,
+        "mean": -18.32796610169491,
+        "median": -19.15,
+        "p05": -72.79,
+        "p95": 46.66999999999997,
+        "sum": -1081.3499999999997,
+        "win_rate": 0.23728813559322035
+      },
+      "hold_sessions": 3,
+      "net_rupees": {
+        "count": 59,
+        "cvar05": -4478.52142982707,
+        "mean": -1336.7984841089758,
+        "median": -1387.1519131813802,
+        "p05": -4208.061407506443,
+        "p95": 1847.1237294488155,
+        "sum": -78871.11056242957,
+        "win_rate": 0.22033898305084745
+      },
+      "signal_family": "upper85_up",
+      "structure": "short_iron_condor"
+    },
+    {
+      "cost_hurdle_points": {
+        "count": 34,
+        "cvar05": 3.1186029158194497,
+        "mean": 5.4786790871422895,
+        "median": 5.010957456958178,
+        "p05": 3.367768714086647,
+        "p95": 8.679724331320834,
+        "sum": 186.27508896283783,
+        "win_rate": 1.0
+      },
+      "gross_points": {
+        "count": 34,
+        "cvar05": -86.95,
+        "mean": -26.87941176470588,
+        "median": -13.425,
+        "p05": -83.0025,
+        "p95": 12.119999999999969,
+        "sum": -913.8999999999999,
+        "win_rate": 0.08823529411764706
+      },
+      "hold_sessions": 5,
+      "net_rupees": {
+        "count": 34,
+        "cvar05": -4611.442520846174,
+        "mean": -1713.0392194686335,
+        "median": -969.480238768905,
+        "p05": -4446.77982258403,
+        "p95": 500.5884974445062,
+        "sum": -58243.33346193354,
+        "win_rate": 0.08823529411764706
+      },
+      "signal_family": "upper85_up",
+      "structure": "short_iron_condor"
+    }
+  ],
+  "coverage": [
+    {
+      "complete_events": 249,
+      "exact_contract_coverage": 0.8586206896551725,
+      "expected_events": 290,
+      "hold_sessions": 1,
+      "signal_family": "lower10_down",
+      "structure": "long_iron_condor"
+    },
+    {
+      "complete_events": 181,
+      "exact_contract_coverage": 0.6241379310344828,
+      "expected_events": 290,
+      "hold_sessions": 2,
+      "signal_family": "lower10_down",
+      "structure": "long_iron_condor"
+    },
+    {
+      "complete_events": 140,
+      "exact_contract_coverage": 0.4827586206896552,
+      "expected_events": 290,
+      "hold_sessions": 3,
+      "signal_family": "lower10_down",
+      "structure": "long_iron_condor"
+    },
+    {
+      "complete_events": 46,
+      "exact_contract_coverage": 0.15862068965517243,
+      "expected_events": 290,
+      "hold_sessions": 5,
+      "signal_family": "lower10_down",
+      "structure": "long_iron_condor"
+    },
+    {
+      "complete_events": 116,
+      "exact_contract_coverage": 0.4264705882352941,
+      "expected_events": 272,
+      "hold_sessions": 1,
+      "signal_family": "upper85_up",
+      "structure": "short_iron_condor"
+    },
+    {
+      "complete_events": 84,
+      "exact_contract_coverage": 0.3088235294117647,
+      "expected_events": 272,
+      "hold_sessions": 2,
+      "signal_family": "upper85_up",
+      "structure": "short_iron_condor"
+    },
+    {
+      "complete_events": 59,
+      "exact_contract_coverage": 0.21691176470588236,
+      "expected_events": 272,
+      "hold_sessions": 3,
+      "signal_family": "upper85_up",
+      "structure": "short_iron_condor"
+    },
+    {
+      "complete_events": 34,
+      "exact_contract_coverage": 0.125,
+      "expected_events": 272,
+      "hold_sessions": 5,
+      "signal_family": "upper85_up",
+      "structure": "short_iron_condor"
+    }
+  ],
+  "interpretation_gate": {
+    "eligible_cells": [
+      {
+        "complete_events": 249,
+        "exact_contract_coverage": 0.8586206896551725,
+        "expected_events": 290,
+        "hold_sessions": 1,
+        "signal_family": "lower10_down",
+        "structure": "long_iron_condor"
+      }
+    ],
+    "minimum_coverage_for_diagnostic": 0.8
+  },
+  "limitations": [
+    "Multi-day exits require the exact entry expiry, strike, option type, and same clock time.",
+    "Complete-case P&L below 80% exact-contract coverage is reported only as a biased sensitivity and must not be treated as evidence of edge.",
+    "The rolling nearest-expiry ATM +/-10 surface creates non-random attrition as contracts expire or leave the local chain.",
+    "No stale last-quote substitution or synthetic repricing is used in this strict feasibility audit.",
+    "All cells remain in-sample diagnostics rather than an out-of-sample strategy test."
+  ],
+  "schema_version": "phase4-multiday-vrp-feasibility/v1"
+}

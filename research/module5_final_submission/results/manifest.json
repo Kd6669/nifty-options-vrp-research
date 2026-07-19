@@ -1,0 +1,95 @@
+{
+  "members": [
+    {
+      "bytes": 665,
+      "path": "research/module5_final_submission/results/curves/annual_returns.csv",
+      "sha256": "e4d71ed8bebc95d8c91688c1c3b5a8f2dc90d83f71691ae54fecd9d5070ac55d"
+    },
+    {
+      "bytes": 142130,
+      "path": "research/module5_final_submission/results/curves/equity_curve.csv",
+      "sha256": "fd3ae92b0561ad31e554e5875877b7daccba516b66db4a1014e66e3b89295eba"
+    },
+    {
+      "bytes": 6720,
+      "path": "research/module5_final_submission/results/curves/monthly_returns.csv",
+      "sha256": "d2f900a03c1bf56ded769bdfa8807cd68077b3f7a484d45f0b42d6dcc4310cd4"
+    },
+    {
+      "bytes": 9613,
+      "path": "research/module5_final_submission/results/curves/weekly_returns.csv",
+      "sha256": "ba7c55253b91b5a93b86254d012f79468b943ecf32aabe037ece3f036de106ee"
+    },
+    {
+      "bytes": 1210,
+      "path": "research/module5_final_submission/results/headline_metrics.csv",
+      "sha256": "a9f5a990df239620199136eec01f046d2c11d59e045155c2c3de39c7c4148483"
+    },
+    {
+      "bytes": 1312,
+      "path": "research/module5_final_submission/results/risk/drawdown_episodes.csv",
+      "sha256": "870b13bfc55d6e206d0a2f695daa8900e6d78589a81998483bfb5bf1b8bee95d"
+    },
+    {
+      "bytes": 9201,
+      "path": "research/module5_final_submission/results/risk/worst_drawdown_trade_autopsy.csv",
+      "sha256": "2ed0c6dd803a650e76509525015652620666c3951840d4b817c5d38ce1e2475c"
+    },
+    {
+      "bytes": 20285,
+      "path": "research/module5_final_submission/results/robustness/capacity_curve.csv",
+      "sha256": "de1b7b1f40a74897381a0294b046e1ee42fbda2383511faaf3d3ccd615f9c784"
+    },
+    {
+      "bytes": 913,
+      "path": "research/module5_final_submission/results/robustness/event_conditioning.csv",
+      "sha256": "2aa9cb37d59399c4c18c8937bc122ab409cf98300c81ea1d6cbd1de227856fb8"
+    },
+    {
+      "bytes": 995,
+      "path": "research/module5_final_submission/results/robustness/execution_decay.csv",
+      "sha256": "4c6da0d2803403fa5654c01d0b6dfc4f034311c2e16ebf24f9b4b0e71a3a4174"
+    },
+    {
+      "bytes": 902,
+      "path": "research/module5_final_submission/results/robustness/nov2024_structural_break.csv",
+      "sha256": "f657517d918bb142c36efbe332c8ab80b98f49dad1302ee46dd7ee7680ea6a63"
+    },
+    {
+      "bytes": 2721,
+      "path": "research/module5_final_submission/results/summary.json",
+      "sha256": "c89f8506e8c9e727f33835463db39a4327ad9926b09509b27c84a543d0f020f7"
+    },
+    {
+      "bytes": 2579,
+      "path": "research/module5_final_submission/results/tearsheet.md",
+      "sha256": "4989c42111d08d561339fad43b5e597a957c5af60e4993b12fdd073a989c4a7c"
+    },
+    {
+      "bytes": 183550,
+      "path": "research/module5_final_submission/results/trades/final_trade_sheet.csv",
+      "sha256": "e6a0f7f50b5f62852c1fa911eae4736600815dd6bff5f9f44b6f4b3e2012e4cf"
+    },
+    {
+      "bytes": 1898,
+      "path": "research/module5_final_submission/results/visualizations/capacity_curve.svg",
+      "sha256": "49ac75cb74fc5e66af67458dabb651b846b4efd1b6cdf3107ee65ff48cb5c221"
+    },
+    {
+      "bytes": 16399,
+      "path": "research/module5_final_submission/results/visualizations/equity_curve.svg",
+      "sha256": "bd5f1db763e2497aa8a2f4bc94cf882fe9fa7722dfa852e7d8608731b99d0226"
+    },
+    {
+      "bytes": 869,
+      "path": "research/module5_final_submission/results/visualizations/execution_decay.svg",
+      "sha256": "7d3c443ab275f8df0e41b5fa3bfd6d37df951e67e66e197a17dc87ca4fcfa4a9"
+    },
+    {
+      "bytes": 911127,
+      "path": "research/module5_final_submission/results/workbook_payload.json",
+      "sha256": "82cb90cb64a2e7f10f5d7bafd5ea4584c36c229ab90a18a62ea24d2b31cd1b84"
+    }
+  ],
+  "schema_version": "module5-final-submission/v1"
+}

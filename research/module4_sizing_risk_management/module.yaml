@@ -1,0 +1,65 @@
+schema_version: module-contract/v1
+module_id: module4_sizing_risk_management
+status: closed_forward_shadow_candidate_not_deployment_approved
+purpose: >-
+  Close the post-hypothesis sizing and risk-management research for the gated upper-85
+  NIFTY short-iron-fly candidate using a 10 lakh capital pool, exact quantity-aware costs,
+  entry-time timestamped SPAN, and explicit defined-loss and margin ceilings.
+universe:
+  underlying: NIFTY
+  expiry: nearest weekly proxy
+  entry_moneyness: ATM plus or minus 3
+  fixed_horizon_minutes: 60
+  structure: short iron fly
+  initial_capital_rupees: 1000000
+signal:
+  event: upper 85th percentile normalized intraday VRP crossing upward
+  gates:
+    atm_iv_change_5m_minimum_vol_points: -0.046817
+    atm_iv_change_15m_minimum_vol_points: -0.114873
+    normalized_rv_change_5m_minimum: -0.02651714
+recommended_candidate:
+  profile: max_margin_efficiency_dd_1.5%
+  config_id: 5628
+  score_floor: 0.40
+  score_power: 0.0
+  margin_cap: 0.35
+  maximum_cost_reserved_structural_risk: 0.04
+  quantity_capacity_cap_lots: 76
+  drawdown_brake: none
+  losing_streak_brake: none
+stages:
+  - corrected_quantity_impact
+  - gated_capital_backtest
+  - confidence_rank_diagnostic
+  - sizing_risk_grid
+  - module_closeout
+implementations:
+  execution_models: src/nifty_execution
+  gated_capital_backtest: research/phase8
+  confidence_sizing: research/phase9
+  sizing_exploration: research/phase10
+  closeout: research/module4_sizing_risk_management
+contracts: research/module4_sizing_risk_management/contracts/strategy.json
+entrypoint: python -m research.module4_sizing_risk_management.run build
+verification: python -m research.module4_sizing_risk_management.run verify
+outputs:
+  - research/module4_sizing_risk_management/results/closeout.json
+  - research/module4_sizing_risk_management/results/closeout_report.md
+  - research/module4_sizing_risk_management/results/trades/recommended_trade_sheet.csv
+  - research/module4_sizing_risk_management/results/curves/recommended_equity_curve.csv
+  - research/module4_sizing_risk_management/results/curves/recommended_monthly_returns.csv
+  - research/module4_sizing_risk_management/results/curves/drawdown_episodes.csv
+  - research/module4_sizing_risk_management/results/diagnostics/profile_comparison.csv
+  - research/module4_sizing_risk_management/results/diagnostics/cost_breakdown.csv
+  - research/module4_sizing_risk_management/results/exploration/sizing_grid.csv.gz
+  - research/module4_sizing_risk_management/results/visualizations/equity_drawdown.svg
+  - research/module4_sizing_risk_management/results/visualizations/profile_frontier.svg
+  - research/module4_sizing_risk_management/results/visualizations/sizing_neighborhoods.svg
+  - research/module4_sizing_risk_management/results/manifest.json
+must_not:
+  - claim clean out-of-sample validation or deployment readiness
+  - retune the frozen score or quality threshold on the same sample
+  - infer intratrade drawdown, margin calls, or stop performance from fixed-horizon exits
+  - treat unused capital as evidence that the strategy should be levered further
+  - extrapolate to multi-day, multi-expiry, or horizons beyond the available coverage

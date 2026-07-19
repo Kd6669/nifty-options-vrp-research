@@ -1,0 +1,73 @@
+{
+  "code": {
+    "path": "<repository-root>\\research\\phase9\\run_confidence_sizing.py",
+    "sha256": "e6ad97a8301c42e133106c9c808c0399cc3c3d58df8f5f434542d8208cc0f6ed"
+  },
+  "impact_model": {
+    "name": "additive_ladder_participation_v2",
+    "parameters": {
+      "ladder_parity_lots": 60.0,
+      "oi_participation_weight": 1.0,
+      "participation_exponent": 0.5,
+      "volume_participation_weight": 1.0
+    }
+  },
+  "inputs": [
+    {
+      "path": "<repository-root>\\audit\\phase8_gated_events.csv",
+      "sha256": "166348a155d034c65b746d211a410a1ad0ced066de1986a4312555115d5d5075"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase4_cost_aware_observations.parquet",
+      "sha256": "2a29f3eefdfba80e0619a76349f93f97ba394598a3be639ef5585d3d8c1b1f05"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase4_cost_aware_tradebook.csv",
+      "sha256": "55dace280d247592aea3bb980f51f2fe466c313b262956e54bc6155236d392a9"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase8_gated_capital_tradebook.csv",
+      "sha256": "d5d81a3b854ebb5afd79abd6b12c7894ddfced7c0f261f0534acee9774d733f6"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase8_gated_tearsheet.json",
+      "sha256": "2e64816745733a09777de190049a532bfcd1227a8d24669fa0a52dadbb698562"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "<repository-root>\\audit\\phase9_scored_events.csv",
+      "sha256": "fa4e3a9792a7e0b1bd2c0d0283dd13855f38867c2af0193dc22ebdeb142ea9c5"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase9_rank_correlation.csv",
+      "sha256": "26b22c35b5ce5e5f79555102356c86c11d2ba88b41d75c5561eccdca85bc7e7a"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase9_score_quintiles.csv",
+      "sha256": "4daf76559f06cd0bd24a3cfc705fa8245dcc5a0b652c6cb99a7ab45b3e682edc"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase9_confidence_tradebook.csv",
+      "sha256": "9fa6db92d049160327eef8226a657e185f686ceb9584b53c71a1cb0811d8f8c5"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase9_economic_summary.csv",
+      "sha256": "d352e6bbcebfdd2fecfb30bfb682f66c77dc864a4f4d69b40dde0b59d0d95b83"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase9_equity_curve.csv",
+      "sha256": "50b1be844fec04481e2a12e35e42475bedcca7f8b253548dfff9848f64923a8d"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase9_tearsheet.json",
+      "sha256": "ed76eb7e954ba89ac4727e87db9025e6a3cc31dd3eaf2c60f9745043f28ce629"
+    },
+    {
+      "path": "<repository-root>\\docs\\research\\PHASE9_CONFIDENCE_SIZING.md",
+      "sha256": "b16cc6feb2dcf7f47e7409dd7a542eea4e0a185c630e00ec53a03dde7109ce3c"
+    }
+  ],
+  "schema_version": "phase9-confidence-sizing-manifest/v1",
+  "verdict": "FAIL"
+}

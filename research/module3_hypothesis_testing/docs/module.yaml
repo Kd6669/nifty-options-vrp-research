@@ -1,0 +1,8 @@
+schema_version: submodule-contract/v1
+name: module_documentation
+owns:
+  - architecture.md
+  - runbook.md
+responsibility: Explain module boundaries, evidence lineage, reproduction, and closure semantics.
+must_not:
+  - replace machine-readable results with prose-only claims

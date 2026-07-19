@@ -1,0 +1,34 @@
+{
+  "code": {
+    "path": "<repository-root>\\research\\phase3\\run_full_strategy_backtest.py",
+    "sha256": "fb2980b34accd4134a93e5d391069503ec242c273c70c8cce02dacdb31a8388e"
+  },
+  "gold_root": "<external-data-root>\\dhan-data-fetch-and-stream-phase2-3\\reports\\nifty_gold_span_six_slot_research_20210101_20260715\\version=2.1.0\\gold",
+  "inputs": [
+    {
+      "path": "<repository-root>\\audit\\phase2_defined_risk_structure_paths.parquet",
+      "sha256": "9b275793099db027bc3ad7856e8d88fa0611b1c533386f4c3e32aa4c7d25807a"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase2_intraday_iv_surface.parquet",
+      "sha256": "8aaa4f0d1c33f35df7c18e22b84d91a26c0e026b635b3f1210fd42c465bc6367"
+    }
+  ],
+  "leg_rows": 3580,
+  "outputs": [
+    {
+      "path": "<repository-root>\\audit\\phase3_full_strategy_tradebook.csv",
+      "sha256": "93b1c3e0e6d2191bdaaa261e359e9b73f3ef5359f4c26b9f485e76c9a03a8442"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase3_full_strategy_legbook.csv",
+      "sha256": "a1bcfc694848ed798c08db13450b43f4616b6055e97a3bdd8a88103e19a14d3d"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase3_full_strategy_tearsheet.json",
+      "sha256": "e85c7e61792c1c8dc858c06e0cbf2d083b54bb2f49e4674cc7ea90d051aa4634"
+    }
+  ],
+  "schema_version": "phase3-full-strategy-manifest/v1",
+  "trades": 895
+}

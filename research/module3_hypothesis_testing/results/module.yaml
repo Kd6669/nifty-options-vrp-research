@@ -1,0 +1,11 @@
+schema_version: submodule-contract/v1
+name: preserved_closeout_results
+owns:
+  - closeout.json
+  - closeout_report.md
+  - manifest.json
+responsibility: Preserve deterministic, reviewable Module 3 closure evidence.
+must_not:
+  - contain unlabelled post-selection
+  - omit the greater-than-180-minute data boundary
+  - promote a positive gross result as a positive net strategy

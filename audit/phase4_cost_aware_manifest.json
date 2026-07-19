@@ -1,0 +1,55 @@
+{
+  "code": {
+    "path": "<repository-root>\\research\\phase4\\run_cost_aware_discovery.py",
+    "sha256": "51abfdf8cf463e837c358b65be69ef6ced2c19a778d086c2501e5f3e95f365be"
+  },
+  "gold_root": "<external-data-root>\\dhan-data-fetch-and-stream-phase2-3\\reports\\nifty_gold_span_six_slot_research_20210101_20260715\\version=2.1.0\\gold",
+  "impact_model": {
+    "capacity_lots": [
+      1,
+      100
+    ],
+    "name": "additive_ladder_participation_v2",
+    "parameters": {
+      "ladder_parity_lots": 60.0,
+      "oi_participation_weight": 1.0,
+      "participation_exponent": 0.5,
+      "volume_participation_weight": 1.0
+    },
+    "source": {
+      "path": "<repository-root>\\src\\nifty_execution\\slippage.py",
+      "sha256": "093f983d13d7c320f21fe6051cb8a1b25d3d5252b03ba15d8e50c7ddce3d1f9e"
+    }
+  },
+  "inputs": [
+    {
+      "path": "<repository-root>\\audit\\phase2_vrp_session_curve_features.parquet",
+      "sha256": "f7cb06db9060d2d9a82adc3403bbc7817a7569601efa40524aa5a4e1d62ec356"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase2_intraday_iv_surface.parquet",
+      "sha256": "8aaa4f0d1c33f35df7c18e22b84d91a26c0e026b635b3f1210fd42c465bc6367"
+    }
+  ],
+  "observation_rows": 13488,
+  "outputs": [
+    {
+      "path": "<repository-root>\\audit\\phase4_cost_aware_tradebook.csv",
+      "sha256": "55dace280d247592aea3bb980f51f2fe466c313b262956e54bc6155236d392a9"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase4_cost_aware_observations.parquet",
+      "sha256": "2a29f3eefdfba80e0619a76349f93f97ba394598a3be639ef5585d3d8c1b1f05"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase4_capacity_curve.csv",
+      "sha256": "da06102a30149f1f941afcc11ab628fdc4ca836148d5d558999737561f577c0e"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase4_cost_aware_summary.json",
+      "sha256": "8a86a314eda6ed47e70974ad2458180524ce10e7ba13c723cb6f9d36b1c74c3a"
+    }
+  ],
+  "schema_version": "phase4-cost-aware-manifest/v2",
+  "trade_rows": 11589
+}

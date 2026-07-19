@@ -1,0 +1,86 @@
+{
+  "decision": "SHADOW_ONLY_NOT_LIVE_CAPITAL_APPROVED",
+  "members": [
+    {
+      "bytes": 498555,
+      "path": "submission/NIFTY_VRP_Research_Memo.pdf",
+      "sha256": "49360b41df1205d72baaa2e51f3abce7952b6c0326bbc7dec9a76f3f96265d8f"
+    },
+    {
+      "bytes": 33016,
+      "path": "submission/NIFTY_VRP_Research_Memo.tex",
+      "sha256": "b934720073a2253bde154ec8d2c86dfa5c50a4d428286341bdccf35f1be53476"
+    },
+    {
+      "bytes": 323461,
+      "path": "submission/NIFTY_VRP_Research_Highlights.pdf",
+      "sha256": "e1aa752e5eb3d96bd0d04e810bfba8af3df7afbb10c583e8d4a22000ebfab54f"
+    },
+    {
+      "bytes": 7044,
+      "path": "submission/NIFTY_VRP_Research_Highlights.tex",
+      "sha256": "a845385e70ded02610daeb4903540f60bb1084ef478c006fd371a6487e06688e"
+    },
+    {
+      "bytes": 11666,
+      "path": "submission/figures/annual_costs.pdf",
+      "sha256": "9cc3979f831b4d4706889ecc395595210806e59d92ef7e1b91042f71ab6f2cdc"
+    },
+    {
+      "bytes": 15141,
+      "path": "submission/figures/coverage_boundary.pdf",
+      "sha256": "baa2b93e324cdda60dd32c2b81761710009b7be3c0f9bf6d6ab035c89d012470"
+    },
+    {
+      "bytes": 27758,
+      "path": "submission/figures/equity_drawdown.pdf",
+      "sha256": "c3d04d4a3496e7b38d6ee112bcc9d398cadc807b61126ae96a862dc9094e76ba"
+    },
+    {
+      "bytes": 14599,
+      "path": "submission/figures/execution_capacity.pdf",
+      "sha256": "36b4874ae8d363cf7caa5a1cc6d2ea6cb092d4977060ff4bc4f342a00b71725f"
+    },
+    {
+      "bytes": 13301,
+      "path": "submission/figures/hypothesis_ladder.pdf",
+      "sha256": "876ca93629a3f6231fa4f33059919ffeee7a8ce8fff61db3fa1842cdf5af74a6"
+    },
+    {
+      "bytes": 13160,
+      "path": "submission/figures/robustness_panels.pdf",
+      "sha256": "142b5865227ec28d66e850ab0e1787e31e3ddbf01f9856cefb5c873a9aa823b1"
+    },
+    {
+      "bytes": 176156,
+      "path": "submission/NIFTY_VRP_Research_Tearsheet.xlsx",
+      "sha256": "658780c4cfb907e828c2a96dd1093c1f29ef7d360f888ac1d6c8cdd650ed0fa0"
+    },
+    {
+      "bytes": 3841,
+      "path": "research/module5_final_submission/results/manifest.json",
+      "sha256": "e86565a6e40ae023c53d37c3cf6bdaac3e632efdb472c13aa21342bbb3eb3d2e"
+    },
+    {
+      "bytes": 2721,
+      "path": "research/module5_final_submission/results/summary.json",
+      "sha256": "3c329da8d24852a4df796478a078a091e70a46fb0ebfe4a7a8038d8d1431ddc0"
+    },
+    {
+      "bytes": 9088,
+      "path": "research/module5_final_submission/scripts/build_pdf.py",
+      "sha256": "f5bce4757f0ff94de8652eab6a9cacf096c87faddb3a908ba0ffc4a323a7dcf5"
+    },
+    {
+      "bytes": 15219,
+      "path": "research/module5_final_submission/scripts/build_workbook.mjs",
+      "sha256": "3ea50b48963ca2b7bd80314845ed86d71ee67d8561b3fd43dfaffce3906890d4"
+    },
+    {
+      "bytes": 1349,
+      "path": "research/module5_final_submission/scripts/run_submission.ps1",
+      "sha256": "72d833ce1aa9294fb07d3522f936b407c3ec8e4b9975808567041f4432309930"
+    }
+  ],
+  "schema_version": "final-submission-artifacts/v2"
+}

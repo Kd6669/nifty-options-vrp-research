@@ -1,0 +1,433 @@
+{
+  "hashing": "sha256; CRLF normalized to LF for declared text suffixes",
+  "member_count": 71,
+  "members": [
+    {
+      "bytes": 170307,
+      "category": "source_evidence",
+      "path": "audit/phase8_gated_events.csv",
+      "sha256": "bb5c42f8863d1048e4fa61ea147f310f1f611f484ae7f01831aba6ab04b0c42a"
+    },
+    {
+      "bytes": 53067,
+      "category": "source_evidence",
+      "path": "audit/phase8_gated_capacity_surface.csv",
+      "sha256": "ac0430cd620424e6596faf7ba402adb37d68ec69932351b98bc8fbdebfe8dec8"
+    },
+    {
+      "bytes": 892772,
+      "category": "source_evidence",
+      "path": "audit/phase8_gated_capital_tradebook.csv",
+      "sha256": "c429128dfbfd2df809e873ea1197692036221000768d03bd926b338eeb2bee45"
+    },
+    {
+      "bytes": 22058,
+      "category": "source_evidence",
+      "path": "audit/phase8_gated_policy_summary.csv",
+      "sha256": "b98246184feb194db639f5afb30b3dc4cdcf5d49c74e37081ac28779b0762d30"
+    },
+    {
+      "bytes": 134726,
+      "category": "source_evidence",
+      "path": "audit/phase8_gated_equity_curve.csv",
+      "sha256": "be16ce9af4e3c2e0bf467ed77a71684f2f09cd46ebd5cce8385136ddbe1e9ee4"
+    },
+    {
+      "bytes": 6595,
+      "category": "source_evidence",
+      "path": "audit/phase8_gated_regime_summary.csv",
+      "sha256": "a8d98631419116d132f161a553a935600244d98b01b7500edf5ea625818ef2e6"
+    },
+    {
+      "bytes": 43613,
+      "category": "source_evidence",
+      "path": "audit/phase8_gated_tearsheet.json",
+      "sha256": "3e68ef91320f3a9bb3857b7f9838e2ace8412a3722ab1fabc2aba6483a6d5730"
+    },
+    {
+      "bytes": 2745,
+      "category": "source_evidence",
+      "path": "audit/phase8_gated_manifest.json",
+      "sha256": "9e3e63f5ad371f50740a5ac6e7855b5958fa548056c28fadecf0ff9c9c80ba9d"
+    },
+    {
+      "bytes": 112173,
+      "category": "source_evidence",
+      "path": "audit/phase9_scored_events.csv",
+      "sha256": "733476ed27573867118da415b58a039f957170386eb4b79c1cd0681f153a5c4d"
+    },
+    {
+      "bytes": 1752,
+      "category": "source_evidence",
+      "path": "audit/phase9_rank_correlation.csv",
+      "sha256": "ca8a9555025167fa6248fae2a5ede3538e3a93b282da70d6068a27f158d40ecc"
+    },
+    {
+      "bytes": 7582,
+      "category": "source_evidence",
+      "path": "audit/phase9_score_quintiles.csv",
+      "sha256": "d26adbef257bc1887b7f6c2b0e6e29b7d30274b949aa9c0ef9d90a194febcb63"
+    },
+    {
+      "bytes": 139878,
+      "category": "source_evidence",
+      "path": "audit/phase9_confidence_tradebook.csv",
+      "sha256": "ccf4d1d5acdbf1ae5aaf314004acfdb97444b61cf02aa5ff413759fd87be694c"
+    },
+    {
+      "bytes": 6749,
+      "category": "source_evidence",
+      "path": "audit/phase9_economic_summary.csv",
+      "sha256": "db9ee8d3b8bca1206766ff26438894df803e5cc78c9db075cf303633e98d843a"
+    },
+    {
+      "bytes": 459660,
+      "category": "source_evidence",
+      "path": "audit/phase9_equity_curve.csv",
+      "sha256": "662e9adb7b0304a4ea1968cdaa547ae7973b2dd02b769900b542080afb151b37"
+    },
+    {
+      "bytes": 29410,
+      "category": "source_evidence",
+      "path": "audit/phase9_tearsheet.json",
+      "sha256": "e1286cba9abc329f18f69d8ac3d5f963edb10ba6410cfa8f114818a06e682c4d"
+    },
+    {
+      "bytes": 2806,
+      "category": "source_evidence",
+      "path": "audit/phase9_manifest.json",
+      "sha256": "19947045fb6f161c6a116e9d9464796300ca1aa5ae138d2bfb9009fccf1d3bc6"
+    },
+    {
+      "bytes": 2341011,
+      "category": "source_evidence",
+      "path": "audit/phase10_fly_cost_surface.parquet",
+      "sha256": "b49ccbbb7fe85bce757cc68d26cfbdae9ca63d2023defdfae8295dab81cda85b"
+    },
+    {
+      "bytes": 4124,
+      "category": "source_evidence",
+      "path": "audit/phase10_cost_reserve.csv",
+      "sha256": "22cdeec6e5bba211905b8549299abfa919ae21728b506acabab21bfc28cb17ed"
+    },
+    {
+      "bytes": 21104952,
+      "category": "source_evidence",
+      "path": "audit/phase10_sizing_grid.csv",
+      "sha256": "8c663066a74369defac5d0a99a3bd719954e7f42ab27e6df6f9ca46773278d7e"
+    },
+    {
+      "bytes": 13304,
+      "category": "source_evidence",
+      "path": "audit/phase10_selected_profiles.csv",
+      "sha256": "51d0ec7019c9edd0cb5d4920e0ee9276e0c8bf5b02b1d55c6b7a271c7a6df813"
+    },
+    {
+      "bytes": 3922,
+      "category": "source_evidence",
+      "path": "audit/phase10_dimension_summary.csv",
+      "sha256": "6f722ad13df61364c7788bba7e52fc4d86325ee894cdda40399f3ab9c95cff83"
+    },
+    {
+      "bytes": 320135,
+      "category": "source_evidence",
+      "path": "audit/phase10_selected_profile_tradebook.csv",
+      "sha256": "bb34879fb88a1814883a10df94288f2d5e6c37ebb6d488360feb94ffd4bfb55a"
+    },
+    {
+      "bytes": 48105,
+      "category": "source_evidence",
+      "path": "audit/phase10_tearsheet.json",
+      "sha256": "e24388f7a053a128717d3c2e32e09623e9ccd8a3a1080f443e00422fdbadc2af"
+    },
+    {
+      "bytes": 2460,
+      "category": "source_evidence",
+      "path": "audit/phase10_manifest.json",
+      "sha256": "d5d43424ea4634cd55ffdfd7595674f5293a6bf1146dbc369b3b8685ea7bee3c"
+    },
+    {
+      "bytes": 4370,
+      "category": "implementation",
+      "path": "src/nifty_execution/costs.py",
+      "sha256": "2a183697e372ed849b88ca3be2186899c2c7b9f09d0642267b8bc2b7a46932ac"
+    },
+    {
+      "bytes": 974,
+      "category": "implementation",
+      "path": "src/nifty_execution/margin.py",
+      "sha256": "c5837c2703ca65cf058c724440b71858b315ed53a1fdfd1df604837eafdff033"
+    },
+    {
+      "bytes": 1664,
+      "category": "implementation",
+      "path": "src/nifty_execution/provenance.py",
+      "sha256": "4b46d4f2ae85c963dba9bb6d62879b5fc2b090f18526d11f8686908d47b78676"
+    },
+    {
+      "bytes": 11236,
+      "category": "implementation",
+      "path": "src/nifty_execution/slippage.py",
+      "sha256": "093f983d13d7c320f21fe6051cb8a1b25d3d5252b03ba15d8e50c7ddce3d1f9e"
+    },
+    {
+      "bytes": 53367,
+      "category": "implementation",
+      "path": "research/phase8/run_gated_capital_backtest.py",
+      "sha256": "0b17a90212d47ce5854e7ac5b4ef68fba22140cb5f9cf7924c5b52ec379ae3c6"
+    },
+    {
+      "bytes": 30535,
+      "category": "implementation",
+      "path": "research/phase9/run_confidence_sizing.py",
+      "sha256": "e6ad97a8301c42e133106c9c808c0399cc3c3d58df8f5f434542d8208cc0f6ed"
+    },
+    {
+      "bytes": 30996,
+      "category": "implementation",
+      "path": "research/phase10/run_sizing_exploration.py",
+      "sha256": "0b5ff8cac186cf8a28a5beed233bd0cedbbe14a38da70522b3ea58c23e35636c"
+    },
+    {
+      "bytes": 263,
+      "category": "implementation",
+      "path": "research/module4_sizing_risk_management/__init__.py",
+      "sha256": "d663ed82abf14454009be7a6df2a7c2799c24d3bb3b9553b7fbe8fe431a0d1ac"
+    },
+    {
+      "bytes": 43470,
+      "category": "implementation",
+      "path": "research/module4_sizing_risk_management/closeout.py",
+      "sha256": "a356eeef8314e9021d89bfd010f9bc061fa3a89b558f8279ce72c85a1bd0d8c8"
+    },
+    {
+      "bytes": 1300,
+      "category": "implementation",
+      "path": "research/module4_sizing_risk_management/run.py",
+      "sha256": "9886df687dbf04725d2956ea4c9e33f0d8d1465e6d30ee85d726ca9fff1e848c"
+    },
+    {
+      "bytes": 1255,
+      "category": "document_or_contract",
+      "path": ".gitattributes",
+      "sha256": "bac6b403544a23ddad3ed54442e2f97acbf26751691e94cb13fe33f953ae49d3"
+    },
+    {
+      "bytes": 478,
+      "category": "document_or_contract",
+      "path": ".gitignore",
+      "sha256": "e1aa58fcd41b544189aed76d81f5995cf873ce1b227b838e0ab9587bce5fd5c0"
+    },
+    {
+      "bytes": 14286,
+      "category": "document_or_contract",
+      "path": "README.md",
+      "sha256": "aa1a98728f815ec2dfc9cbf4b7df3e5b6da883dc8d08de1d394cc43f2ded68a6"
+    },
+    {
+      "bytes": 1680,
+      "category": "document_or_contract",
+      "path": "pyproject.toml",
+      "sha256": "77c27c356b191e7623fee65d05a5b2163ac4016d702058b1dda54b8d832d7a2c"
+    },
+    {
+      "bytes": 5235,
+      "category": "document_or_contract",
+      "path": "docs/research/CHECKPOINT3_EXECUTION_CAPITAL_MODELS.md",
+      "sha256": "4d023a53f6ceeeb0e9eadf8161d3c2178c48ac2154a4e916c4c0a3a9f82ea06f"
+    },
+    {
+      "bytes": 6102,
+      "category": "document_or_contract",
+      "path": "docs/research/PHASE8_10L_GATED_CAPITAL_BACKTEST.md",
+      "sha256": "d20fe25d6e0865c9a920fddd34fbe37da47679785b01dd9c7f58d48a8ae44e90"
+    },
+    {
+      "bytes": 3365,
+      "category": "document_or_contract",
+      "path": "docs/research/PHASE9_CONFIDENCE_SIZING.md",
+      "sha256": "b16cc6feb2dcf7f47e7409dd7a542eea4e0a185c630e00ec53a03dde7109ce3c"
+    },
+    {
+      "bytes": 3945,
+      "category": "document_or_contract",
+      "path": "docs/research/PHASE10_SIZING_EXPLORATION.md",
+      "sha256": "bd550b9f754ef1d2a1166e1e1a98d1d1d32551ca9fc072081f9f42ffe3e80810"
+    },
+    {
+      "bytes": 3546,
+      "category": "document_or_contract",
+      "path": "research/module4_sizing_risk_management/README.md",
+      "sha256": "3ecfee6840d1f49e5ddb1430098e6b302cf1d83c9758389971de55633414477a"
+    },
+    {
+      "bytes": 1762,
+      "category": "document_or_contract",
+      "path": "research/module4_sizing_risk_management/MODULE_MANIFEST.md",
+      "sha256": "6bda2ee51786631133a9829b5d70bf6ed886585c1ba9c46f5d936f9406315778"
+    },
+    {
+      "bytes": 3239,
+      "category": "document_or_contract",
+      "path": "research/module4_sizing_risk_management/module.yaml",
+      "sha256": "91b4aa1c42d2c3eb83380e8f4fcc41bf5468704fe81f03fa9d1306a133b8b841"
+    },
+    {
+      "bytes": 183,
+      "category": "document_or_contract",
+      "path": "research/module4_sizing_risk_management/contracts/module.yaml",
+      "sha256": "6086cb2905bd1d2aa14819a94a2ab481ffdc6e826511e74f8f2a0c57ec6c459c"
+    },
+    {
+      "bytes": 2451,
+      "category": "document_or_contract",
+      "path": "research/module4_sizing_risk_management/contracts/strategy.json",
+      "sha256": "176536ab37c9ede03fc2f3d679b3f319e07eeaebf4467a0f6ab0c2227b1fc2d7"
+    },
+    {
+      "bytes": 224,
+      "category": "document_or_contract",
+      "path": "research/module4_sizing_risk_management/docs/module.yaml",
+      "sha256": "82a8b3d9b998e83f9fa20fdf0c9f861317b2250a7c9dd3b6868792acf2670b12"
+    },
+    {
+      "bytes": 2147,
+      "category": "document_or_contract",
+      "path": "research/module4_sizing_risk_management/docs/architecture.md",
+      "sha256": "06980df82c2dfb43ea94ceec39e243f1c120e1285e48df74866c03fdf3fb2e49"
+    },
+    {
+      "bytes": 2116,
+      "category": "document_or_contract",
+      "path": "research/module4_sizing_risk_management/docs/runbook.md",
+      "sha256": "a17f7ed6294ebab06a3d303d682e8af913ec5ecde133cba8f71f83aeb1776db6"
+    },
+    {
+      "bytes": 2175,
+      "category": "document_or_contract",
+      "path": "research/module4_sizing_risk_management/docs/research_note.md",
+      "sha256": "be3f4204a49f3f0b709e7c8f41f2d0fb279e4a4c80bf7700a9efb3ef920a0287"
+    },
+    {
+      "bytes": 395,
+      "category": "document_or_contract",
+      "path": "research/module4_sizing_risk_management/results/module.yaml",
+      "sha256": "59e9dd597331ca1d42d3972efc59d2f21b19e65c23b9e1b9de51b25a0c064c8d"
+    },
+    {
+      "bytes": 130,
+      "category": "document_or_contract",
+      "path": "research/module4_sizing_risk_management/scripts/module.yaml",
+      "sha256": "b2df2bdfaf4edf25622704de8341e535d5ccd4dacb5a58ef5fbf2a96e196a1df"
+    },
+    {
+      "bytes": 224,
+      "category": "document_or_contract",
+      "path": "research/module4_sizing_risk_management/scripts/run_closeout.ps1",
+      "sha256": "477fcfa1b60231edcbdd7da446c21648344e99c082228d6fe1755f438e886474"
+    },
+    {
+      "bytes": 3933,
+      "category": "generated_result",
+      "path": "research/module4_sizing_risk_management/results/closeout.json",
+      "sha256": "5d44a28329596179e2af86f30afcac257b718ae78080eb4eb56944a1960b8bf8"
+    },
+    {
+      "bytes": 4740,
+      "category": "generated_result",
+      "path": "research/module4_sizing_risk_management/results/closeout_report.md",
+      "sha256": "7df9cb640f1492e47e5a1dc215af2247aea86f19258b70fa0ce71dd4cb68d80a"
+    },
+    {
+      "bytes": 78906,
+      "category": "generated_result",
+      "path": "research/module4_sizing_risk_management/results/trades/recommended_trade_sheet.csv",
+      "sha256": "ed67f6c82d9e6b42c9234c6b7e0bcecd7442481e1184e8f65735befa6e94abfd"
+    },
+    {
+      "bytes": 144577,
+      "category": "generated_result",
+      "path": "research/module4_sizing_risk_management/results/curves/recommended_equity_curve.csv",
+      "sha256": "cdb9fb09e27058dede7d5d3d8870f6ab589349222a0473ab15b55a32ad0442f3"
+    },
+    {
+      "bytes": 9195,
+      "category": "generated_result",
+      "path": "research/module4_sizing_risk_management/results/curves/recommended_monthly_returns.csv",
+      "sha256": "4f58a2511c5c96c822ec75425c2fd909c5759558276c4fdb0058e660d2b60597"
+    },
+    {
+      "bytes": 1345,
+      "category": "generated_result",
+      "path": "research/module4_sizing_risk_management/results/curves/drawdown_episodes.csv",
+      "sha256": "f99ae5afd8bb1060e7fa780c6ecec46336208ee64d392ee1b60e6a2dd8f6d138"
+    },
+    {
+      "bytes": 12985,
+      "category": "generated_result",
+      "path": "research/module4_sizing_risk_management/results/diagnostics/profile_comparison.csv",
+      "sha256": "cc525b1f2aa3443ef05d07fdbd7174e49375a322d7d502ca087b09b3bcdeadaa"
+    },
+    {
+      "bytes": 5620,
+      "category": "generated_result",
+      "path": "research/module4_sizing_risk_management/results/diagnostics/cost_breakdown.csv",
+      "sha256": "2f9c5ab10897be78908adf6ea83bcd00274a36dc4a351a1a1c0378b93a881d10"
+    },
+    {
+      "bytes": 1695,
+      "category": "generated_result",
+      "path": "research/module4_sizing_risk_management/results/diagnostics/rank_correlation.csv",
+      "sha256": "e34048cb9b354f8afa936924f4b09712114c19b5f1bf6ece66f8cac8a197cc91"
+    },
+    {
+      "bytes": 7431,
+      "category": "generated_result",
+      "path": "research/module4_sizing_risk_management/results/diagnostics/score_quintiles.csv",
+      "sha256": "c6ab06ae0c7b3c81d70baa6f0e17f1bad06d20f504c147760fb9c737d48f9cca"
+    },
+    {
+      "bytes": 6522,
+      "category": "generated_result",
+      "path": "research/module4_sizing_risk_management/results/diagnostics/regime_summary.csv",
+      "sha256": "15096d58a42654d813b8fe133ea5f7a9b7ac7084e3730b66be1724e91d505dc1"
+    },
+    {
+      "bytes": 3748,
+      "category": "generated_result",
+      "path": "research/module4_sizing_risk_management/results/diagnostics/sizing_dimension_summary.csv",
+      "sha256": "d6911526cc9936fac8c9830120696c27952657ad4dd3ffdf15547311b4ab856b"
+    },
+    {
+      "bytes": 12985,
+      "category": "generated_result",
+      "path": "research/module4_sizing_risk_management/results/exploration/selected_profiles.csv",
+      "sha256": "cc525b1f2aa3443ef05d07fdbd7174e49375a322d7d502ca087b09b3bcdeadaa"
+    },
+    {
+      "bytes": 2385069,
+      "category": "generated_result",
+      "path": "research/module4_sizing_risk_management/results/exploration/sizing_grid.csv.gz",
+      "sha256": "1429bdcac1aaa4cac288ae654190e407e67e92cfc941dd014a216ef9ee0386d4"
+    },
+    {
+      "bytes": 39467,
+      "category": "generated_result",
+      "path": "research/module4_sizing_risk_management/results/visualizations/equity_drawdown.svg",
+      "sha256": "5ba29d4c70e3eba243e8f728f82372ee62dee43a81c57c88456e4d5be78e1528"
+    },
+    {
+      "bytes": 2895,
+      "category": "generated_result",
+      "path": "research/module4_sizing_risk_management/results/visualizations/profile_frontier.svg",
+      "sha256": "06508506092f21e0afd54903494c88daa10c4d855b6ba98e5c8110da3306f80f"
+    },
+    {
+      "bytes": 4019,
+      "category": "generated_result",
+      "path": "research/module4_sizing_risk_management/results/visualizations/sizing_neighborhoods.svg",
+      "sha256": "850c0040993d2e030bc0ac82aa81135643441a4cc1422937c8d3d1ebe1e2c09d"
+    }
+  ],
+  "schema_version": "module4-integrity-manifest/v1"
+}

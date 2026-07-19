@@ -1,0 +1,44 @@
+{
+  "code": {
+    "path": "<repository-root>\\research\\phase6\\run_vrp_reversal_test.py",
+    "sha256": "ee9ec9a977e7d3697c8191a6971b0589e5b349e012065b985df97ec361d6ae7f"
+  },
+  "gold_root": "<external-data-root>\\dhan-data-fetch-and-stream-phase2-3\\reports\\nifty_gold_span_six_slot_research_20210101_20260715\\version=2.1.0\\gold",
+  "inputs": [
+    {
+      "path": "<repository-root>\\docs\\research\\PHASE6_VRP_REVERSAL_PROTOCOL.md",
+      "sha256": "3674932a1170feea7ac6580043ef372a96778374ea07502ec9069a8d05b2b7ad"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase2_vrp_session_curve_features.parquet",
+      "sha256": "f7cb06db9060d2d9a82adc3403bbc7817a7569601efa40524aa5a4e1d62ec356"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase2_intraday_iv_surface.parquet",
+      "sha256": "8aaa4f0d1c33f35df7c18e22b84d91a26c0e026b635b3f1210fd42c465bc6367"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "<repository-root>\\audit\\phase6_reversal_events.csv",
+      "sha256": "df0255ab99ab487b0dc8433736b81be3359ba541fa7b05a152485a04f7536bc2"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase6_reversal_observations.parquet",
+      "sha256": "dceaf8e73858ef1e9782a8031033725dc7d9168d288d28cb5a26c66e6bd2c434"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase6_reversal_zero_diagnostics.csv",
+      "sha256": "d32ec182ef2143cec6c4eaaa8dafcb3112965379403c2ac31b0f7494600925a6"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase6_reversal_tradebook.csv",
+      "sha256": "a01c768c19a4c752da4b70d93d4234fe8fcc739cd20046daa4934918bff05347"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase6_reversal_summary.json",
+      "sha256": "2342647c5e5abbd960906c85819cea4d9e314f5e51f2991f2065ed35b6ea7472"
+    }
+  ],
+  "schema_version": "phase6-vrp-reversal-manifest/v1"
+}

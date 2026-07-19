@@ -1,0 +1,81 @@
+{
+  "manifest_schema": "nifty_options_data_foundation_provenance",
+  "manifest_schema_version": "1.0.0",
+  "source_code": {
+    "repository": "Goyal-Dedhia-Capital/dhan-data-fetch-and-stream",
+    "branch": "kd-codex/dhan-phase2-3",
+    "commit": "516d31bce1e869ccd5fb0ab238b4283fb04f9f6e",
+    "tree": "4748beb952447d9aea45e245c4cfa3ad614dd849",
+    "import_policy": "tracked code, tests, scripts, source evidence and audit docs only"
+  },
+  "span_source_code": {
+    "repository": "Goyal-Dedhia-Capital/groww-margin-charges-model",
+    "branch": "kd-codex/span-phase1-baseline",
+    "commit": "b862d6bf7590ff62097ac373d40fd85e1be6480f",
+    "tree": "f125956064b7a85a2b6207bec84f2ec4c9e62a95",
+    "import_policy": "tracked SPAN package, focused dependencies, tests, scripts and Phase 1 evidence only",
+    "namespace_repackaging": "robs_live.* renamed mechanically to nifty_span.*; no logic change",
+    "excluded_dirty_paths": [
+      "data/"
+    ]
+  },
+  "research_brief": {
+    "repository_path": "docs/task/quant-research-task.md",
+    "source_path": "docs/task/quant-research-task.md",
+    "bytes": 12733,
+    "sha256": "39903d9784724c4e095f79c36101e351ff051a21220b4fdfd3a4d26db0ea0989"
+  },
+  "canonical_data": {
+    "date_range_inclusive": [
+      "2021-01-01",
+      "2026-07-15"
+    ],
+    "rows": 43018677,
+    "monthly_partitions": 67,
+    "bsm_release": "dhan_phase3_bsm_quality_patch_20210101_20260715/version=2.1.0",
+    "bod_gold_release": "nifty_gold_span_bod_20210101_20260715/version=1.4.0",
+    "strict_span_release": "nifty_gold_span_point_in_time_strict_20210101_20260715/version=1.0.0",
+    "six_slot_research_release": "nifty_gold_span_six_slot_research_20210101_20260715/version=2.1.0",
+    "bod_gold_corpus_sha256": "aee5dbebcc1195882c48d57695ca7dd47deb470d4b1fc7c5e112def607caa252"
+  },
+  "upstream_terminal_audits": {
+    "acquisition": {
+      "sha256": "5d87204033e64821b863915860ba33e9225faf3a8833f93f18620a44db6aa3e8",
+      "status": "PASS"
+    },
+    "bsm_v2_1": {
+      "sha256": "a398c656a9954d4646240ca5e843991af4d0555b6a87bef68ccf6bb57dfbbdd6",
+      "status": "PASS"
+    },
+    "bod_span_release_v1_4": {
+      "sha256": "40256695dc78b9111a0aaf2480d7a8a7d4005bdb3001bc9ad7ab2fcbb46b1cc4",
+      "status": "PASS"
+    },
+    "span_timing_release": {
+      "sha256": "cfe46cdcb5b561b39c3741fff4bc79df0a80fb18c6967aebee408ff470b0e1c5",
+      "status": "PASS"
+    }
+  },
+  "repository_audit": {
+    "verdict": "PASS_WITH_DECLARED_LIMITATIONS",
+    "report": "AUDIT_REPORT.md",
+    "report_sha256": "38898a6871b20379035d15f161e42d3f8e5644d8fd1253bbee1ad22c078d373e",
+    "json": "audit/gold_dataset_audit.json",
+    "json_sha256": "3d4081cb3cfee7a7f4b098646e6c5936b110e9e1a76128faa7d26706bd1c5ae9"
+  },
+  "sample": {
+    "path": "samples/nifty_gold_sample.parquet",
+    "rows": 751,
+    "columns": 89,
+    "bytes": 108732,
+    "sha256": "3d5bd6b28510cb868c6e62a40cd9afb05125b7170d5a896e413cde699d85914a",
+    "manifest": "samples/nifty_gold_sample.manifest.json",
+    "manifest_sha256": "86dc898c1217995be5567b393b33919ee3018c071a33fb670043bbec37ae06fa"
+  },
+  "excluded": [
+    "credentials and environment files",
+    "raw multi-GB bronze responses",
+    "full silver/gold Parquet payloads",
+    "logs, caches, partials and temporary files"
+  ]
+}

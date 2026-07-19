@@ -1,0 +1,69 @@
+{
+  "audit_date": "2026-07-15",
+  "credentials_persisted": false,
+  "manifest_set_hash_contract": "sha256 of request_id|status|bronze_sha256|silver_sha256|rows lines sorted by request_id",
+  "nifty_spot": {
+    "root": "reports/dhan_phase2_backfill_20210101_20260715",
+    "dataset_filter": "spot",
+    "requests_completed": 67,
+    "rows": 576631,
+    "min_timestamp_ist": "2021-01-01T09:16:00+05:30",
+    "max_timestamp_ist": "2026-07-15T18:32:00+05:30",
+    "quality_exception_rows": 335,
+    "outside_regular_session_rows": 62372,
+    "global_duplicate_natural_keys": 0,
+    "manifest_set_sha256": "ee932ac18732b0423a83a3e5b46b22edd3fd50bf6efe32ef6f4f759f135d4e02"
+  },
+  "india_vix_pilot": {
+    "root": "reports/dhan_phase2_vix_pilot_20260715",
+    "requests_completed": 1,
+    "rows": 374,
+    "min_timestamp_ist": "2026-07-14T09:16:00+05:30",
+    "max_timestamp_ist": "2026-07-14T15:29:00+05:30",
+    "bronze_sha256": "765065d7dcb9f136c6984a83622a2e26e0c39e7352cbf65e61dbd632091df4fc",
+    "silver_sha256": "66ea2614c5fbe2d56d042f1b50855ff26cd9e8356ff911aa2e8dc2ad21d7f269",
+    "manifest_set_sha256": "39e58948ad2c31b216510a25dd7f8b5c9a6edd6804157656b52af0dda3ac7509"
+  },
+  "india_vix_history": {
+    "root": "reports/dhan_phase2_vix_backfill_20210101_20260715",
+    "requests_completed_nonempty": 60,
+    "requests_completed_empty": 7,
+    "rows": 524077,
+    "provider_rows": 524404,
+    "min_timestamp_ist": "2021-08-04T10:00:00+05:30",
+    "max_timestamp_ist": "2026-07-15T18:35:00+05:30",
+    "empty_months": [
+      "2021-01",
+      "2021-02",
+      "2021-03",
+      "2021-04",
+      "2021-05",
+      "2021-06",
+      "2021-07"
+    ],
+    "regular_session_rows": 456329,
+    "outside_regular_session_rows": 67748,
+    "quality_exception_rows": 327,
+    "quality_exception_breakdown": {
+      "ohlc_invariant": 3,
+      "negative_volume_or_oi": 324
+    },
+    "global_duplicate_natural_keys": 0,
+    "manifest_set_sha256": "f8051afc9eb57be407f2a04c535da0c936a3d50bba6aca00b7723c3a44171e53"
+  },
+  "rolling_atm10_pilot": {
+    "root": "reports/dhan_phase2_atm10_pilot_20260715",
+    "requests_completed": 84,
+    "rows": 31495,
+    "provider_rows": 62980,
+    "request_window_rows_dropped": 31485,
+    "min_timestamp_ist": "2026-07-14T09:15:00+05:30",
+    "max_timestamp_ist": "2026-07-14T15:29:00+05:30",
+    "manifest_set_sha256": "12100be6febca12ad6b8e469030728a294a45f2e06147f9ff6c74f1778a8f0ae"
+  },
+  "blocked": [
+    "expired_futures_identity_and_historical_endpoint_support_unproven",
+    "rolling_response_actual_expiry_not_returned",
+    "span_phase1_audited_input_pending"
+  ]
+}

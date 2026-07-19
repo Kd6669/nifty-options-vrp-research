@@ -1,0 +1,65 @@
+{
+  "schema_version": "module4-strategy-contract/v1",
+  "strategy_id": "upper85_gated_short_iron_fly_60m",
+  "research_state": "forward_shadow_candidate_not_deployment_approved",
+  "universe": {
+    "underlying": "NIFTY",
+    "expiry": "nearest_weekly_proxy",
+    "entry_moneyness": "ATM_plus_or_minus_3",
+    "horizon_minutes": 60,
+    "structure": "short_iron_fly"
+  },
+  "entry": {
+    "signal": "normalized_intraday_vrp_percentile_crosses_upward_through_0.85",
+    "causal_gates": {
+      "atm_iv_change_5m_vol_points_greater_than": -0.046817,
+      "atm_iv_change_15m_vol_points_greater_than": -0.114873,
+      "normalized_rv_change_5m_greater_than": -0.02651714
+    },
+    "confidence_score": {
+      "gate_cushion_weight": 0.5,
+      "inverse_iv_percentile_weight": 0.15,
+      "inverse_rv_percentile_weight": 0.15,
+      "inverse_dte_percentile_weight": 0.1,
+      "time_score_weight": 0.1,
+      "percentile_fit_window": "2021-2023_only",
+      "quality_switch": "score_strictly_greater_than_0.40",
+      "score_power": 0.0
+    }
+  },
+  "exit": {
+    "type": "fixed_horizon",
+    "minutes": 60,
+    "intratrade_stop": null,
+    "note": "The retained archive does not support a trustworthy intratrade stop or margin-call path."
+  },
+  "capital": {
+    "initial_rupees": 1000000,
+    "margin_cap_fraction_of_current_equity": 0.35,
+    "maximum_risk_fraction_of_current_equity": 0.04,
+    "risk_definition": "defined_structure_max_loss_plus_discovery_q95_exact_round_trip_cost_reserve",
+    "capacity_cap_lots": 76,
+    "drawdown_brake": null,
+    "losing_streak_brake": null,
+    "integer_lots": true
+  },
+  "execution": {
+    "charges": "date_aware_Groww_option_cost_model",
+    "slippage": "base_depth_staleness_plus_quantity_impact",
+    "quantity_impact": "(lots_minus_1)/59_plus_sqrt(incremental_quantity/minute_volume)+sqrt(incremental_quantity/OI)",
+    "margin": "timestamp_aware_joined_SPAN_at_entry",
+    "vix_fallback": "ATM_IV_when_India_VIX_is_missing"
+  },
+  "selection": {
+    "config_id": 5628,
+    "profile": "max_margin_efficiency_dd_1.5%",
+    "profile_selection_window": "2021-2023",
+    "later_periods_are_report_only": true
+  },
+  "acceptance": {
+    "phase9_rank_gate": "FAIL_bootstrap_lower_bound_not_above_zero",
+    "phase10_historical_economics": "POSITIVE",
+    "deployment": "NOT_APPROVED",
+    "allowed_next_use": "frozen_forward_shadow_test"
+  }
+}

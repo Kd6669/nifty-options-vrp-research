@@ -1,0 +1,67 @@
+{
+  "schema_version": "module3-hypothesis-contracts/v1",
+  "module_id": "module3_vrp_hypothesis_testing",
+  "hypotheses": [
+    {
+      "id": "H1_ZERO_CROSS_UP_SHORT_CONDOR_60M",
+      "claim": "The first sustained normalized-VRP cross above zero predicts positive net 60-minute one-lot short iron-condor P&L.",
+      "signal": "first daily five-minute-median VRP cross from non-positive to positive",
+      "requested_structure": "short_iron_condor_ATM_inner_1_wings_3",
+      "inverse_structure": "long_iron_condor_ATM_inner_1_wings_3",
+      "horizon_minutes": 60,
+      "status": "rejected_after_costs"
+    },
+    {
+      "id": "H2_TAIL_LEVEL_DIRECTION_SHORT_CONDOR_60M",
+      "claim": "Causal VRP percentile-tail crossings and crossing direction identify a short or long defined-risk volatility payoff large enough to clear execution costs.",
+      "signals": "first daily 70/75/80/85/90/95 percentile crossing, upward and downward",
+      "structures": ["short_iron_condor", "long_iron_condor_exact_inverse"],
+      "horizon_minutes": 60,
+      "status": "rejected_after_costs"
+    },
+    {
+      "id": "H3_VRP_VELOCITY_ACCELERATION_CONFIDENCE",
+      "claim": "VRP percentile direction, velocity, or acceleration provides a stable confidence or leverage ordering for defined-risk condor P&L.",
+      "signals": ["percentile_level", "five_minute_velocity", "five_minute_acceleration"],
+      "structures": ["short_iron_condor", "long_iron_condor"],
+      "horizon_minutes": 60,
+      "status": "rejected_as_stable_ordering"
+    },
+    {
+      "id": "H4_STRUCTURE_HORIZON_RESCUE",
+      "claim": "A different defined-risk structure or a 60/120/180-minute horizon converts VRP state into positive one-lot net P&L.",
+      "structures": ["iron_condor", "iron_fly", "butterfly", "vertical_spread"],
+      "horizons_minutes": [60, 120, 180],
+      "status": "rejected_after_costs"
+    },
+    {
+      "id": "H5_CAUSAL_FEATURE_RESCUE",
+      "claim": "Causal IV, RV, VRP, ratio, dynamics, surface, Greek, spot, and cost features can select positive-net defined-risk trades out of sample.",
+      "confirmation_period": "2025-01-01 through 2026-06-30",
+      "status": "rejected_on_locked_confirmation"
+    },
+    {
+      "id": "H6_TAIL_TO_ZERO_MEAN_REVERSION",
+      "claim": "A ten-percentile reversal from a causal VRP tail toward zero predicts a profitable long or short iron condor.",
+      "requested_mapping": "top reversal to long condor; bottom reversal to short condor",
+      "inverse_mapping": "top reversal to short condor; bottom reversal to long condor",
+      "horizons_minutes": [60, 120, 180],
+      "status": "rejected_after_costs"
+    },
+    {
+      "id": "H7_UNIFIED_180MIN_SIGNAL_COMPARISON",
+      "claim": "Previously tested VRP events become economically viable when held for the maximum observable 180-minute diagnostic horizon.",
+      "structures": ["requested_long_or_short_condor", "exact_inverse"],
+      "horizon_minutes": 180,
+      "top_reversal_coverage": {
+        "signals": 191,
+        "evaluated": 96,
+        "unevaluated": 95,
+        "coverage": 0.5026178010471204
+      },
+      "status": "no_credible_edge_data_limited"
+    }
+  ],
+  "closed_decision": "REJECT_INTRADAY_VRP_AS_STANDALONE_DEFINED_RISK_ENTRY_RULE_FOR_CURRENT_DATASET",
+  "future_research_boundary": "Full fixed-contract chain history is required to test horizons beyond 180 minutes or multi-session holds without non-random rolling-surface survivorship."
+}

@@ -1,0 +1,7 @@
+schema_version: module-folder/v1
+folder: contracts
+owns:
+  - frozen strategy and sizing specification
+  - acceptance state and non-deployment boundary
+files:
+  - strategy.json

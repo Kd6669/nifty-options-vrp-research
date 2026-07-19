@@ -1,0 +1,55 @@
+{
+  "code": {
+    "path": "<repository-root>\\research\\phase5\\run_final_attempt_strategy.py",
+    "sha256": "71d1988e77c6d2e672371445a9553e86fb5dee49a40c79dff2cfc4cc9c983528"
+  },
+  "inputs": [
+    {
+      "path": "<repository-root>\\audit\\phase5_final_attempt_dataset.parquet",
+      "sha256": "65ada7f3ebf7c62265a9e7c1f7d3309ed71faf9e0e9bcdca46f6293581a2a461"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase5_final_attempt_observations.parquet",
+      "sha256": "640b00f67df37efabb4dc2c15cc6911198fc70a8cc820e4d2a0979a0f34b4555"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase5_final_attempt_dataset_summary.json",
+      "sha256": "eb310667797186f440d2c1a11c55547609104e4b932d9e86a7ec139b3d0695ac"
+    },
+    {
+      "path": "<repository-root>\\docs\\research\\PHASE5_FINAL_ATTEMPT_PROTOCOL.md",
+      "sha256": "91fc6f96df3bb24a5298d06635a74a3ed28755324a0b3e3fac7a5e8d5fbc09ba"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "<repository-root>\\audit\\phase5_final_attempt_validation_grid.csv",
+      "sha256": "b84c88885a8837a7f274f4803591bf4a076f929d2a44e84fae4e37413bac2f3c"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase5_final_attempt_tradebook.csv",
+      "sha256": "a6f23e7349af88d21ed3d16f6f3c843867a7472a80fc2c507ad7b0f592ba9ca8"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase5_final_attempt_monthly.csv",
+      "sha256": "2cc44a762148b9d93865ac577889a4765b8a264fe81e849818e7d2963d3690c2"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase5_final_attempt_yearly.csv",
+      "sha256": "1bf94a4010e2d97218812664b0587c24fea9eea9bf8eeca5396855900c1fb3db"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase5_final_attempt_calibration.csv",
+      "sha256": "2eaa69c5c164e3ea7c4af0eedb59ff0ad03eed239002ef19bad20d11dd24b58d"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase5_final_attempt_models.json",
+      "sha256": "6f18da440772e6294c79f3fc8a165583f7fac5ee855036efe5e81bae7bf1acaf"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase5_final_attempt_summary.json",
+      "sha256": "7454cb72150833e6594f4729a6ffc468bb72f5555b381dc6cbd653b1e79dd001"
+    }
+  ],
+  "schema_version": "phase5-final-attempt-strategy-manifest/v1"
+}

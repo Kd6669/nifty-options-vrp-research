@@ -1,0 +1,11 @@
+schema_version: module-folder/v1
+folder: results
+generated_by: python -m research.module4_sizing_risk_management.run build
+owns:
+  - consolidated decision and report
+  - complete recommended trade sheet
+  - capital and drawdown curves
+  - cost, rank, regime, and sizing diagnostics
+  - complete compressed sizing grid
+  - deterministic research figures
+  - SHA-256 integrity manifest

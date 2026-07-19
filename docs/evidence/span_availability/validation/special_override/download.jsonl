@@ -1,0 +1,6 @@
+{"trading_date":"2026-02-01","slot":"BOD","suffix":"i1","state":"not_returned_http_404","terminal":true,"http_status":404,"observed_at_utc":"2026-07-15T14:50:00+00:00"}
+{"trading_date":"2026-02-01","slot":"ID1","suffix":"i2","state":"not_returned_http_404","terminal":true,"http_status":404,"observed_at_utc":"2026-07-15T14:50:00+00:00"}
+{"trading_date":"2026-02-01","slot":"ID2","suffix":"i3","state":"not_returned_http_404","terminal":true,"http_status":404,"observed_at_utc":"2026-07-15T14:50:00+00:00"}
+{"trading_date":"2026-02-01","slot":"ID3","suffix":"i4","state":"not_returned_http_404","terminal":true,"http_status":404,"observed_at_utc":"2026-07-15T14:50:00+00:00"}
+{"trading_date":"2026-02-01","slot":"ID4","suffix":"i5","state":"not_returned_http_404","terminal":true,"http_status":404,"observed_at_utc":"2026-07-15T14:50:00+00:00"}
+{"trading_date":"2026-02-01","slot":"EOD","suffix":"s","state":"not_returned_http_404","terminal":true,"http_status":404,"observed_at_utc":"2026-07-15T14:50:00+00:00"}

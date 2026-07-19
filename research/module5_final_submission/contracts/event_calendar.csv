@@ -1,0 +1,41 @@
+event_date,event_type,event_label,source_url
+2021-02-01,union_budget,Union Budget 2021-22,https://www.indiabudget.gov.in/
+2021-04-07,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/AnnualReportPublications.aspx?Id=1355
+2021-06-04,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/Annualpolicy.aspx.html
+2021-08-06,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/Annualpolicy.aspx.html
+2021-10-08,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/Annualpolicy.aspx.html
+2021-12-08,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=52843
+2022-02-10,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/Annualpolicy.aspx.html
+2022-02-01,union_budget,Union Budget 2022-23,https://www.indiabudget.gov.in/
+2022-04-08,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/AnnualReportPublications.aspx?Id=1384
+2022-05-04,rbi_mpc,RBI off-cycle MPC decision,https://www.rbi.org.in/scripts/AnnualReportPublications.aspx?Id=1384
+2022-06-08,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/AnnualReportPublications.aspx?Id=1384
+2022-08-05,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/AnnualReportPublications.aspx?Id=1384
+2022-09-30,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/AnnualReportPublications.aspx?Id=1384
+2022-12-07,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/AnnualReportPublications.aspx?Id=1384
+2023-02-01,union_budget,Union Budget 2023-24,https://www.indiabudget.gov.in/
+2023-02-08,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=55178
+2023-04-06,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/PublicationsView.aspx?id=21752
+2023-06-08,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/PublicationsView.aspx?id=21752
+2023-08-10,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/PublicationsView.aspx?id=21752
+2023-10-06,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/PublicationsView.aspx?id=21752
+2023-12-08,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/PublicationsView.aspx?id=21752
+2024-02-01,union_budget,Interim Union Budget 2024-25,https://www.indiabudget.gov.in/
+2024-02-08,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/Annualpolicy.aspx.html
+2024-04-05,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/Annualpolicy.aspx.html
+2024-06-04,national_election,2024 Lok Sabha counting and results,https://elections24.eci.gov.in/
+2024-06-07,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/Annualpolicy.aspx.html
+2024-07-23,union_budget,Union Budget 2024-25,https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=2043862
+2024-08-08,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/Annualpolicy.aspx.html
+2024-10-09,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/Annualpolicy.aspx.html
+2024-12-06,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/Annualpolicy.aspx.html
+2025-02-01,union_budget,Union Budget 2025-26,https://www.indiabudget.gov.in/budget2025-26/doc/Budget_Speech.pdf
+2025-02-07,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/Annualpolicy.aspx.html
+2025-04-09,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/PublicationsView.aspx?id=23139
+2025-06-06,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/PublicationsView.aspx?id=23139
+2025-08-07,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/PublicationsView.aspx?id=23139
+2025-10-01,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/PublicationsView.aspx?id=23139
+2025-12-05,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/PublicationsView.aspx?id=23139
+2026-02-01,union_budget,Union Budget 2026-27,https://www.indiabudget.gov.in/doc/Budget_Speech.pdf
+2026-02-06,rbi_mpc,RBI MPC decision,https://www.rbi.org.in/scripts/PublicationsView.aspx?id=23139
+

@@ -1,0 +1,6 @@
+schema_version: module-folder/v1
+folder: scripts
+owns:
+  - user-facing reproducibility wrappers
+files:
+  - run_closeout.ps1

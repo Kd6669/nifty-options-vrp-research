@@ -1,0 +1,32 @@
+docs/source_evidence/nse_rules/sources/*.html binary
+docs/source_evidence/nse_rules/sources/*.pdf binary
+docs/source_evidence/nse_rules/*.parquet binary
+samples/*.parquet binary
+
+# Research evidence and implementations are SHA-256 bound by their manifests.
+# Preserve their exact bytes across Windows and Unix checkouts.
+audit/phase3*.csv -text -whitespace
+audit/phase3*.json -text -whitespace
+audit/phase4*.csv -text -whitespace
+audit/phase4*.json -text -whitespace
+audit/phase5*.csv -text -whitespace
+audit/phase5*.json -text -whitespace
+audit/phase6*.csv -text -whitespace
+audit/phase6*.json -text -whitespace
+audit/phase7*.csv -text -whitespace
+audit/phase7*.json -text -whitespace
+docs/research/** -text
+docs/research/PHASE3_TAIL_PERCENTILE_TEAR_SHEET.md -text -whitespace
+docs/source_evidence/checkpoint3/** -text
+research/phase3/** -text
+research/phase4/** -text
+research/phase5/** -text
+research/phase6/** -text
+research/phase7/** -text
+research/module3_hypothesis_testing/** -text
+research/module3_hypothesis_testing/results/* -text -whitespace
+research/module5_final_submission/** -text -whitespace
+submission/*.pdf binary
+submission/*.xlsx binary
+submission/*.json -text -whitespace
+src/nifty_execution/** -text

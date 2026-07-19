@@ -1,0 +1,8 @@
+schema_version: submodule-contract/v1
+name: hypothesis_contracts
+owns:
+  - hypotheses.json
+responsibility: Freeze tested claims, structures, signal variables, and decision states.
+must_not:
+  - contain outcome-selected replacement thresholds
+  - silently rewrite the original Phase 2 hypothesis after economic testing

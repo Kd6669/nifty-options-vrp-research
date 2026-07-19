@@ -1,0 +1,138 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=12mm,top=15mm,bottom=14mm]{geometry}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{booktabs,tabularx,array}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\definecolor{Navy}{HTML}{0F172A}
+\definecolor{Blue}{HTML}{1D4ED8}
+\definecolor{Pale}{HTML}{EFF6FF}
+\definecolor{PaleGreen}{HTML}{ECFDF5}
+\definecolor{PaleRed}{HTML}{FEF2F2}
+\definecolor{Red}{HTML}{B91C1C}
+\definecolor{Green}{HTML}{047857}
+\definecolor{Grey}{HTML}{475569}
+\hypersetup{colorlinks=true,urlcolor=Blue,pdfauthor={Kd6669},pdftitle={NIFTY Intraday VRP Research Highlights}}
+\graphicspath{{submission/figures/}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\scriptsize\color{Grey} NIFTY INTRADAY VRP -- RESEARCH HIGHLIGHTS}
+\fancyhead[R]{\scriptsize\color{Grey} 19 July 2026}
+\fancyfoot[L]{\scriptsize\color{Grey} Companion to the eight-page research note}
+\fancyfoot[R]{\scriptsize\color{Grey} 1/1}
+\renewcommand{\headrulewidth}{0.3pt}
+\setlength{\headheight}{11pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2.2pt}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.08}
+\newcommand{\INR}{\textsf{Rs.}\,}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\metricbox}[3]{\colorbox{#1}{\parbox[c][14mm][c]{0.95\linewidth}{\centering{\scriptsize\color{Grey}#2}\par{\large\bfseries\color{Navy}#3}}}}
+\newcommand{\decisionbox}[1]{\colorbox{Pale}{\parbox{0.968\linewidth}{\textbf{Decision.} #1}}}
+
+\begin{document}
+\fontsize{8.35}{10.0}\selectfont
+
+{\fontsize{19}{21}\selectfont\bfseries\color{Navy} NIFTY intraday VRP research -- highlights}\par
+{\large\color{Blue} An audited data foundation, an honest hypothesis rejection, and one frozen shadow candidate}\par
+\vspace{1.5mm}
+
+\decisionbox{Standalone 60--180 minute VRP timing is rejected after costs. One post-hoc p85 short-iron-fly candidate is retained for forward shadow only; current live allocation is \INR0.}
+
+\vspace{2mm}
+\begin{tabularx}{\linewidth}{@{}Y Y Y Y@{}}
+\metricbox{Pale}{AUDITED GOLD}{43.02m rows} &
+\metricbox{Pale}{SESSION COVERAGE}{1,371 / 1,371} &
+\metricbox{PaleGreen}{H4 EXECUTIONS}{86 of 132} &
+\metricbox{PaleGreen}{HISTORICAL NET}{\INR108,983} \\
+\end{tabularx}
+
+\vspace{2mm}
+\begin{minipage}[t]{0.485\linewidth}
+{\large\bfseries\color{Navy} What we built}\par
+\vspace{1mm}
+\begin{tabularx}{\linewidth}{@{}p{20mm}Y@{}}
+\toprule
+Layer & Delivered evidence \\
+\midrule
+Acquisition & Dhan rolling options, NIFTY spot and India VIX with immutable request/response manifests. \\
+Archive & Bronze provider bytes, typed silver Parquet and linked rejects, audited research gold. \\
+Cleaning & Same-session backward joins, date-effective expiry/lot rules, anomaly gates and duplicate quarantine. \\
+Volatility & Independent gold BSM plus parity-forward Black--76 research IV; provider IV is comparison-only. \\
+Margin & Entry-time six-slot SPAN research schedule; historical file-arrival timing remains unproven. \\
+Execution & Date-aware Groww charges, adverse liquidity/staleness slippage and corrected volume/OI quantity impact. \\
+\bottomrule
+\end{tabularx}
+
+\vspace{2mm}
+{\large\bfseries\color{Navy} Research boundary}\par
+NIFTY single nearest-listed-expiry \emph{proxy}; rolling ATM$\pm10$ source, structures inside ATM$\pm3$ at entry, defined-risk only, next-minute entry and fixed 60-minute exit. Strict fixed-contract path coverage supports ATM$\pm3$ through 180 minutes, but not unbiased multi-day inference. Historical bid/ask, queue position, intratrade MTM and proven SPAN arrival timestamps are unavailable.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.485\linewidth}
+{\large\bfseries\color{Navy} What the hypotheses said}\par
+\vspace{1mm}
+\begin{tabularx}{\linewidth}{@{}p{8mm}Y p{18mm}@{}}
+\toprule
+ID & Test and result & Decision \\
+\midrule
+H1 & Zero-cross short condor: 895 trades, \INR22.60 gross vs \INR271.14 cost; $-\INR248.54$ net/trade. & \textcolor{Red}{Reject} \\
+H2 & 70--95 percentile crossings up/down: all 12 one-lot variants negative net. & \textcolor{Red}{Reject} \\
+H3 & Dynamics, structures, 60/120/180m, feature rescue and reversals: 0/48 structure-horizon cells positive net. & \textcolor{Red}{Reject} \\
+H4 & Upper-85 up, gated short iron fly: selected one-lot mean \INR292 gross, \INR240 cost, \INR52 net. & \textcolor{Green}{Shadow} \\
+\bottomrule
+\end{tabularx}
+
+\vspace{2mm}
+{\large\bfseries\color{Navy} Matched intraday VRP}\par
+\[
+\begin{aligned}
+F_t&=\operatorname{median}_{K}\{K+e^{rT}(C_t-P_t)\},\\
+VRP_{t,60}&=\widehat\sigma_{IV,t}^{2}-\frac{\sum_{i=1}^{60}r_i^2}{60/525600}.
+\end{aligned}
+\]
+The causal percentile compares only prior dates at the same minute of day; velocity and acceleration are changes in its trailing five-minute median. Signals never use future returns or later rolling labels.
+
+\vspace{1mm}
+{\large\bfseries\color{Navy} Why H4 remains conditional}\par
+The candidate is post-selected. Its combined 2024--26 score/P\&L Spearman is 0.214, but the bootstrap 95\% interval is $[-0.066,0.484]$. Event weeks and post-20-Nov-2024 trades are weaker, and the 2024 slice has only 11 executions.
+\end{minipage}
+
+\vspace{2mm}
+\begin{minipage}[t]{0.58\linewidth}
+\vspace{0pt}
+{\large\bfseries\color{Navy} \INR10 lakh historical sizing snapshot}\par
+\begin{tabularx}{\linewidth}{@{}Y r Y r@{}}
+\toprule
+Metric & Result & Metric & Result \\
+\midrule
+Gross / costs & \INR153,013 / \INR44,029 & Net / return & \INR108,983 / 10.90\% \\
+Average / max lots & 6.50 / 14 & Margin use & 31.93\% avg / 34.97\% max \\
+Hit / profit factor & 66.28\% / 2.537 & Avg win / loss & \INR3,156 / $-\INR2,445$ \\
+Max rupee DD & $-\INR7,982$ & Trade CVaR 5\% & $-\INR6,142$ \\
+Turnover / cost drag & \INR6.67m / 28.77\% & CAGR / Sortino & 2.04\% / 2.75 \\
+\bottomrule
+\end{tabularx}
+{\scriptsize The 35\% SPAN and 4\% cost-reserved max-loss caps produced a feasible profile, not a proven risk-return efficient frontier.}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.39\linewidth}
+\vspace{0pt}
+\includegraphics[width=\linewidth]{equity_drawdown.pdf}
+\end{minipage}
+
+\vspace{2mm}
+\colorbox{PaleRed}{\parbox{0.968\linewidth}{\textbf{Next gate.} Freeze every parameter and shadow one modeled lot. Require at least 100 new non-overlapping trades over 12 months, positive net in both six-month halves, score-rank bootstrap lower bound above zero, observed slippage within 1.5$\times$ model over 20 fills, forward drawdown below 1.5\%, and no month above 40\% of profit before discussing live capital.}}
+
+\vfill
+{\scriptsize\color{Grey}\textbf{Reproduce:} \texttt{.\textbackslash research\textbackslash module5\_final\_submission\textbackslash scripts\textbackslash run\_submission.ps1} \quad | \quad Full methods, limitations, sources and ``why this might be fake'' are in \texttt{NIFTY\_VRP\_Research\_Memo.pdf}.}
+
+\end{document}

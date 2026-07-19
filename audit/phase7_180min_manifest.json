@@ -1,0 +1,48 @@
+{
+  "code": {
+    "path": "<repository-root>\\research\\phase7\\run_180min_signal_comparison.py",
+    "sha256": "8d40d95496ad7e40d0a636a9605afffe765c3162169d3baec8055fc8ff5e82e9"
+  },
+  "gold_root": "<external-data-root>\\dhan-data-fetch-and-stream-phase2-3\\reports\\nifty_gold_span_six_slot_research_20210101_20260715\\version=2.1.0\\gold",
+  "inputs": [
+    {
+      "path": "<repository-root>\\docs\\research\\PHASE7_180MIN_COMPARISON_PROTOCOL.md",
+      "sha256": "81fb669cd9a39bce9edc336003ce2cf8c4e6622594d18938f24fe89c647a5668"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase2_defined_risk_structure_paths.parquet",
+      "sha256": "9b275793099db027bc3ad7856e8d88fa0611b1c533386f4c3e32aa4c7d25807a"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase2_vrp_session_curve_features.parquet",
+      "sha256": "f7cb06db9060d2d9a82adc3403bbc7817a7569601efa40524aa5a4e1d62ec356"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase2_intraday_iv_surface.parquet",
+      "sha256": "8aaa4f0d1c33f35df7c18e22b84d91a26c0e026b635b3f1210fd42c465bc6367"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "<repository-root>\\audit\\phase7_180min_membership.csv",
+      "sha256": "492ce1f4410c9cbf3dd8cba385e4284bfaa7a868b8bddb04727ab0973cda4106"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase7_180min_executions.csv",
+      "sha256": "db4754c23449b7dbc00ce1ba250ca05053ab3c35deb15a47776a3055dd6b8908"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase7_180min_observations.parquet",
+      "sha256": "8826cdfcf2120d1ef663ef2bff74c30469ccfefb5591c263c3401cc8a2466bd1"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase7_180min_tradebook.csv",
+      "sha256": "327403f2c4856df772e5ae568cfd8954112b35ca01216a8408bc30ebc72acc3c"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase7_180min_summary.json",
+      "sha256": "d589a1fcdbc199a076015dd12d4d78c6cf38c7729fc3f4ec75e58781fa3f4df8"
+    }
+  ],
+  "schema_version": "phase7-180min-signal-comparison-manifest/v1"
+}

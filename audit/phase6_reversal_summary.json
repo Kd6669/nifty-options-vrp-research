@@ -1,0 +1,596 @@
+{
+  "cells": [
+    {
+      "bootstrap_mean_net_95pct_ci": [
+        -328.8500065987977,
+        -249.8405293595615
+      ],
+      "cost_rupees": {
+        "count": 428,
+        "mean": 291.41112819201555,
+        "median": 254.4806533212166,
+        "p05": 211.66344247794837,
+        "p95": 504.9131173357423,
+        "sum": 124723.96286618266,
+        "win_rate": 1.0
+      },
+      "coverage": 0.8699186991869918,
+      "gross_pnl_points": {
+        "count": 428,
+        "mean": -0.15654205607476543,
+        "median": -0.2999999999999865,
+        "p05": -8.450000000000001,
+        "p95": 9.794999999999979,
+        "sum": -66.9999999999996,
+        "win_rate": 0.4485981308411215
+      },
+      "gross_pnl_rupees": {
+        "count": 428,
+        "mean": 2.7050233644860366,
+        "median": -11.249999999999005,
+        "p05": -389.62500000000006,
+        "p95": 528.25,
+        "sum": 1157.7500000000236,
+        "win_rate": 0.4485981308411215
+      },
+      "horizon_minutes": 60,
+      "mapping": "inverse",
+      "net_pnl_rupees": {
+        "count": 428,
+        "mean": -288.70610482752954,
+        "median": -289.2819635068073,
+        "p05": -703.5923726326126,
+        "p95": 306.82478527956584,
+        "sum": -123566.21286618264,
+        "win_rate": 0.1191588785046729
+      },
+      "net_return_on_margin": {
+        "count": 428,
+        "mean": -0.005829397839707774,
+        "median": -0.005902529317113513,
+        "p05": -0.015457173692316828,
+        "p95": 0.005718797249257575,
+        "sum": -2.494982275394927,
+        "win_rate": 0.1191588785046729
+      },
+      "trades": 428
+    },
+    {
+      "bootstrap_mean_net_95pct_ci": [
+        -303.4229729677793,
+        -191.23861079628324
+      ],
+      "cost_rupees": {
+        "count": 335,
+        "mean": 289.3396953576377,
+        "median": 249.59864385331792,
+        "p05": 211.22737494187993,
+        "p95": 526.2532733219956,
+        "sum": 96928.79794480864,
+        "win_rate": 1.0
+      },
+      "coverage": 0.6808943089430894,
+      "gross_pnl_points": {
+        "count": 335,
+        "mean": 0.22880597014925433,
+        "median": -0.1999999999999993,
+        "p05": -12.725000000000001,
+        "p95": 15.424999999999999,
+        "sum": 76.6500000000002,
+        "win_rate": 0.4597014925373134
+      },
+      "gross_pnl_rupees": {
+        "count": 335,
+        "mean": 42.31865671641793,
+        "median": -7.499999999999574,
+        "p05": -612.7500000000001,
+        "p95": 1021.5000000000002,
+        "sum": 14176.750000000005,
+        "win_rate": 0.4597014925373134
+      },
+      "horizon_minutes": 120,
+      "mapping": "inverse",
+      "net_pnl_rupees": {
+        "count": 335,
+        "mean": -247.02103864121983,
+        "median": -295.8606860920953,
+        "p05": -860.901026989185,
+        "p95": 805.0753441134235,
+        "sum": -82752.04794480864,
+        "win_rate": 0.191044776119403
+      },
+      "net_return_on_margin": {
+        "count": 335,
+        "mean": -0.005511791683122199,
+        "median": -0.006389894646019773,
+        "p05": -0.02046822258216111,
+        "p95": 0.011837982450831463,
+        "sum": -1.8464502138459367,
+        "win_rate": 0.191044776119403
+      },
+      "trades": 335
+    },
+    {
+      "bootstrap_mean_net_95pct_ci": [
+        -289.86264830084644,
+        -74.25784319344702
+      ],
+      "cost_rupees": {
+        "count": 242,
+        "mean": 286.0276151246068,
+        "median": 246.16993238536793,
+        "p05": 208.73576371181218,
+        "p95": 541.0652200403312,
+        "sum": 69218.68286015485,
+        "win_rate": 1.0
+      },
+      "coverage": 0.491869918699187,
+      "gross_pnl_points": {
+        "count": 242,
+        "mean": 1.3886363636363641,
+        "median": 0.04999999999998295,
+        "p05": -23.922500000000003,
+        "p95": 24.337499999999995,
+        "sum": 336.0500000000001,
+        "win_rate": 0.5
+      },
+      "gross_pnl_rupees": {
+        "count": 242,
+        "mean": 104.59710743801652,
+        "median": 3.7499999999989875,
+        "p05": -1176.1749999999997,
+        "p95": 1379.8125,
+        "sum": 25312.5,
+        "win_rate": 0.5
+      },
+      "horizon_minutes": 180,
+      "mapping": "inverse",
+      "net_pnl_rupees": {
+        "count": 242,
+        "mean": -181.43050768659032,
+        "median": -272.9892925043399,
+        "p05": -1412.582749712958,
+        "p95": 1155.9605344172062,
+        "sum": -43906.182860154855,
+        "win_rate": 0.30165289256198347
+      },
+      "net_return_on_margin": {
+        "count": 242,
+        "mean": -0.004163858520771051,
+        "median": -0.005435650472327332,
+        "p05": -0.03100355429877634,
+        "p95": 0.02141994919070906,
+        "sum": -1.0076537620265942,
+        "win_rate": 0.30165289256198347
+      },
+      "trades": 242
+    },
+    {
+      "bootstrap_mean_net_95pct_ci": [
+        -331.7916741527544,
+        -254.19130593748966
+      ],
+      "cost_rupees": {
+        "count": 428,
+        "mean": 291.4134786407711,
+        "median": 254.49943565000063,
+        "p05": 211.46039524422883,
+        "p95": 504.9782267748928,
+        "sum": 124724.96885825002,
+        "win_rate": 1.0
+      },
+      "coverage": 0.8699186991869918,
+      "gross_pnl_points": {
+        "count": 428,
+        "mean": 0.15654205607476543,
+        "median": 0.2999999999999865,
+        "p05": -9.794999999999984,
+        "p95": 8.450000000000001,
+        "sum": 66.9999999999996,
+        "win_rate": 0.5490654205607477
+      },
+      "gross_pnl_rupees": {
+        "count": 428,
+        "mean": -2.7050233644860366,
+        "median": 11.249999999999005,
+        "p05": -528.2500000000001,
+        "p95": 389.62499999999955,
+        "sum": -1157.7500000000236,
+        "win_rate": 0.5490654205607477
+      },
+      "horizon_minutes": 60,
+      "mapping": "requested",
+      "net_pnl_rupees": {
+        "count": 428,
+        "mean": -294.11850200525714,
+        "median": -302.8027946695056,
+        "p05": -837.4926332220738,
+        "p95": 160.89623054222028,
+        "sum": -125882.71885825005,
+        "win_rate": 0.08411214953271028
+      },
+      "net_return_on_margin": {
+        "count": 428,
+        "mean": -0.0057251203283441845,
+        "median": -0.006230257702767902,
+        "p05": -0.015246799949691898,
+        "p95": 0.0032696070309758242,
+        "sum": -2.450351500531311,
+        "win_rate": 0.08411214953271028
+      },
+      "trades": 428
+    },
+    {
+      "bootstrap_mean_net_95pct_ci": [
+        -385.811431746754,
+        -274.14462078947565
+      ],
+      "cost_rupees": {
+        "count": 335,
+        "mean": 289.3104236866214,
+        "median": 249.17308590101504,
+        "p05": 211.3120500911887,
+        "p95": 526.2185005248457,
+        "sum": 96918.99193501817,
+        "win_rate": 1.0
+      },
+      "coverage": 0.6808943089430894,
+      "gross_pnl_points": {
+        "count": 335,
+        "mean": -0.22880597014925433,
+        "median": 0.1999999999999993,
+        "p05": -15.424999999999995,
+        "p95": 12.725000000000009,
+        "sum": -76.6500000000002,
+        "win_rate": 0.5313432835820896
+      },
+      "gross_pnl_rupees": {
+        "count": 335,
+        "mean": -42.31865671641793,
+        "median": 7.499999999999574,
+        "p05": -1021.4999999999999,
+        "p95": 612.7500000000003,
+        "sum": -14176.750000000005,
+        "win_rate": 0.5313432835820896
+      },
+      "horizon_minutes": 120,
+      "mapping": "requested",
+      "net_pnl_rupees": {
+        "count": 335,
+        "mean": -331.6290804030394,
+        "median": -300.0546081849247,
+        "p05": -1237.2881950901142,
+        "p95": 382.68566385695425,
+        "sum": -111095.74193501819,
+        "win_rate": 0.1373134328358209
+      },
+      "net_return_on_margin": {
+        "count": 335,
+        "mean": -0.006216013354294884,
+        "median": -0.005981268516737387,
+        "p05": -0.02109771179939215,
+        "p95": 0.008507149032384444,
+        "sum": -2.082364473688786,
+        "win_rate": 0.1373134328358209
+      },
+      "trades": 335
+    },
+    {
+      "bootstrap_mean_net_95pct_ci": [
+        -493.95094285118836,
+        -283.6581546339487
+      ],
+      "cost_rupees": {
+        "count": 242,
+        "mean": 285.9743566508056,
+        "median": 246.18977225428387,
+        "p05": 208.7027606983589,
+        "p95": 541.1061961194775,
+        "sum": 69205.79430949496,
+        "win_rate": 1.0
+      },
+      "coverage": 0.491869918699187,
+      "gross_pnl_points": {
+        "count": 242,
+        "mean": -1.3886363636363641,
+        "median": -0.04999999999998295,
+        "p05": -24.3375,
+        "p95": 23.922499999999996,
+        "sum": -336.0500000000001,
+        "win_rate": 0.5
+      },
+      "gross_pnl_rupees": {
+        "count": 242,
+        "mean": -104.59710743801652,
+        "median": -3.7499999999989875,
+        "p05": -1379.8125,
+        "p95": 1176.1749999999997,
+        "sum": -25312.5,
+        "win_rate": 0.5
+      },
+      "horizon_minutes": 180,
+      "mapping": "requested",
+      "net_pnl_rupees": {
+        "count": 242,
+        "mean": -390.57146408882215,
+        "median": -354.4414992829197,
+        "p05": -1620.7015451555953,
+        "p95": 950.7980621257271,
+        "sum": -94518.29430949496,
+        "win_rate": 0.1487603305785124
+      },
+      "net_return_on_margin": {
+        "count": 242,
+        "mean": -0.0076549146004360824,
+        "median": -0.006943776873650671,
+        "p05": -0.03275329795830911,
+        "p95": 0.019314486069777297,
+        "sum": -1.852489333305532,
+        "win_rate": 0.1487603305785124
+      },
+      "trades": 242
+    }
+  ],
+  "decision": "FAIL_KEEP_PHASE5_CLOSURE",
+  "events": {
+    "by_type": {
+      "bottom_to_zero": 301,
+      "top_to_zero": 191
+    },
+    "date_max": "2026-07-09",
+    "date_min": "2021-04-01",
+    "total": 492
+  },
+  "limitations": [
+    "This is an explicitly post-hoc test after the original hypothesis family was closed.",
+    "The inverse and 120/180-minute cells are diagnostics, not replacement primaries.",
+    "Rolling-surface attrition remains horizon dependent."
+  ],
+  "primary_acceptance": {
+    "gates": {
+      "bootstrap_lower_above_zero": false,
+      "both_reversal_subgroups_positive": false,
+      "coverage_at_least_80pct": true,
+      "minimum_100_trades": true,
+      "positive_aggregate_net": false,
+      "positive_mean_net": false,
+      "positive_month_fraction_at_least_60pct": false
+    },
+    "passed": false,
+    "positive_month_fraction": 0.046875
+  },
+  "protocol": "docs\\research\\PHASE6_VRP_REVERSAL_PROTOCOL.md",
+  "schema_version": "phase6-vrp-reversal/v1",
+  "subgroups": [
+    {
+      "horizon_minutes": 60,
+      "mapping": "inverse",
+      "net_pnl_rupees": {
+        "count": 281,
+        "mean": -313.4776655060949,
+        "median": -307.74334161199755,
+        "p05": -580.6606161179946,
+        "p95": -54.29769762729461,
+        "sum": -88087.22400721267,
+        "win_rate": 0.03202846975088968
+      },
+      "reversal_type": "bottom_to_zero",
+      "trades": 281
+    },
+    {
+      "horizon_minutes": 60,
+      "mapping": "inverse",
+      "net_pnl_rupees": {
+        "count": 147,
+        "mean": -241.3536657072786,
+        "median": -181.1156753116083,
+        "p05": -1381.1112911352488,
+        "p95": 600.2469476658953,
+        "sum": -35478.988858969955,
+        "win_rate": 0.2857142857142857
+      },
+      "reversal_type": "top_to_zero",
+      "trades": 147
+    },
+    {
+      "horizon_minutes": 120,
+      "mapping": "inverse",
+      "net_pnl_rupees": {
+        "count": 212,
+        "mean": -305.12004297125,
+        "median": -316.7805864054734,
+        "p05": -694.4094669571103,
+        "p95": 137.97257899528478,
+        "sum": -64685.44910990499,
+        "win_rate": 0.06132075471698113
+      },
+      "reversal_type": "bottom_to_zero",
+      "trades": 212
+    },
+    {
+      "horizon_minutes": 120,
+      "mapping": "inverse",
+      "net_pnl_rupees": {
+        "count": 123,
+        "mean": -146.88291735694023,
+        "median": -164.77244676532672,
+        "p05": -1314.4666537494522,
+        "p95": 1051.2923552863995,
+        "sum": -18066.59883490365,
+        "win_rate": 0.4146341463414634
+      },
+      "reversal_type": "top_to_zero",
+      "trades": 123
+    },
+    {
+      "horizon_minutes": 180,
+      "mapping": "inverse",
+      "net_pnl_rupees": {
+        "count": 146,
+        "mean": -321.2312557775181,
+        "median": -324.87750103197897,
+        "p05": -957.3487580719404,
+        "p95": 379.99335397141573,
+        "sum": -46899.76334351764,
+        "win_rate": 0.1232876712328767
+      },
+      "reversal_type": "bottom_to_zero",
+      "trades": 146
+    },
+    {
+      "horizon_minutes": 180,
+      "mapping": "inverse",
+      "net_pnl_rupees": {
+        "count": 96,
+        "mean": 31.183130035028984,
+        "median": 251.76881011085723,
+        "p05": -2214.505211526687,
+        "p95": 1574.391415769514,
+        "sum": 2993.5804833627826,
+        "win_rate": 0.5729166666666666
+      },
+      "reversal_type": "top_to_zero",
+      "trades": 96
+    },
+    {
+      "horizon_minutes": 60,
+      "mapping": "requested",
+      "net_pnl_rupees": {
+        "count": 281,
+        "mean": -299.7497193624058,
+        "median": -268.88979410487354,
+        "p05": -600.81269393871,
+        "p95": -39.736697127604515,
+        "sum": -84229.67114083603,
+        "win_rate": 0.03914590747330961
+      },
+      "reversal_type": "bottom_to_zero",
+      "trades": 281
+    },
+    {
+      "horizon_minutes": 60,
+      "mapping": "requested",
+      "net_pnl_rupees": {
+        "count": 147,
+        "mean": -283.3540661048572,
+        "median": -361.074216017881,
+        "p05": -1051.4687742068634,
+        "p95": 944.3273655827261,
+        "sum": -41653.04771741401,
+        "win_rate": 0.17006802721088435
+      },
+      "reversal_type": "top_to_zero",
+      "trades": 147
+    },
+    {
+      "horizon_minutes": 120,
+      "mapping": "requested",
+      "net_pnl_rupees": {
+        "count": 212,
+        "mean": -304.78933621325706,
+        "median": -273.1943545445335,
+        "p05": -776.6995242924962,
+        "p95": 182.57520998059158,
+        "sum": -64615.33927721049,
+        "win_rate": 0.08018867924528301
+      },
+      "reversal_type": "bottom_to_zero",
+      "trades": 212
+    },
+    {
+      "horizon_minutes": 120,
+      "mapping": "requested",
+      "net_pnl_rupees": {
+        "count": 123,
+        "mean": -377.8894525025014,
+        "median": -405.19309087342504,
+        "p05": -1500.9122124430298,
+        "p95": 897.4968528157265,
+        "sum": -46480.402657807674,
+        "win_rate": 0.23577235772357724
+      },
+      "reversal_type": "top_to_zero",
+      "trades": 123
+    },
+    {
+      "horizon_minutes": 180,
+      "mapping": "requested",
+      "net_pnl_rupees": {
+        "count": 146,
+        "mean": -299.9057441949318,
+        "median": -292.50156357225444,
+        "p05": -900.0943276191233,
+        "p95": 455.71209877486467,
+        "sum": -43786.238652460044,
+        "win_rate": 0.13013698630136986
+      },
+      "reversal_type": "bottom_to_zero",
+      "trades": 146
+    },
+    {
+      "horizon_minutes": 180,
+      "mapping": "requested",
+      "net_pnl_rupees": {
+        "count": 96,
+        "mean": -528.4589130941137,
+        "median": -681.0110689716408,
+        "p05": -2025.9679611864033,
+        "p95": 1715.6814307421248,
+        "sum": -50732.055657034914,
+        "win_rate": 0.17708333333333334
+      },
+      "reversal_type": "top_to_zero",
+      "trades": 96
+    }
+  ],
+  "zero_reversion": [
+    {
+      "distance_reduced_rate": 0.5516014234875445,
+      "events": 301,
+      "horizon_minutes": 60,
+      "median_minutes_to_zero_when_touched": 28.0,
+      "reversal_type": "bottom_to_zero",
+      "zero_touch_rate": 0.24916943521594684
+    },
+    {
+      "distance_reduced_rate": 0.49056603773584906,
+      "events": 301,
+      "horizon_minutes": 120,
+      "median_minutes_to_zero_when_touched": 35.0,
+      "reversal_type": "bottom_to_zero",
+      "zero_touch_rate": 0.3289036544850498
+    },
+    {
+      "distance_reduced_rate": 0.4520547945205479,
+      "events": 301,
+      "horizon_minutes": 180,
+      "median_minutes_to_zero_when_touched": 36.0,
+      "reversal_type": "bottom_to_zero",
+      "zero_touch_rate": 0.3554817275747508
+    },
+    {
+      "distance_reduced_rate": 0.24489795918367346,
+      "events": 191,
+      "horizon_minutes": 60,
+      "median_minutes_to_zero_when_touched": 6.0,
+      "reversal_type": "top_to_zero",
+      "zero_touch_rate": 0.46596858638743455
+    },
+    {
+      "distance_reduced_rate": 0.29838709677419356,
+      "events": 191,
+      "horizon_minutes": 120,
+      "median_minutes_to_zero_when_touched": 9.0,
+      "reversal_type": "top_to_zero",
+      "zero_touch_rate": 0.5602094240837696
+    },
+    {
+      "distance_reduced_rate": 0.3434343434343434,
+      "events": 191,
+      "horizon_minutes": 180,
+      "median_minutes_to_zero_when_touched": 16.0,
+      "reversal_type": "top_to_zero",
+      "zero_touch_rate": 0.6963350785340314
+    }
+  ]
+}

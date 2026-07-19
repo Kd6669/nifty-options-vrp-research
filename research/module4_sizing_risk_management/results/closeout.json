@@ -1,0 +1,97 @@
+{
+  "confidence_rank_gate": {
+    "bootstrap_95_ci": [
+      -0.066046333518081,
+      0.484328752547624
+    ],
+    "combined_holdout_spearman": 0.2136670767212159,
+    "failed_gate": "combined_holdout_bootstrap_ci_low_above_zero",
+    "one_sided_permutation_p": 0.0471952804719528,
+    "verdict": "FAIL"
+  },
+  "decision": "FORWARD_SHADOW_CANDIDATE_NOT_DEPLOYMENT_APPROVED",
+  "initial_capital_rupees": 1000000.0,
+  "interpretation": {
+    "allowed": "freeze_and_forward_shadow_test",
+    "historical_result": "positive_after_exact_costs_and_entry_time_span",
+    "not_allowed": "deployment_or_clean_out_of_sample_claim"
+  },
+  "limitations": [
+    "The confidence score did not pass its strict combined-holdout bootstrap gate.",
+    "The score and regime directions are post-hoc to the available archive.",
+    "The Phase 10 policy grid creates multiple-testing risk despite discovery-only selection.",
+    "Drawdown and brakes use fixed-horizon end-of-trade equity, not intratrade MTM paths.",
+    "SPAN is observed at entry; intratrade margin expansion and liquidation paths are unavailable.",
+    "The rolling nearest-expiry ATM\u00b110 archive does not support multi-day or multi-expiry claims."
+  ],
+  "recommended_candidate": {
+    "config_id": 5628.0,
+    "confirmation_net": 23035.61072012069,
+    "discovery_net": 70835.25635069759,
+    "full_average_lots": 6.5,
+    "full_average_margin_utilization": 0.3193470952761578,
+    "full_cagr": 0.019904877142159,
+    "full_cost": 44029.01740172524,
+    "full_cvar05_trade": -6141.716232818131,
+    "full_gross": 153012.5,
+    "full_max_drawdown": -7981.72981214535,
+    "full_max_drawdown_pct": -0.0076205277761951,
+    "full_maximum_lots": 14.0,
+    "full_maximum_margin_utilization": 0.3497309230220656,
+    "full_net": 108983.48259827474,
+    "full_return": 0.1089834825982747,
+    "full_trades": 86.0,
+    "full_turnover": 6670527.677784263,
+    "full_win_rate": 0.6627906976744186,
+    "holdout_net": 38148.22624757715,
+    "margin_fraction": 0.35,
+    "max_risk_fraction": 0.04,
+    "profile": "max_margin_efficiency_dd_1.5%",
+    "score_floor": 0.4,
+    "score_power": 0.0,
+    "validation_net": 15112.615527456464
+  },
+  "recomputed_trade_sheet": {
+    "average_cash_risk_utilization": 0.027855885124958426,
+    "average_lots": 6.5,
+    "average_margin_utilization": 0.31934709527615784,
+    "ending_equity_rupees": 1108983.4825982747,
+    "executed_trades": 86,
+    "gross_pnl_rupees": 153012.5,
+    "maximum_cash_risk_utilization": 0.03983139658872809,
+    "maximum_lots": 14,
+    "maximum_margin_utilization": 0.3497309230220656,
+    "net_pnl_rupees": 108983.48259827476,
+    "profit_factor": 2.537229142887366,
+    "signals": 132,
+    "total_cost_rupees": 44029.01740172526,
+    "turnover_rupees": 6670527.677784263,
+    "win_rate": 0.6627906976744186
+  },
+  "reconciliation": {
+    "cash_risk_cap_respected": true,
+    "cost_matches": true,
+    "gross_matches": true,
+    "margin_cap_respected": true,
+    "net_matches": true,
+    "trades_match": true,
+    "turnover_matches": true
+  },
+  "research_lineage": {
+    "module3_decision": "standalone_short_horizon_VRP_hypothesis_rejected",
+    "phase10": "post_hoc_discovery_only_sizing_exploration",
+    "phase8": "gated_10_lakh_capital_diagnostic",
+    "phase9": "confidence_rank_gate_failed"
+  },
+  "schema_version": "module4-sizing-risk-closeout/v1",
+  "sizing_grid_robustness": {
+    "discovery_holdout_net_spearman": 0.6492121573733414,
+    "eligible_policy_count": 4392,
+    "positive_both_later_splits_rate": 0.4583333333333333,
+    "positive_holdout_rate": 0.5883424408014571,
+    "top_discovery_decile_count": 442,
+    "top_discovery_decile_median_holdout_net": 24962.908046190612,
+    "top_discovery_decile_positive_holdout_rate": 0.8597285067873304
+  },
+  "strategy_id": "upper85_gated_short_iron_fly_60m"
+}

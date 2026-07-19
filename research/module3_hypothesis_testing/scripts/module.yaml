@@ -1,0 +1,5 @@
+schema_version: submodule-contract/v1
+name: module_entrypoints
+owns:
+  - run_closeout.ps1
+responsibility: Provide a reproducible Windows entrypoint for build and verification.

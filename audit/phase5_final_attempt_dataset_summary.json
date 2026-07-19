@@ -1,0 +1,57 @@
+{
+  "candidate_timestamps": 27608,
+  "coverage": [
+    {
+      "complete_labels": 22428,
+      "coverage": 0.8123732251521298,
+      "expected_candidates": 27608,
+      "horizon_minutes": 60,
+      "structure": "bear_put_spread"
+    },
+    {
+      "complete_labels": 17206,
+      "coverage": 0.6232251521298174,
+      "expected_candidates": 27608,
+      "horizon_minutes": 120,
+      "structure": "bear_put_spread"
+    },
+    {
+      "complete_labels": 11985,
+      "coverage": 0.4341133004926108,
+      "expected_candidates": 27608,
+      "horizon_minutes": 180,
+      "structure": "bear_put_spread"
+    },
+    {
+      "complete_labels": 22448,
+      "coverage": 0.8130976528542452,
+      "expected_candidates": 27608,
+      "horizon_minutes": 60,
+      "structure": "bull_call_spread"
+    },
+    {
+      "complete_labels": 17234,
+      "coverage": 0.6242393509127789,
+      "expected_candidates": 27608,
+      "horizon_minutes": 120,
+      "structure": "bull_call_spread"
+    },
+    {
+      "complete_labels": 12014,
+      "coverage": 0.43516372066067804,
+      "expected_candidates": 27608,
+      "horizon_minutes": 180,
+      "structure": "bull_call_spread"
+    }
+  ],
+  "dataset_rows": 103315,
+  "date_max": "2026-07-14",
+  "date_min": "2021-03-31",
+  "limitations": [
+    "Candidate labels may overlap; the strategy evaluator enforces one live trade at a time.",
+    "The causal hurdle proxies exit liquidity with entry liquidity; actual labels use observed exit liquidity.",
+    "The rolling surface creates horizon-dependent exact-contract attrition."
+  ],
+  "observation_rows": 661563,
+  "schema_version": "phase5-final-attempt-dataset/v1"
+}

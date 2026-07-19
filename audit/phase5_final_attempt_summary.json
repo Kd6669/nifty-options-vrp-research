@@ -1,0 +1,141 @@
+{
+  "acceptance": {
+    "bootstrap_mean_net_95pct_ci": [
+      -355.1516248138823,
+      31.750770888281682
+    ],
+    "composition": [
+      {
+        "horizon_minutes": 60,
+        "material_cell_pass": true,
+        "structure": "bear_put_spread",
+        "trade_share": 0.06315789473684211,
+        "trades": 12,
+        "unconditional_label_coverage": 0.8123732251521298
+      },
+      {
+        "horizon_minutes": 120,
+        "material_cell_pass": true,
+        "structure": "bear_put_spread",
+        "trade_share": 0.08947368421052632,
+        "trades": 17,
+        "unconditional_label_coverage": 0.6232251521298174
+      },
+      {
+        "horizon_minutes": 180,
+        "material_cell_pass": false,
+        "structure": "bear_put_spread",
+        "trade_share": 0.5894736842105263,
+        "trades": 112,
+        "unconditional_label_coverage": 0.4341133004926108
+      },
+      {
+        "horizon_minutes": 60,
+        "material_cell_pass": true,
+        "structure": "bull_call_spread",
+        "trade_share": 0.02631578947368421,
+        "trades": 5,
+        "unconditional_label_coverage": 0.8130976528542452
+      },
+      {
+        "horizon_minutes": 120,
+        "material_cell_pass": true,
+        "structure": "bull_call_spread",
+        "trade_share": 0.09473684210526316,
+        "trades": 18,
+        "unconditional_label_coverage": 0.6242393509127789
+      },
+      {
+        "horizon_minutes": 180,
+        "material_cell_pass": false,
+        "structure": "bull_call_spread",
+        "trade_share": 0.1368421052631579,
+        "trades": 26,
+        "unconditional_label_coverage": 0.43516372066067804
+      }
+    ],
+    "gates": {
+      "bootstrap_ci_lower_above_zero": false,
+      "every_year_positive": false,
+      "material_cell_coverage_at_least_80pct": false,
+      "minimum_trades": true,
+      "positive_aggregate_net": false,
+      "positive_mean_net": false,
+      "positive_month_concentration_at_most_40pct": true,
+      "positive_month_fraction_at_least_60pct": false
+    },
+    "passed": false,
+    "positive_month_concentration": 0.32463589674449184,
+    "positive_month_fraction": 0.2777777777777778
+  },
+  "confirmation": {
+    "date_max": "2026-06-30 00:00:00",
+    "date_min": "2025-01-01 00:00:00",
+    "gross_pnl_rupees": -6129.75,
+    "mean_margin_rupees": 39460.502185449535,
+    "mean_net_pnl_rupees": -165.02385375933662,
+    "mean_net_return_on_margin": -0.003951515824180635,
+    "mean_predicted_excess_points": 0.8845118098012056,
+    "mean_predicted_gross_points": 2.749746675834892,
+    "median_net_pnl_rupees": -478.36692435506984,
+    "net_pnl_rupees": -31354.532214273957,
+    "net_win_rate": 0.26842105263157895,
+    "total_cost_rupees": 25224.78221427396,
+    "trades": 190
+  },
+  "decision": "FAIL_CLOSE_HYPOTHESIS_FAMILY",
+  "limitations": [
+    "The confirmation period is post-selection walk-forward evidence, not pristine OOS.",
+    "Ridge and gate hyperparameters are selected once on calendar 2024.",
+    "Any material reliance on a below-80%-coverage cell fails the strategy regardless of P&L."
+  ],
+  "prediction_correlations": [
+    {
+      "horizon_minutes": 60,
+      "observations": 6416,
+      "predicted_vs_realized_gross_correlation": 0.09374988143239214,
+      "structure": "bear_put_spread"
+    },
+    {
+      "horizon_minutes": 120,
+      "observations": 4900,
+      "predicted_vs_realized_gross_correlation": 0.024369496984260237,
+      "structure": "bear_put_spread"
+    },
+    {
+      "horizon_minutes": 180,
+      "observations": 3383,
+      "predicted_vs_realized_gross_correlation": -0.018527166668479682,
+      "structure": "bear_put_spread"
+    },
+    {
+      "horizon_minutes": 60,
+      "observations": 6421,
+      "predicted_vs_realized_gross_correlation": 0.0115896871760851,
+      "structure": "bull_call_spread"
+    },
+    {
+      "horizon_minutes": 120,
+      "observations": 4907,
+      "predicted_vs_realized_gross_correlation": 0.02927474437139433,
+      "structure": "bull_call_spread"
+    },
+    {
+      "horizon_minutes": 180,
+      "observations": 3392,
+      "predicted_vs_realized_gross_correlation": 0.06122505548665883,
+      "structure": "bull_call_spread"
+    }
+  ],
+  "protocol": "docs\\research\\PHASE5_FINAL_ATTEMPT_PROTOCOL.md",
+  "schema_version": "phase5-final-attempt-strategy/v1",
+  "selected_validation_config": {
+    "alpha": 0.0,
+    "gate_multiplier": 1.0
+  },
+  "split_rows": {
+    "confirmation": 29419,
+    "train": 54183,
+    "validation": 19713
+  }
+}

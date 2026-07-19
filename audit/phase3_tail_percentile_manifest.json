@@ -1,0 +1,39 @@
+{
+  "code": {
+    "path": "<repository-root>\\research\\phase3\\run_tail_percentile_backtests.py",
+    "sha256": "da38b0aaf89fdde6ab71818676685da2ae9fc543620e5239eb7dc93e1ee6d13b"
+  },
+  "event_trades": 4028,
+  "gold_root": "<external-data-root>\\dhan-data-fetch-and-stream-phase2-3\\reports\\nifty_gold_span_six_slot_research_20210101_20260715\\version=2.1.0\\gold",
+  "inputs": [
+    {
+      "path": "<repository-root>\\audit\\phase2_vrp_session_curve_features.parquet",
+      "sha256": "f7cb06db9060d2d9a82adc3403bbc7817a7569601efa40524aa5a4e1d62ec356"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase2_intraday_iv_surface.parquet",
+      "sha256": "8aaa4f0d1c33f35df7c18e22b84d91a26c0e026b635b3f1210fd42c465bc6367"
+    }
+  ],
+  "leg_rows": 16112,
+  "outputs": [
+    {
+      "path": "<repository-root>\\audit\\phase3_tail_percentile_tradebook.csv",
+      "sha256": "16abae3574a8d3f65b49c1274986dd83b916c32e23e46536e563d7a811fb98e5"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase3_tail_percentile_legbook.csv",
+      "sha256": "99b9e44bc5387bafb9c03c6ceca51ac5a3991790dfe54978d93c86b5f8ccfc5e"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase3_tail_percentile_tearsheet.json",
+      "sha256": "6703931868e21ca3c6b79e1225a115ee9b3d4e04d078a98e670f7b4d5ec1fc38"
+    },
+    {
+      "path": "<repository-root>\\docs\\research\\PHASE3_TAIL_PERCENTILE_TEAR_SHEET.md",
+      "sha256": "5ec70762341da089c5d2b1f00f291cea47afb1ec1fb5a5af71c09163e710b596"
+    }
+  ],
+  "schema_version": "phase3-tail-percentile-manifest/v1",
+  "variant_count": 12
+}

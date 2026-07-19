@@ -1,0 +1,242 @@
+{
+  "decision": "REJECT_INTRADAY_VRP_AS_STANDALONE_DEFINED_RISK_ENTRY_RULE_FOR_CURRENT_DATASET",
+  "documents": [
+    {
+      "path": ".gitattributes",
+      "sha256": "1ea53d82048fbd0fbc6e878747bbc9a789b319448dc6ccfb605d57d01f6625d2"
+    },
+    {
+      "path": "research/module3_hypothesis_testing/README.md",
+      "sha256": "b72242cfc7fb07774c871a6c6c7a7f05c90d95f4bbfb77fa17469bb0a36f4420"
+    },
+    {
+      "path": "research/module3_hypothesis_testing/MODULE_MANIFEST.md",
+      "sha256": "bb332f0e87937b4c6e8d10707ebb30243d36b5d9a94c4a786c61454695a923e9"
+    },
+    {
+      "path": "research/module3_hypothesis_testing/module.yaml",
+      "sha256": "ff0a76e6df3a1340d153c1a5405eb953ecce7f62d82ba68dc2a8ea98fdd44d56"
+    },
+    {
+      "path": "research/module3_hypothesis_testing/contracts/module.yaml",
+      "sha256": "842c3f8418d321067b039bb1d3b5d72e1c71152030b917f046296ba3cdb81d88"
+    },
+    {
+      "path": "research/module3_hypothesis_testing/contracts/hypotheses.json",
+      "sha256": "ad86363ce65dc8019d23ad5c3a24f779cd772ea51a81ae580838359a2d86405f"
+    },
+    {
+      "path": "research/module3_hypothesis_testing/docs/module.yaml",
+      "sha256": "508fffbcae9596a6d73cbd3b0c2955bce235b64247adc00e78e1f5188afaeb02"
+    },
+    {
+      "path": "research/module3_hypothesis_testing/docs/architecture.md",
+      "sha256": "0294bb9d46ce13507835edef8e735f070d9ad666f9cdde365df9d9bfcaa148de"
+    },
+    {
+      "path": "research/module3_hypothesis_testing/docs/runbook.md",
+      "sha256": "2a1112345069a13ccaa37df025a336998411261b48f49f251307b5755d0b71af"
+    },
+    {
+      "path": "research/module3_hypothesis_testing/results/module.yaml",
+      "sha256": "76b8e058eac72f2ae39d26a1c2ff0cf6d164685fbe4e3da8f04e8e41cf970ffe"
+    },
+    {
+      "path": "research/module3_hypothesis_testing/scripts/module.yaml",
+      "sha256": "18b7d2aa34a0a627a62e71b3342003b04667b171bbebda6a37e618b034d5683b"
+    },
+    {
+      "path": "research/module3_hypothesis_testing/scripts/run_closeout.ps1",
+      "sha256": "5c9cca907b0137f72217d489dd52f65e15ea692369886343877b79e14319a825"
+    },
+    {
+      "path": "docs/research/FINAL_HYPOTHESIS.md",
+      "sha256": "62a06ccbfdd3a5e9f6254ebce81c411a32eab96e5da1d43dd03091b695b2d5f2"
+    },
+    {
+      "path": "docs/research/PHASE3_FULL_STRATEGY_TEAR_SHEET.md",
+      "sha256": "89d597498f0d32515380a44cd195fee51a718d866521e16ad51190143282d9c4"
+    },
+    {
+      "path": "docs/research/PHASE3_TAIL_PERCENTILE_TEAR_SHEET.md",
+      "sha256": "1028aa2ce64d5dd35e3c59dcb1958cbef51d87187e42d1cf5554340f54f9bb0f"
+    },
+    {
+      "path": "docs/research/PHASE4_COST_AWARE_VRP_DISCOVERY.md",
+      "sha256": "d7b654f0eab45d694e22c60a3521c844e72d0d9ad7283b10e68982658dbd23f1"
+    },
+    {
+      "path": "docs/research/PHASE5_FINAL_ATTEMPT_PROTOCOL.md",
+      "sha256": "91fc6f96df3bb24a5298d06635a74a3ed28755324a0b3e3fac7a5e8d5fbc09ba"
+    },
+    {
+      "path": "docs/research/PHASE5_FINAL_ATTEMPT_RESULTS.md",
+      "sha256": "faf3619c7d23380f68b84a94c7d07a3557d6bf03a004764c8ff0aff25c97ea7e"
+    },
+    {
+      "path": "docs/research/PHASE6_VRP_REVERSAL_PROTOCOL.md",
+      "sha256": "3674932a1170feea7ac6580043ef372a96778374ea07502ec9069a8d05b2b7ad"
+    },
+    {
+      "path": "docs/research/PHASE6_VRP_REVERSAL_RESULTS.md",
+      "sha256": "5b403bd187145f20368c1dbc30aa373d5dbf50acaced2e467fdecb1e730ca67d"
+    },
+    {
+      "path": "docs/research/PHASE7_180MIN_COMPARISON_PROTOCOL.md",
+      "sha256": "81fb669cd9a39bce9edc336003ce2cf8c4e6622594d18938f24fe89c647a5668"
+    },
+    {
+      "path": "docs/research/PHASE7_180MIN_COMPARISON_RESULTS.md",
+      "sha256": "06f3228d63dde2ef93876991d579a44b2e7f508e3e5e807646769770b0608a96"
+    }
+  ],
+  "hash_contract": "sha256 after CRLF-to-LF canonicalization",
+  "implementations": [
+    {
+      "path": "src/nifty_execution/__init__.py",
+      "sha256": "aece58b3f3de6c942c7c4f54dbab1bac6898cd2482f7bade3dda6cb0536fa566"
+    },
+    {
+      "path": "src/nifty_execution/costs.py",
+      "sha256": "2a183697e372ed849b88ca3be2186899c2c7b9f09d0642267b8bc2b7a46932ac"
+    },
+    {
+      "path": "src/nifty_execution/margin.py",
+      "sha256": "c5837c2703ca65cf058c724440b71858b315ed53a1fdfd1df604837eafdff033"
+    },
+    {
+      "path": "src/nifty_execution/provenance.py",
+      "sha256": "4b46d4f2ae85c963dba9bb6d62879b5fc2b090f18526d11f8686908d47b78676"
+    },
+    {
+      "path": "src/nifty_execution/slippage.py",
+      "sha256": "093f983d13d7c320f21fe6051cb8a1b25d3d5252b03ba15d8e50c7ddce3d1f9e"
+    },
+    {
+      "path": "research/phase3/run_full_strategy_backtest.py",
+      "sha256": "fb2980b34accd4134a93e5d391069503ec242c273c70c8cce02dacdb31a8388e"
+    },
+    {
+      "path": "research/phase3/run_tail_percentile_backtests.py",
+      "sha256": "da38b0aaf89fdde6ab71818676685da2ae9fc543620e5239eb7dc93e1ee6d13b"
+    },
+    {
+      "path": "research/phase4/run_cost_aware_discovery.py",
+      "sha256": "51abfdf8cf463e837c358b65be69ef6ced2c19a778d086c2501e5f3e95f365be"
+    },
+    {
+      "path": "research/phase4/run_multiday_vrp_feasibility.py",
+      "sha256": "651e38df7cd102a1d61e7a585f292b0d22023fb80309cb8e588f5bd768fec3d4"
+    },
+    {
+      "path": "research/phase5/build_final_attempt_dataset.py",
+      "sha256": "c7f72043e289088991de66cb9272479dab41fb0a3992114106f8d02f6c577a7b"
+    },
+    {
+      "path": "research/phase5/run_final_attempt_strategy.py",
+      "sha256": "71d1988e77c6d2e672371445a9553e86fb5dee49a40c79dff2cfc4cc9c983528"
+    },
+    {
+      "path": "research/phase6/run_vrp_reversal_test.py",
+      "sha256": "ee9ec9a977e7d3697c8191a6971b0589e5b349e012065b985df97ec361d6ae7f"
+    },
+    {
+      "path": "research/phase7/run_180min_signal_comparison.py",
+      "sha256": "8d40d95496ad7e40d0a636a9605afffe765c3162169d3baec8055fc8ff5e82e9"
+    },
+    {
+      "path": "research/module3_hypothesis_testing/__init__.py",
+      "sha256": "ff7eddb6f97872b22692942c40df5698fc390a13e00f067ce3ec87d0f42fa547"
+    },
+    {
+      "path": "research/module3_hypothesis_testing/closeout.py",
+      "sha256": "496d6a966b7fe78f4f2fd96c6ee68b6236c6e1407212f13b680becbafd326a51"
+    },
+    {
+      "path": "research/module3_hypothesis_testing/run.py",
+      "sha256": "c17c81f47d4acae1f7f4231a0c5389b3b8cf0a858f9bb4db8b9527fc0b12b000"
+    }
+  ],
+  "module_id": "module3_vrp_hypothesis_testing",
+  "outputs": [
+    {
+      "path": "research/module3_hypothesis_testing/results/closeout.json",
+      "sha256": "7d38d66fd6af42bf44a17d96a6896fa33323a05c03b7d67d77897db42b1519c6"
+    },
+    {
+      "path": "research/module3_hypothesis_testing/results/closeout_report.md",
+      "sha256": "b8259fd887ef17fffcf6076e192f9bd88765dcac06538aa7f3cd419a756e6281"
+    }
+  ],
+  "schema_version": "module3-vrp-hypothesis-manifest/v1",
+  "sources": [
+    {
+      "path": "audit/phase2_vrp_curve_crossings.json",
+      "sha256": "90ea5e90d40d2d5be22ec111f78233a3e8bba82886423412c1a36e1b87fac448"
+    },
+    {
+      "path": "audit/phase3_full_strategy_tearsheet.json",
+      "sha256": "3c64122adf012a73da47e90f1e5803f42a1a245ad5bedc3dcfee7707105fe1c5"
+    },
+    {
+      "path": "audit/phase3_tail_percentile_tearsheet.json",
+      "sha256": "a74ec2738e536657d1419371603fadb7efba1003e6489858e47b61b9a20cec9e"
+    },
+    {
+      "path": "audit/phase4_cost_aware_summary.json",
+      "sha256": "8975202d601c7a6fac7e41e22584b1e88bcd1a86f49a5361f9ad4422bbca0bcb"
+    },
+    {
+      "path": "audit/phase4_multiday_summary.json",
+      "sha256": "ddf561db8eb849fef944e2920b017cc9fc3dd8d7131b8dc53bb1d1c1f45fb562"
+    },
+    {
+      "path": "audit/phase5_final_attempt_summary.json",
+      "sha256": "3d4f1f18bacacbc091ce7cdfe5794c3e13e8feac6d252ed49b9922db17f5d9b3"
+    },
+    {
+      "path": "audit/phase6_reversal_summary.json",
+      "sha256": "2aff27cbdb89e4d9bb60c3c1e0b8b21dcd5ebc1a677cd9ac8afb42f764395851"
+    },
+    {
+      "path": "audit/phase7_180min_summary.json",
+      "sha256": "fdfbd9d31c5985ceebaad95307759387b449b3f54412fdfcd483011a7ebcd8fb"
+    },
+    {
+      "path": "audit/phase2_hypothesis_evidence_manifest.json",
+      "sha256": "dbe23d59af9143c66cdeb1d4dac8fae485a4a49d04d8640e4147b3d0f6548c0f"
+    },
+    {
+      "path": "audit/phase3_full_strategy_manifest.json",
+      "sha256": "6b747332f99f02f5c63fd4665cbe9325f2d915b3d81009b1fefc9bbe2ebb6b0a"
+    },
+    {
+      "path": "audit/phase3_tail_percentile_manifest.json",
+      "sha256": "e4bf6e027ba208af91b98c16051bb5733263b40d79209a55117fae35025a2db3"
+    },
+    {
+      "path": "audit/phase4_cost_aware_manifest.json",
+      "sha256": "847500d565d38699a0d16d620288bb299305217e79a37a8b5671920e1677d6f5"
+    },
+    {
+      "path": "audit/phase4_multiday_manifest.json",
+      "sha256": "aef9fed28cefeeaa8a8a24f5f5793f14b771cf201c4200925f34e7091c8dcc7b"
+    },
+    {
+      "path": "audit/phase5_final_attempt_dataset_manifest.json",
+      "sha256": "5c64ac92fac8e187a208780ffe608da1ab6c05d9f9989af30b31f712b04ada0c"
+    },
+    {
+      "path": "audit/phase5_final_attempt_manifest.json",
+      "sha256": "b18fcf775399c4c306d525682940110467002682065159797b3ae82ed19a21de"
+    },
+    {
+      "path": "audit/phase6_reversal_manifest.json",
+      "sha256": "cd641c682e8dfc229e8833af7fc09798f6ce195c4ff08a7ac52836ca8987308b"
+    },
+    {
+      "path": "audit/phase7_180min_manifest.json",
+      "sha256": "aea6e7baa53dfa4c0e87588234143a40c600e4c608d87066723c4e51ca551106"
+    }
+  ]
+}

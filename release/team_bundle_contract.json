@@ -1,0 +1,56 @@
+{
+  "schema_version": "team-share-bundle-contract/v1",
+  "bundle_name": "nifty-options-data-foundation-team-bundle",
+  "bundle_version": "1.0.0",
+  "archive_prefix": "nifty-options-data-foundation",
+  "source_repository": "https://github.com/Kd6669/nifty-options-vrp-research",
+  "include_all_tracked_files": true,
+  "exclude_prefixes": [
+    ".git/",
+    ".pytest_cache/",
+    ".ruff_cache/",
+    ".tmp/",
+    ".venv/",
+    "build/",
+    "data/",
+    "dist/",
+    "node_modules/",
+    "reports/",
+    "tmp/"
+  ],
+  "exclude_paths": [
+    ".env"
+  ],
+  "forbidden_names": [
+    ".env",
+    "id_rsa",
+    "id_ed25519"
+  ],
+  "forbidden_suffixes": [
+    ".key",
+    ".p12",
+    ".pem",
+    ".pfx"
+  ],
+  "required_paths": [
+    "README.md",
+    "REPRODUCE.md",
+    "pyproject.toml",
+    "requirements/research-release.txt",
+    "AUDIT_REPORT.md",
+    "DATA_DICTIONARY.md",
+    "DATA_LINEAGE.md",
+    "samples/nifty_gold_sample.parquet",
+    "samples/nifty_gold_sample.manifest.json",
+    "research/module3_hypothesis_testing/results/manifest.json",
+    "research/module4_sizing_risk_management/results/manifest.json",
+    "research/module5_final_submission/results/manifest.json",
+    "research/module5_final_submission/results/trades/final_trade_sheet.csv",
+    "submission/NIFTY_VRP_Research_Memo.pdf",
+    "submission/NIFTY_VRP_Research_Highlights.pdf",
+    "submission/NIFTY_VRP_Research_Tearsheet.xlsx",
+    "submission/manifest.json"
+  ],
+  "compact_reproduction_command": "powershell -ExecutionPolicy Bypass -File scripts/reproduce_compact.ps1",
+  "full_data_runbook": "REPRODUCE.md"
+}

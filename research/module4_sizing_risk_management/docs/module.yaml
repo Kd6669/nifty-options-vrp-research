@@ -1,0 +1,10 @@
+schema_version: module-folder/v1
+folder: docs
+owns:
+  - architecture and lineage
+  - research interpretation
+  - exact rerun and verification commands
+files:
+  - architecture.md
+  - research_note.md
+  - runbook.md

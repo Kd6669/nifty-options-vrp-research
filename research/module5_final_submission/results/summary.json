@@ -1,0 +1,64 @@
+{
+  "decision": "SHADOW_ONLY_NOT_LIVE_CAPITAL_APPROVED",
+  "event_calendar": {
+    "heavy_results_weeks": "not_tagged_no_reliable_index_specific_calendar",
+    "window_business_days": 5
+  },
+  "execution_decay": {
+    "break_even_slippage_multiplier": 5.919954924315367
+  },
+  "hypothesis_result": "STANDALONE_INTRADAY_VRP_RULE_REJECTED_NET_OF_COSTS",
+  "limitations": [
+    "rolling nearest-expiry ATM+/-10 archive",
+    "fixed-contract labels reliable only through 180 minutes",
+    "historical bid/ask unavailable; slippage is modeled",
+    "post-hoc candidate and sizing are not clean OOS evidence",
+    "event results are descriptive, not causal",
+    "SPAN is timestamp-aware where joined; missing India VIX falls back to entry ATM IV"
+  ],
+  "metrics": {
+    "annualized_volatility": 0.01432306387923665,
+    "average_cash_risk_utilization": 0.027855885124958377,
+    "average_loss_rupees": -2444.691568245785,
+    "average_margin_utilization": 0.31934709527615784,
+    "average_trade_net_rupees": 1267.2497976543577,
+    "average_win_rupees": 3155.781369778991,
+    "cagr": 0.020355254134580836,
+    "candidate_signals": 132,
+    "cost_drag_pct_gross": 0.28774784675582227,
+    "cvar_5_trade_rupees": -6141.716232818131,
+    "ending_equity_rupees": 1108983.4825982747,
+    "executed_trades": 86,
+    "gross_pnl_rupees": 153012.5,
+    "hit_rate": 0.6627906976744186,
+    "initial_capital_rupees": 1000000.0,
+    "maximum_cash_risk_utilization": 0.039831396588728,
+    "maximum_drawdown_duration_calendar_days": 184,
+    "maximum_drawdown_pct": -0.0076205277761951,
+    "maximum_drawdown_rupees": -7981.72981214535,
+    "maximum_margin_utilization": 0.3497309230220656,
+    "net_profit_rupees": 108983.48259827471,
+    "payoff_ratio": 1.290870967433923,
+    "profit_factor": 2.537229142887366,
+    "return_on_average_entry_margin": 0.3210903246073379,
+    "sharpe": 1.3653943704972664,
+    "skipped_signals": 46,
+    "sortino": 2.750320884574666,
+    "total_cost_rupees": 44029.01740172526,
+    "total_return": 0.10898348259827473,
+    "turnover_rupees": 6670527.677784263,
+    "worst_day_rupees": -7981.729812145328,
+    "worst_trade_rupees": -7981.729812145328,
+    "worst_week_rupees": -7981.729812145328
+  },
+  "nov2024_break": {
+    "bootstrap_ci_95_lower": -377.80638616026187,
+    "bootstrap_ci_95_upper": 262.033838995944,
+    "mean_difference_post_minus_pre": -71.76162628297703,
+    "permutations": 20000,
+    "test_unit": "selected_profile_net_pnl_per_lot",
+    "two_sided_permutation_p_value": 0.63925
+  },
+  "post_hoc_candidate": "UPPER_85_SHORT_IRON_FLY_WITH_FROZEN_GATES_AND_SIZING",
+  "schema_version": "module5-final-submission/v1"
+}

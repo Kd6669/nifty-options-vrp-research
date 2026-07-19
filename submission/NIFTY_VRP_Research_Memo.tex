@@ -1,0 +1,351 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=12mm,top=15mm,bottom=14mm]{geometry}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,tabularx,array}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{titlesec}
+
+\definecolor{Navy}{HTML}{0F172A}
+\definecolor{Blue}{HTML}{1D4ED8}
+\definecolor{Pale}{HTML}{EFF6FF}
+\definecolor{Red}{HTML}{B91C1C}
+\definecolor{Green}{HTML}{047857}
+\definecolor{Grey}{HTML}{475569}
+\hypersetup{colorlinks=true,linkcolor=Blue,urlcolor=Blue,citecolor=Blue,pdfauthor={Kd6669},pdftitle={NIFTY Intraday VRP Research Note}}
+\graphicspath{{submission/figures/}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\scriptsize\color{Grey} NIFTY INTRADAY VRP -- INTERNAL RESEARCH NOTE}
+\fancyhead[R]{\scriptsize\color{Grey} 19 July 2026}
+\fancyfoot[L]{\scriptsize\color{Grey} Hash-covered repository artifacts; no live allocation}
+\fancyfoot[R]{\scriptsize\color{Grey} \thepage/8}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{11pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2.4pt}
+\setlength{\tabcolsep}{3.2pt}
+\renewcommand{\arraystretch}{1.10}
+\raggedbottom
+\setlist[itemize]{leftmargin=4mm,itemsep=1pt,topsep=1pt}
+\setlist[enumerate]{leftmargin=4mm,itemsep=1pt,topsep=1pt}
+\titleformat{\section}{\large\bfseries\color{Navy}}{}{0pt}{}
+\titleformat{\subsection}{\normalsize\bfseries\color{Blue}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{2pt}{3pt}
+\titlespacing*{\subsection}{0pt}{3pt}{2pt}
+\captionsetup{font=footnotesize,labelfont=bf,skip=2pt}
+
+\newcommand{\INR}{\textsf{Rs.}\,}
+\newcommand{\good}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\bad}[1]{\textcolor{Red}{\textbf{#1}}}
+\newcommand{\decisionbox}[1]{\colorbox{Pale}{\parbox{0.965\linewidth}{\textbf{Research decision.} #1}}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+
+\begin{document}
+\fontsize{8.35}{10.05}\selectfont
+
+% PAGE 1
+{\fontsize{20}{22}\selectfont\bfseries\color{Navy} NIFTY intraday volatility-risk-premium research}\par
+\vspace{1mm}
+{\large\color{Blue} From audited option-chain data to a cost-aware, defined-risk shadow candidate}\par
+\vspace{2mm}
+\begin{tabularx}{\linewidth}{@{}Y Y@{}}
+\textbf{Instrument:} NIFTY index options, single nearest-listed-expiry proxy &
+\textbf{Research window:} 1 Jan 2021--15 Jul 2026 \\
+\textbf{Entry/exit:} ATM$\pm3$, fixed 60 minutes (180-minute audit ceiling) &
+\textbf{Capital experiment:} \INR10,00,000; historical, no live allocation \\
+\end{tabularx}
+
+\section*{Abstract}
+We ask whether a causal, normalized intraday variance-risk-premium (VRP) curve can time defined-risk NIFTY option structures after realistic execution and capital constraints. The foundation contains 43,018,677 one-minute option rows across 1,371 expected trading sessions, independently recomputed Black--Scholes implied volatility (IV), date-aware contract rules, India VIX/spot joins and a six-slot research SPAN join. A full unconditional coverage audit limits defensible fixed-contract research to ATM$\pm3$ and at most 180 minutes; the primary exit is 60 minutes. Provider IV is not accepted at face value, realized volatility (RV) uses only information available at entry, and IV/RV are converted to matched intraday variance before VRP is ranked within the intraday clock.
+
+The original level/direction rule, 12 percentile-cross variants, structure/horizon grid, tail-reversal rules and a causal feature rescue all fail net of one-lot costs. A later, explicitly post-hoc upper-85 percentile upward crossing with a short iron fly, three causal deterioration gates and a frozen quality switch is historically positive: 86 executions from 132 signals, \INR153,013 gross, \INR44,029 costs and \INR108,983 net under a \INR10 lakh sizing experiment. The largest rupee drawdown is \INR7,982; the largest percentage drawdown is 0.762\% in a different episode. However, the composite-score later-period Spearman bootstrap interval crosses zero; 2024, post-20-Nov-2024 and event-week results are weaker; and the same archive influenced selection. The correct decision is therefore \textbf{reject standalone intraday VRP timing and retain one p85 candidate only for frozen forward shadow observation}.
+
+\decisionbox{The p85 candidate is approved for this submission and a forward-shadow protocol, \emph{not} for live-capital deployment. Current live allocation is \INR0.}
+
+\subsection*{Research path in one table}
+\begin{tabularx}{\linewidth}{@{}p{16mm}p{43mm}p{39mm}Y@{}}
+\toprule
+Stage & Question & Main evidence & Decision \\
+\midrule
+Foundation & Can the raw archive support causal fixed-contract labels? & 100\% session coverage; strict ATM$\pm3$/180m path coverage 99.09\% & Proceed inside boundary \\
+H1--H3 & Does VRP alone pay through condors/flies/verticals? & Every aggregate primary family negative after one-lot execution & Reject standalone rule \\
+H4 & Can a tail state plus causal regime gates clear costs? & One-lot mean gross \INR292, cost \INR240, net \INR52; 86 executed & Shadow candidate \\
+Sizing & Can \INR10 lakh allocate without excessive margin/drawdown? & Avg 6.5 lots; avg margin 31.93\%; max drawdown 0.76\% & Feasible point, not frontier \\
+Robustness & Is the positive result stable enough for capital? & Holdout score $\rho_s=0.214$, bootstrap CI $[-0.066,0.484]$ & Live gate fails \\
+\bottomrule
+\end{tabularx}
+
+\vfill
+{\scriptsize\color{Grey}This note reports the result that exists, including the failed hypotheses. All rupee P\&L is based on historical date-aware exchange lot sizes and completed fixed-contract exits unless stated otherwise.}
+
+\newpage
+% PAGE 2
+\section*{1. Data engineering: acquisition, cleaning, BSM, SPAN and gold}
+\subsection*{1.1 Reproducible three-layer archive}
+The Dhan modules call \texttt{/v2/charts/rollingoption} for the rolling option surface and \texttt{/v2/charts/intraday} for NIFTY spot, India VIX and available futures inputs; contract identities and expiry rules are reconciled to official exchange evidence. \textbf{Bronze} retains immutable provider bytes and request manifests. \textbf{Silver} performs source-specific parsing, timezone normalization, type enforcement, key construction and exception quarantine. The pre-BSM quality layer enriches same-session spot/VIX and date-effective rules, then blocks severe anomalies. \textbf{Gold} adds independent BSM outputs and SPAN references without rewriting upstream facts. Writes are atomic, resumable and hash-manifested; duplicate excess is quarantined. Thursday-to-Tuesday expiry migration and holiday rollback are effective-dated. Historical lots are keyed by contract expiry; the current lot is 65 (weekly expiries from 6-Jan-2026, monthly from 27-Jan-2026).
+
+\begin{tabularx}{\linewidth}{@{}p{30mm}R R Y@{}}
+\toprule
+Gold specification & Count & Coverage & Interpretation \\
+\midrule
+Rows / Parquet partitions & 43,018,677 / 67 & 3.743 GB & CALL 21,509,933; PUT 21,508,744 \\
+Trading dates & 1,371 of 1,371 & 100.000\% & No missing or unexpected expected sessions \\
+Time range (IST) & \multicolumn{2}{l}{2021-01-01 09:15 to 2026-07-15 15:29} & One-minute rolling surface \\
+BSM-ready / blocked & 42,970,270 / 48,407 & 99.8875\% ready & Severe data failures never enter the solver \\
+Spot matched / blocked & 42,988,752 / 29,925 & 99.9304\% matched & Backward same-session join; no future rows \\
+VIX matched / unavailable / blocked & 38,262,338 / 4,561,054 / 195,285 & 88.95\% matched & Research uses contemporaneous ATM IV when unavailable \\
+SPAN exact BOD contract matches & 42,718,832 & 99.3030\% & 299,845 unmatched exact contracts retained \\
+Integrity violations & 0 & all audited invariants & Null keys, negative volume/OI, OHLC, duplicates, future joins, BSM invariants \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{1.2 Independent Black--Scholes inversion}
+For call/put prices $C,P$, spot $S$, strike $K$, rate $r=10\%$, dividend yield $q=0$, and ACT/365 time $T$ to verified 15:30 IST expiry,
+\[
+d_1=\frac{\ln(S/K)+(r-q+\tfrac12\sigma^2)T}{\sigma\sqrt{T}},\quad d_2=d_1-\sigma\sqrt{T},\quad
+C=Se^{-qT}N(d_1)-Ke^{-rT}N(d_2),\quad P=Ke^{-rT}N(-d_2)-Se^{-qT}N(-d_1).
+\]
+No-arbitrage bounds are checked before inversion. Newton is attempted first and Brent provides a bounded fallback: 28,196,221 and 5,085,391 successful rows respectively; only 48 solver failures remain. Repricing residuals are approximately $5.46\times10^{-12}$ at the median, $6.26\times10^{-9}$ at p95 and $1.05\times10^{-7}$ maximum. Provider IV is retained only as a comparison field.
+
+\subsection*{1.3 Timestamp-aware SPAN treatment -- and its limit}
+The research release joins BOD/ID1/ID2/ID3 reference slots and selects the latest matched slot not later than entry (for the original 895 H1 trades: BOD 298, ID1 473, ID2 119, ID3 5). This is timestamp-aware within the retained reference schedule and gives entry-specific scenario arrays. It is \textbf{not proof of historical archive arrival}: retained publication timestamps are unproven, and the strict point-in-time release yields no usable historical SPAN matches. Margin is therefore a conservative timestamp-scheduled reconstruction, not a claim of observed broker margin at that instant.
+
+\subsection*{1.4 Dataset limitations carried into every conclusion}
+\begin{itemize}
+\item The source is rolling ATM$\pm10$ \texttt{WEEK} history, not a complete absolute-strike chain. Evidence supports a \emph{nearest-listed-expiry proxy}; it does not prove actual historical nearest-weekly identity in every row.
+\item No historical bid/ask, queue position or expired-futures minute archive exists. Fills require a conservative model and longer paths are non-randomly censored as ATM migrates.
+\item The versioned 751-row, three-date sample is for schema/reproducibility; full Parquets stay outside Git and are pinned by corpus SHA-256 \texttt{aee5db...252}.
+\end{itemize}
+
+\newpage
+% PAGE 3
+\section*{2. Playable universe and volatility normalization}
+\subsection*{2.1 Unconditional moneyness $\times$ horizon audit}
+Every theoretical entry minute on every available session was audited at 15/30/60/90/120/180/240/300 minutes and offsets ATM$\pm0$ through ATM$\pm10$. Contract identity is frozen at entry; a later rolling label is never substituted. For the four-leg ATM$\pm3$ window, 60-minute exact endpoints cover 99.7766\% of 430,665 windows, strict minute paths cover 99.6754\%, and a last-observation-carried-forward rule capped at ten minutes reaches 99.8546\% with only 258 proxies (0.0599\%). At 180 minutes, 266,698 windows have 99.5208\% exact endpoints, 99.0926\% strict paths and 99.7068\% ten-minute-stale coverage; 621 proxies (0.2328\%) remain.
+
+\begin{center}
+\includegraphics[width=0.76\linewidth]{coverage_boundary.pdf}
+\end{center}
+The 99\% strict-path frontier contracts from ATM$\pm6$ at 60 minutes to ATM$\pm3$ at 180 minutes. Entries begin at 09:16 (09:15 has a large source hole) and must leave an observable fixed exit before 15:29. Missingness is tail-correlated with ATM migration, so >180-minute or multi-day profitability cannot be inferred from survivors.
+
+\subsection*{2.2 IV, RV and VRP are matched to the intraday clock}
+The signal does not subtract an arbitrary daily RV statistic from a chain IV percentage, and it does not use the upstream gold spot-BSM IV at face value. Synchronized ATM$-1$/ATM/ATM$+1$ calls and puts imply a parity forward,
+\[
+F_t=\operatorname{median}_{K}\left\{K+e^{rT}[C_t(K)-P_t(K)]\right\},
+\]
+then CE and PE IV are independently inverted with discounted Black--76 and averaged at ATM. Local ATM$\pm3$ CE/PE IV supplies skew and curvature; provider IV is reconciliation-only. The ATM variance forecast is $V^{IV}_{t,H}=\widehat\sigma_{IV,t}^{\,2}\tau_H$, where $\tau_H=H/(365\cdot24\cdot60)$. RV is built causally from one-minute log returns observed up to $t$. On a matching interval,
+\[
+V^{RV}_{t,H}=\sum_{i=t-H+1}^{t}r_i^2,\qquad
+\widehat\sigma_{RV,t,H}=\sqrt{V^{RV}_{t,H}/\tau_H},\qquad
+VRP_{t,H}=V^{IV}_{t,H}-V^{RV}_{t,H}.
+\]
+The implementation also retains annualized variance spread $\widehat\sigma_{IV}^2-\widehat\sigma_{RV}^2$, \(\log(IV/RV)\), IV--RV divergence and 5/15/30-minute changes. Matching conventions makes the magnitude economically interpretable; common positive scaling preserves crossing direction.
+
+\subsection*{2.3 Causal curve level, direction and acceleration}
+Intraday IV/RV are strongly seasonal. We therefore rank VRP against historical observations from the same minute-of-day, using only prior dates:
+\[
+q_t=\frac{1+\sum_{s<t,\,m(s)=m(t)}\mathbf{1}[VRP_s\le VRP_t]}{n_{t,m}+1},\quad
+v_t=q_t-q_{t-5},\quad a_t=v_t-v_{t-5}.
+\]
+The hypothesis family uses zero crossings, percentile-tail crossings, $v_t$, $a_t$ and tail reversals. Signals execute on the next exact minute; exit is the same frozen contracts at $t+60$ (120/180 only as declared diagnostics). One signal per session avoids overlapping duplicates in the base tests.
+
+\subsection*{2.4 Initial number crunching}
+Unconditional matched 60-minute VRP is positive in 39.54\% of windows. Complete ATM/$-3$PE/$+3$CE surfaces exist in 511,859 windows (99.88\%). Raw rank dependence is weak: Spearman correlations of short-condor P\&L with VRP percentile, percentile velocity, percentile acceleration and raw-VRP acceleration are respectively 0.1381, 0.0147, $-0.0012$ and 0.0031. This motivates a falsifiable crossing test, but not a trading claim.
+
+\newpage
+% PAGE 4
+\section*{3. Hypotheses H0--H4: the full path, including failures}
+\textbf{Naming.} $H_0$ is the statistical null; H1--H4 are sequential trading alternatives, fixed or explicitly labeled post-hoc. The primary outcome is mean \emph{net} rupee P\&L per completed historical lot. A result must also survive tail, calendar, concentration and capital checks.
+
+\begin{tabularx}{\linewidth}{@{}p{12mm}p{48mm}p{55mm}Y@{}}
+\toprule
+ID & Falsifiable statement & Implementation and result & Status \\
+\midrule
+$H_0$ & VRP curve level/direction has no positive cost-inclusive predictive value for 60-minute defined-risk P\&L. & Rejection requires positive net mean and robust resampling/calendar evidence, not gross association alone. & Not rejected by H1--H3. \\
+$H_1$ & First sustained VRP crossing from non-positive to positive favors an ATM$\pm3$ short iron condor. & 895 trades: gross mean \INR22.60, cost \INR271.14, net mean $-\INR248.54$; 9.39\% net wins; 0/65 positive months. & \bad{Reject}. \\
+$H_2$ & Deeper causal percentile crossings plus direction/velocity/acceleration improve short/long defined-risk timing. & 70/75/80/85/90/95 thresholds $\times$ up/down: all 12 short-condor variants have negative net means. q85-up is least bad at the broad sample: 272 trades, gross \INR102.73, net $-\INR169.32$. & \bad{Reject}. \\
+$H_3$ & Reversal from upper tail toward zero favors long condors; lower-tail reversal favors short condors (inverse predeclared). & Requested 60m map: 428 trades, gross $-\INR2.71$, net $-\INR294.12$. Inverse 180m: gross \INR104.60 but net $-\INR181.43$ with 49.19\% coverage. & \bad{Reject}. \\
+$H_4$ & At an upper-85 upward crossing, a short iron fly becomes viable when causal IV/RV deterioration regimes are excluded and size is cost-aware. & 132 signals; 86 pass gates. Equal one lot: gross \INR292.42, cost \INR240.36, net \INR52.06. Frozen capital path: \INR108,983 net. & \good{Shadow only}. \\
+\bottomrule
+\end{tabularx}
+
+\begin{center}
+\includegraphics[width=0.80\linewidth]{hypothesis_ladder.pdf}
+\end{center}
+
+\subsection*{3.1 Why the condor barely moved while costs looked large}
+At 6--20 DTE, 60 minutes is a short window for a four-leg, partially Greek-offset condor: wing and body moves cancel, net vega/theta are modest, and the signal is not a direct tradable on the scalar VRP. Yet entry plus exit require eight orders. Under H1, the average bill was \INR160 brokerage, \INR59.18 modeled slippage, \INR30.39 GST, \INR12.37 STT, \INR8.68 exchange charges and about \INR0.53 other regulatory charges. Thus small gross structure movement, not an accounting bug, was the central failure.
+
+\subsection*{3.2 Structure/horizon and longer-hold diagnostics}
+The cost-aware grid compared condors, iron flies, butterflies and two-leg verticals at 60/120/180 minutes: 48 cells, zero positive-net-mean cells. The best was a lower-10-down 180-minute bull call spread (219 trades, \INR139.16 gross, $-\INR19.22$ net). Some 180-minute gross means exceeded \INR65, consistent with a slower maturation story, but round-trip costs remained roughly \INR249--311. Multi-day testing produced only one cell with at least 80\% coverage and it failed. For the apparent top-reversal 180-minute subgroup, 96 of 191 signals are evaluable and \textbf{95 are explicitly unevaluated}; the missing half cannot be assumed random.
+
+\subsection*{3.3 Final causal feature rescue before closing standalone VRP}
+A feature model used IV/RV divergence, $\log(IV/RV)$, VRP level/slope/acceleration, local skew/curvature, spot returns, DTE, Greeks, credit/debit and cost hurdles. Its 2025--26 confirmation had 190 trades, gross $-\INR6,130$, net $-\INR31,355$, mean net $-\INR165.02$ and failed six of eight gates. Module 3 therefore closes the standalone VRP hypothesis family rather than mining another crossing.
+
+\newpage
+% PAGE 5
+\section*{4. H4: the one retained p85 regime-conditional candidate}
+\subsection*{4.1 Frozen trade contract}
+At the first causal upper-85 percentile crossing upward, enter next minute in a nearest-listed-expiry-proxy \textbf{short iron fly} with every leg inside ATM$\pm3$ at entry; close the same contracts after 60 minutes. The structure is fully defined-risk. Historical lot size and latest research SPAN slot not later than entry are used. India VIX informs the slippage regime when present; contemporaneous reconstructed ATM IV $\times100$ substitutes where absent.
+
+Three discovery-period deterioration conditions reject entries:
+\[
+\Delta IV_{5m}\le -0.046817,\qquad \Delta IV_{15m}\le -0.114873,\qquad
+\Delta \widehat\sigma_{RV,5m}\le -0.02651714.
+\]
+The intuition is structure-specific: a short fly entered while IV/RV are already collapsing has too little remaining premium response relative to eight-order friction. Thresholds were learned on 2021--23 and frozen for later diagnostics; they are not a pristine prospective discovery.
+
+\subsection*{4.2 Confidence score, rank test and hard quality switch}
+The causal score is 50\% gate cushion, 15\% inverse IV percentile, 15\% inverse RV percentile, 10\% inverse DTE percentile and 10\% entry-time score. Percentile maps are frozen from 2021--23. Spearman is computed against \emph{one-lot net P\&L before sizing}:
+\[
+\rho_s=\operatorname{corr}\big(\operatorname{rank}(score_t),\operatorname{rank}(PnL^{net}_{t,1lot})\big),
+\]
+which prevents an artificial correlation from assigning more lots to high scores. Full-sample $\rho_s=0.271$ (one-sided permutation $p=0.0014$); discovery $\rho_s=0.337$ with bootstrap CI $[0.100,0.551]$; combined 2024--26 $\rho_s=0.214$, one-sided $p=0.0472$, but bootstrap CI $[-0.066,0.484]$. Because the later lower bound is not positive, confidence-proportional sizing fails its strict validation gate. The final rule uses a simpler \textbf{hard switch}: execute only if score $>0.40$; power zero means score does not scale lots after admission.
+
+\subsection*{4.3 Cost model and corrected quantity impact}
+For integer lots $L$,
+\[
+PnL^{net}_t(L)=L\,PnL^{gross}_{t,1}-C^{Groww}_t(L)-C^{slip}_t(L).
+\]
+Groww charges include date-aware sell-side STT, brokerage, exchange transaction charge, SEBI fee, stamp, IPFT and GST. Selected entries have at least 6.08 DTE and exit after 60 minutes, so expiry-settlement STT, expiry-day ELM and disappearing calendar-spread benefit are outside the realized trade path rather than omitted applicable costs. Synthetic adverse slippage begins with premium/VIX, depth, staleness and observed volume/OI terms. The removed 10\%-per-extra-lot ladder was demonstrably dominant despite sub-1\% participation. Its corrected incremental factor is
+\[
+\frac{impact}{base}=\frac{L-1}{59}+sqrt{\frac{q_{inc}}{V_{1m}}}+\sqrt{\frac{q_{inc}}{OI}},
+\]
+so the smooth heuristic contributes one base-slippage unit around 60 lots while participation retains the liquidity penalty. At six lots, the original model's added impact was 94.7\% arbitrary ladder; the correction restores market variables as the main scaling logic. This is calibrated conservatism, not measured order-book impact.
+
+\subsection*{4.4 Why H4 clears where the original condor does not}
+Across 86 admitted signals at one equal lot, gross P\&L is \INR25,148, charges \INR17,270, slippage \INR3,401 and net \INR4,477: \INR292.42 gross, \INR240.36 total cost and \INR52.06 net per trade. The cushion is narrow at one lot. With exact historical profile sizing, gross averages \INR1,779 and total costs \INR512 per executed trade, leaving \INR1,267 net; fixed brokerage is amortized while the corrected impact curve remains moderate at 6.5 average lots. This is the specific economically viable candidate -- not evidence that arbitrary VRP tails work.
+
+\decisionbox{H4 is retained because gross clears modeled cost at one lot and by a wider amount under feasible sizing. It remains post-hoc and conditional; no claim is made that p85 is a universal optimum.}
+
+\newpage
+% PAGE 6
+\section*{5. \INR10 lakh sizing, risk management and tearsheet}
+\subsection*{5.1 Sizing rule selected from a broad exploratory grid}
+Starting equity is \INR10,00,000. For each admitted trade,
+\[
+L_t=\min\left(
+\left\lfloor\frac{0.35E_t}{M_{t,1}}\right\rfloor,
+\left\lfloor\frac{0.04E_t}{Loss^{defined}_{t,1}+Reserve^{q95}_{cost,1}}\right\rfloor,
+76\right),
+\]
+with integer lots and exact quantity-aware cost recomputation. The rule caps entry SPAN at 35\% of current equity, defined max loss plus discovery q95 round-trip cost reserve at 4\%, and capacity at 76 lots. There is no fitted drawdown or losing-streak brake. The 17,640-policy grid produced 4,392 discovery-eligible rules; discovery-vs-holdout policy-net rank correlation was 0.649. The chosen configuration (margin 35\%, risk 4\%, score floor 0.40, score power 0) lies in a useful neighborhood, but \textbf{is not a proven efficient frontier}: objectives, intratrade MTM paths, SPAN expansion and truly independent data are insufficient to identify a global risk-return optimum.
+
+\begin{center}
+\includegraphics[width=0.85\linewidth]{equity_drawdown.pdf}
+\end{center}
+
+\begin{tabularx}{\linewidth}{@{}p{37mm}R p{39mm}R@{}}
+\toprule
+Metric & Result & Metric & Result \\
+\midrule
+Candidate / executed / skipped & 132 / 86 / 46 & Average / maximum lots & 6.50 / 14 \\
+Gross / costs / net & \INR153,013 / \INR44,029 / \INR108,983 & Ending equity / total return & \INR1,108,983 / 10.90\% \\
+CAGR / annualized vol & 2.04\% / 1.43\% & Sharpe / Sortino & 1.37 / 2.75 \\
+Hit rate / profit factor & 66.28\% / 2.537 & Avg win / avg loss & \INR3,156 / $-\INR2,445$ \\
+Worst trade/day/week & $-\INR7,982$ & Trade CVaR 5\% & $-\INR6,142$ \\
+Max rupee DD / max \% DD & $-\INR7,982$ / $-0.762\%$ (different episodes) & Recovery / turnover / cost drag & 184d / \INR6.67m / 28.77\% \\
+Average / max margin use & 31.93\% / 34.97\% & Average / max risk use & 2.79\% / 3.98\% \\
+\bottomrule
+\end{tabularx}
+
+\begin{center}
+\includegraphics[width=0.88\linewidth]{annual_costs.pdf}
+\end{center}
+
+\subsection*{5.2 Calendar path and distribution}
+Net P\&L is positive in every displayed calendar year: 2021 \INR20,204; 2022 \INR27,046; 2023 \INR23,585; 2024 \INR15,113; 2025 \INR18,148; 2026 through 14 July \INR4,888. Discovery 2021--23 contributes \INR70,835; 2024 validation \INR15,113; 2025--26 confirmation \INR23,036. Cumulative net divided by average entry margin is 32.11\% (not annualized). The worst trade, 25-May-2023, was seven lots: $-\INR7,577.50$ gross plus \INR404.23 cost, $-\INR7,981.73$ net; it bound on reserved cash risk and recovered by 22-Jun-2023. This breadth is encouraging, but sparse dependence and the post-hoc path prevent clean-OOS language. Sharpe should not dominate judgement on a short-gamma structure without intratrade MTM tails.
+
+\newpage
+% PAGE 7
+\section*{6. Robustness: costs, capacity, regimes, events and failure modes}
+\subsection*{6.1 Execution decay and capacity}
+\begin{center}
+\includegraphics[width=0.82\linewidth]{execution_capacity.pdf}
+\end{center}
+At the selected historical sizes, modeled aggregate P\&L breaks even only near 5.92$\times$ baseline slippage. The equal-size 1--100 lot diagnostic remains positive over the tested grid, but this is a model sensitivity, not proof of fillable exchange capacity. On \INR10 lakh, margin/risk caps bind far before 100 lots. Capacity outside observed minute volume/OI, concurrent orders and queue priority is unknown.
+
+\subsection*{6.2 Regime, structural-break and event evidence}
+\begin{center}
+\includegraphics[width=0.84\linewidth]{robustness_panels.pdf}
+\end{center}
+Pre-20-Nov-2024 has 53 trades and mean sized net \INR1,639; post-break has 33 and \INR671. The post-minus-pre per-selected-lot difference is $-\INR71.76$, bootstrap 95\% CI $[-\INR377.81,\INR262.03]$, permutation $p=0.639$: weaker, but not statistically distinguishable in this sample. Event windows use $\pm5$ business days around RBI MPC, Budget and national-election anchors: 27 event-week trades average \INR418 with 53.6\% cost drag, versus 59 non-event trades at \INR1,656 and 24.1\% drag. Heavy-results weeks are not tagged because a defensible index-specific calendar was unavailable. These event numbers are descriptive, not causal.
+
+The exploratory losing-trade audit found useful \emph{directions}, not validated filters: wide gate cushion, lower IV/RV, lower DTE and entries after 13:00 were better; high-IV/high-RV, thin-cushion and 11:00--13:00 groups were worse. The three deterioration gates were learned only on 2021--23 and kept fixed. Adding more regime cuts now would be another same-sample search.
+
+\subsection*{6.3 What passed, what failed}
+\begin{tabularx}{\linewidth}{@{}p{44mm}p{28mm}Y@{}}
+\toprule
+Test & Outcome & Reading \\
+\midrule
+One-lot H4 gross $>$ charges + modeled slippage & \good{Pass} & \INR52.06 mean net, but a thin base-size cushion \\
+Later-period score Spearman $\ge0.20$ and $p\le0.05$ & \good{Pass} & $\rho_s=0.214$, one-sided $p=0.0472$ \\
+Later-period bootstrap lower bound $>0$ & \bad{Fail} & 95\% interval $[-0.066,0.484]$ \\
+Positive chronological capital slices & \good{Pass} & Discovery, 2024 and 2025--26 positive under frozen capital rule \\
+November 2024 break stability & Inconclusive & Point estimate weaker; wide interval, small post sample \\
+Multi-day / $>180$m verification & \bad{Not evaluable} & Rolling fixed-contract coverage censors outcomes \\
+Intratrade liquidation/tail path & \bad{Not observed} & Equity records fixed-horizon completed trades, not worst MTM \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{6.4 Why this might be fake}
+The retained candidate was found after H1--H3 failed; p85, structure, gates and sizing all reuse a finite archive. No historical spread/queue data validates modeled fills. SPAN timing is a research schedule, not proven publication time. The expiry identity is a nearest-listed proxy. Missing longer paths are state-dependent. Score rank uncertainty spans zero, 2024 is weak, and event/post-break performance is lower. The strongest alternative explanation is post-selection plus fixed-cost amortization, not stationary regime alpha.
+
+\newpage
+% PAGE 8
+\section*{7. Decision, kill-switch, task coverage and reproducibility}
+\subsection*{7.1 Capital decision and frozen forward protocol}
+\decisionbox{Allocate \INR0 live. Run the exact H4 rule in shadow at one modeled lot until new observations -- not re-optimization -- decide whether the candidate survives.}
+
+Minimum evidence before capital discussion: at least 100 new non-overlapping trades, at least 12 months and eight active months; positive net P\&L overall and in both chronological six-month halves; no month above 40\% of total forward profit; score/P\&L Spearman bootstrap 95\% lower bound above zero; modeled-vs-observed 20-fill slippage ratio no more than 1.5$\times$ and no fill above 3$\times$; forward maximum drawdown below 1.5\%. A future micro-allocation would start at one lot with a 0.75\% daily capital stop, immediate data/timestamp/instrument kill-switch and no discretionary averaging. Any parameter change restarts the forward clock.
+
+\subsection*{7.2 Quant-task requirements -- explicit coverage}
+\begin{tabularx}{\linewidth}{@{}p{51mm}p{22mm}Y@{}}
+\toprule
+Brief requirement & Status & Evidence in submission \\
+\midrule
+Specific falsifiable VRP hypothesis & Complete & H0--H4 statements, crossings and acceptance gates \\
+Defined-risk NIFTY structure & Complete & Condors/flies/verticals only; H4 short iron fly \\
+Data source, cleaning and limitations & Complete & Bronze/silver/gold, 43.0m-row audit, proxy/coverage disclosures \\
+No lookahead / expiry mechanics & Complete & Prior-date minute ranks, next-minute entry, fixed contracts, dated rules \\
+Realistic costs, slippage and margin & Complete & Groww charges, dated STT, quantity impact, entry SPAN; no mid fills \\
+IS/OOS check and self-attack & Qualified & Chronological discovery/later slices; explicitly not pristine OOS \\
+CAGR, vol, Sharpe, Sortino & Complete & Net-capital metrics with short-gamma caveat \\
+Drawdown/duration, CVaR, worst day/week & Complete & Trade sheet and risk artifacts; intratrade MTM limitation \\
+Hit rate, win/loss, turnover, cost drag & Complete & Page 6 tearsheet and formula-backed workbook \\
+Regime and Nov-2024 break & Complete & Causal gates, formal break/permutation/bootstrap diagnostics \\
+Events and execution decay & Complete & RBI/Budget/election windows; 0--6$\times$ slippage curve \\
+Capacity and solo-desk monitoring & Complete & Quantity-aware 1--100 lot diagnostic; shadow/kill-switch design \\
+Trade/size/kill decision & Complete & Shadow only, \INR0 live; exact promotion conditions \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{7.3 Reproduce and inspect}
+From the repository root, run:
+\begin{verbatim}
+.\research\module5_final_submission\scripts\run_submission.ps1
+\end{verbatim}
+This rebuilds compact analytics, verifies hashes, regenerates this LaTeX PDF and formula-backed workbook, and runs the test suite. The reviewer surface includes \texttt{submission/NIFTY\_VRP\_Research\_Memo.tex/.pdf}, \texttt{NIFTY\_VRP\_Research\_Tearsheet.xlsx}, all 132 signal rows with 46 explicit skips, equity/monthly/weekly/annual curves, drawdown episodes and autopsy, charge/slippage attribution, capacity/decay tables, break/event diagnostics, manifests and module runbooks. Raw multi-GB Parquets remain outside Git by design; full-corpus SHA, audited sample and routing contract pin the source.
+
+\subsection*{7.4 Conclusion}
+The central result is a disciplined rejection: normalized intraday VRP level, tails, direction, velocity, acceleration and reversal do not by themselves generate enough 60--180 minute defined-risk movement to cover execution. A p85 short-iron-fly regime candidate produces a meaningful historical gross-to-cost cushion after gating and feasible sizing, with broad positive calendar P\&L and controlled completed-trade drawdown. But its discovery is post-hoc, rank stability is not decisive and market/data boundaries are material. The strategy is therefore complete enough to submit, not complete enough to fund.
+
+\subsection*{Primary references}
+{\scriptsize
+NSE, \href{https://www.nseindia.com/static/products-services/equity-derivatives-contract-specifications}{Equity derivatives contract specifications}; NSE circulars \href{https://nsearchives.nseindia.com/content/circulars/FAOP68685.pdf}{FAOP68685} (Tuesday expiry) and \href{https://nsearchives.nseindia.com/content/circulars/FAOP70616.pdf}{FAOP70616} (lot 75 to 65); SEBI, \href{https://www.sebi.gov.in/sebi_data/attachdocs/jul-2025/1751900271726.pdf}{Measures to strengthen index derivatives} (Nov-2024 regime); \href{https://www.rbi.org.in/scripts/Annualpolicy.aspx.html}{RBI MPC archive}; \href{https://www.indiabudget.gov.in/}{Union Budget}; \href{https://elections24.eci.gov.in/}{Election Commission 2024}. Internal evidence: gold audit, Phase 2 universe/volatility notes, Module 3 hypothesis closeout, Module 4 sizing closeout and Module 5 final manifest.}
+
+\vfill
+{\scriptsize\color{Grey}\textbf{Submission status:} exact strategy/config frozen; shadow-only; no live-capital approval.}
+
+\end{document}

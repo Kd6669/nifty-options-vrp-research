@@ -1,0 +1,70 @@
+{
+  "code": {
+    "path": "<repository-root>\\research\\phase8\\run_gated_capital_backtest.py",
+    "sha256": "0b17a90212d47ce5854e7ac5b4ef68fba22140cb5f9cf7924c5b52ec379ae3c6"
+  },
+  "impact_model": {
+    "name": "additive_ladder_participation_v2",
+    "parameters": {
+      "ladder_parity_lots": 60.0,
+      "oi_participation_weight": 1.0,
+      "participation_exponent": 0.5,
+      "volume_participation_weight": 1.0
+    }
+  },
+  "initial_capital": 1000000.0,
+  "inputs": [
+    {
+      "path": "<repository-root>\\audit\\phase4_cost_aware_observations.parquet",
+      "sha256": "2a29f3eefdfba80e0619a76349f93f97ba394598a3be639ef5585d3d8c1b1f05"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase4_cost_aware_tradebook.csv",
+      "sha256": "55dace280d247592aea3bb980f51f2fe466c313b262956e54bc6155236d392a9"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase2_vrp_session_curve_features.parquet",
+      "sha256": "f7cb06db9060d2d9a82adc3403bbc7817a7569601efa40524aa5a4e1d62ec356"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase2_intraday_iv_surface.parquet",
+      "sha256": "8aaa4f0d1c33f35df7c18e22b84d91a26c0e026b635b3f1210fd42c465bc6367"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "<repository-root>\\audit\\phase8_gated_events.csv",
+      "sha256": "166348a155d034c65b746d211a410a1ad0ced066de1986a4312555115d5d5075"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase8_gated_capacity_surface.csv",
+      "sha256": "98131850bc7121de0ec5f9a9b3514942d2c1b1be2a2c5cd62a1cdeafbacdd693"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase8_gated_capital_tradebook.csv",
+      "sha256": "d5d81a3b854ebb5afd79abd6b12c7894ddfced7c0f261f0534acee9774d733f6"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase8_gated_policy_summary.csv",
+      "sha256": "0eb9fb13a7aa622ce9b925b7fa3ea05022b674b59ca8673f0471546c09c9b014"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase8_gated_equity_curve.csv",
+      "sha256": "2ad13409ce0c57d95bcb1e7ec52940e8be71fca0818ed5af76765f9ae2820395"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase8_gated_regime_summary.csv",
+      "sha256": "e19136dfa191551a60c58a9583ae0204a8ef525bb6fead867b2d35df77cad97c"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase8_gated_tearsheet.json",
+      "sha256": "2e64816745733a09777de190049a532bfcd1227a8d24669fa0a52dadbb698562"
+    },
+    {
+      "path": "<repository-root>\\docs\\research\\PHASE8_10L_GATED_CAPITAL_BACKTEST.md",
+      "sha256": "d20fe25d6e0865c9a920fddd34fbe37da47679785b01dd9c7f58d48a8ae44e90"
+    }
+  ],
+  "primary_structure": "short_iron_fly",
+  "schema_version": "phase8-gated-capital-manifest/v1"
+}

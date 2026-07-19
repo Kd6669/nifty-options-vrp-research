@@ -1,0 +1,38 @@
+{
+  "code": {
+    "path": "<repository-root>\\research\\phase4\\run_multiday_vrp_feasibility.py",
+    "sha256": "651e38df7cd102a1d61e7a585f292b0d22023fb80309cb8e588f5bd768fec3d4"
+  },
+  "complete_trade_rows": 909,
+  "gold_root": "<external-data-root>\\dhan-data-fetch-and-stream-phase2-3\\reports\\nifty_gold_span_six_slot_research_20210101_20260715\\version=2.1.0\\gold",
+  "inputs": [
+    {
+      "path": "<repository-root>\\audit\\phase4_cost_aware_observations.parquet",
+      "sha256": "97469ffe95bf4c1626a6e9d4a84ca4708dbdedcdd4c61f1179c3619fdfcc3df0"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase2_vrp_session_curve_features.parquet",
+      "sha256": "f7cb06db9060d2d9a82adc3403bbc7817a7569601efa40524aa5a4e1d62ec356"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase2_intraday_iv_surface.parquet",
+      "sha256": "8aaa4f0d1c33f35df7c18e22b84d91a26c0e026b635b3f1210fd42c465bc6367"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "<repository-root>\\audit\\phase4_multiday_tradebook.csv",
+      "sha256": "86d0ffcf40a9f787c19446fb101b18e9d59ba40189c4a3f324aaa4dc7447c61c"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase4_multiday_coverage.csv",
+      "sha256": "9acd4a965fbc603fc97c5e6903a88edd02b7b7f78c094b69c81c3b8d1e0096bf"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase4_multiday_summary.json",
+      "sha256": "dd12b868e6d4cd4e968db34e60f928fe3665396171e3bbb52fe35e71f5f15805"
+    }
+  ],
+  "request_rows": 8992,
+  "schema_version": "phase4-multiday-vrp-manifest/v1"
+}

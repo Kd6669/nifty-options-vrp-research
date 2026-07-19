@@ -1,0 +1,20 @@
+schema_version: module5-final-submission/v1
+module: module5_final_submission
+status: reproducible_closeout
+decision: SHADOW_ONLY_NOT_LIVE_CAPITAL_APPROVED
+owns:
+  - final trade sheet and tearsheet
+  - execution-decay sensitivity
+  - November-2024 structural-break test
+  - event-calendar conditioning
+  - live-monitoring and kill-switch specification
+consumes:
+  - research/module3_hypothesis_testing/results
+  - research/module4_sizing_risk_management/results
+  - audit/phase9_scored_events.csv
+  - audit/phase10_fly_cost_surface.parquet
+must_not:
+  - mutate upstream phase outputs
+  - reinterpret missing 180-minute labels as zero P&L
+  - claim a clean out-of-sample strategy approval
+

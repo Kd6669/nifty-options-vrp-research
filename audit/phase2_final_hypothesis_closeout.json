@@ -1,0 +1,1125 @@
+{
+  "curve_extension": {
+    "candidate_confidence_ladders": [
+      {
+        "candidate_structure": "short_iron_condor",
+        "confidence_step": 1,
+        "dates": 809,
+        "direction": "up",
+        "gross_cvar05_return_on_max_loss": -0.24622652571893133,
+        "gross_mean_return_on_max_loss": 0.010502245040581344,
+        "gross_median_return_on_max_loss": 0.017524644030668106,
+        "ladder": "upper_up",
+        "mean_bootstrap_95": [
+          0.0043531024777951136,
+          0.016315905018609564
+        ],
+        "strictly_monotonic_gross_mean": true,
+        "threshold": 0.5
+      },
+      {
+        "candidate_structure": "short_iron_condor",
+        "confidence_step": 2,
+        "dates": 475,
+        "direction": "up",
+        "gross_cvar05_return_on_max_loss": -0.2970213010990276,
+        "gross_mean_return_on_max_loss": 0.011878171024438085,
+        "gross_median_return_on_max_loss": 0.021248339973439594,
+        "ladder": "upper_up",
+        "mean_bootstrap_95": [
+          0.0026284052239553546,
+          0.020377686825451068
+        ],
+        "strictly_monotonic_gross_mean": true,
+        "threshold": 0.75
+      },
+      {
+        "candidate_structure": "short_iron_condor",
+        "confidence_step": 3,
+        "dates": 181,
+        "direction": "up",
+        "gross_cvar05_return_on_max_loss": -0.46279082803033333,
+        "gross_mean_return_on_max_loss": 0.012927966615847743,
+        "gross_median_return_on_max_loss": 0.03743654822335025,
+        "ladder": "upper_up",
+        "mean_bootstrap_95": [
+          -0.012498618937433755,
+          0.03688260018619771
+        ],
+        "strictly_monotonic_gross_mean": true,
+        "threshold": 0.9
+      },
+      {
+        "candidate_structure": "long_iron_condor",
+        "confidence_step": 1,
+        "dates": 793,
+        "direction": "down",
+        "gross_cvar05_return_on_max_loss": -0.42280064148536967,
+        "gross_mean_return_on_max_loss": -0.0032371144335528227,
+        "gross_median_return_on_max_loss": -0.007304116865869629,
+        "ladder": "lower_down",
+        "mean_bootstrap_95": [
+          -0.017038553027804906,
+          0.011267947800347967
+        ],
+        "strictly_monotonic_gross_mean": false,
+        "threshold": 0.5
+      },
+      {
+        "candidate_structure": "long_iron_condor",
+        "confidence_step": 2,
+        "dates": 590,
+        "direction": "down",
+        "gross_cvar05_return_on_max_loss": -0.47426561634228237,
+        "gross_mean_return_on_max_loss": -0.005336704923331887,
+        "gross_median_return_on_max_loss": -0.007337105571697782,
+        "ladder": "lower_down",
+        "mean_bootstrap_95": [
+          -0.023274553087835458,
+          0.013745024989374344
+        ],
+        "strictly_monotonic_gross_mean": false,
+        "threshold": 0.25
+      },
+      {
+        "candidate_structure": "long_iron_condor",
+        "confidence_step": 3,
+        "dates": 290,
+        "direction": "down",
+        "gross_cvar05_return_on_max_loss": -0.269657589069285,
+        "gross_mean_return_on_max_loss": 0.010130941668398962,
+        "gross_median_return_on_max_loss": -0.0052407206935038975,
+        "ladder": "lower_down",
+        "mean_bootstrap_95": [
+          -0.008513175826356405,
+          0.032324518681650705
+        ],
+        "strictly_monotonic_gross_mean": false,
+        "threshold": 0.1
+      }
+    ],
+    "conclusion": "VRP level and crossing direction remain features; acceleration and percentile-to-lots leverage are excluded from the final hypothesis.",
+    "coverage": {
+      "curve_dates": 1306,
+      "curve_rows": 410562,
+      "event_dates": 1282,
+      "first_crossing_events": 4744,
+      "first_date": "2021-03-31",
+      "last_date": "2026-07-14",
+      "ranked_curve_rows": 405301
+    },
+    "paired_session_ladder_comparisons": [
+      {
+        "deeper_better_rate": 0.45426829268292684,
+        "from_threshold": 0.5,
+        "ladder": "upper_up",
+        "mean_deeper_minus_shallower": -0.006174054999650291,
+        "mean_difference_bootstrap_95": [
+          -0.02003244431445648,
+          0.007816834145742795
+        ],
+        "median_deeper_minus_shallower": -0.0023134162629446257,
+        "outcome": "return_on_max_loss",
+        "paired_dates": 328,
+        "structure": "short_iron_condor",
+        "to_threshold": 0.75
+      },
+      {
+        "deeper_better_rate": 0.44366197183098594,
+        "from_threshold": 0.75,
+        "ladder": "upper_up",
+        "mean_deeper_minus_shallower": -0.01127568256369261,
+        "mean_difference_bootstrap_95": [
+          -0.04001937748072684,
+          0.016543841229833003
+        ],
+        "median_deeper_minus_shallower": -0.006647461433274007,
+        "outcome": "return_on_max_loss",
+        "paired_dates": 142,
+        "structure": "short_iron_condor",
+        "to_threshold": 0.9
+      },
+      {
+        "deeper_better_rate": 0.4263959390862944,
+        "from_threshold": 0.5,
+        "ladder": "lower_down",
+        "mean_deeper_minus_shallower": -0.004679336879753631,
+        "mean_difference_bootstrap_95": [
+          -0.03324215543070599,
+          0.02434508884399972
+        ],
+        "median_deeper_minus_shallower": -0.003708584234338449,
+        "outcome": "return_on_max_loss",
+        "paired_dates": 394,
+        "structure": "long_iron_condor",
+        "to_threshold": 0.25
+      },
+      {
+        "deeper_better_rate": 0.4759825327510917,
+        "from_threshold": 0.25,
+        "ladder": "lower_down",
+        "mean_deeper_minus_shallower": 0.00941901182251393,
+        "mean_difference_bootstrap_95": [
+          -0.010786389274703444,
+          0.03209668134856314
+        ],
+        "median_deeper_minus_shallower": 0.0,
+        "outcome": "return_on_max_loss",
+        "paired_dates": 229,
+        "structure": "long_iron_condor",
+        "to_threshold": 0.1
+      }
+    ],
+    "selected_acceleration_diagnostics": [
+      {
+        "acceleration_bin": "q75_100",
+        "dates": 106,
+        "direction": "down",
+        "directional_acceleration_median": 0.0725329949,
+        "directional_velocity_median": 0.0730210072,
+        "pnl_mean_bootstrap_95": [
+          -0.0767570755,
+          2.8226650943
+        ],
+        "pnl_points": {
+          "count": 106,
+          "cvar05": -10.3833333333,
+          "mean": 1.2839622642,
+          "median": -0.025,
+          "p05": -4.1625,
+          "p25": -1.125,
+          "p75": 1.925,
+          "p95": 9.675,
+          "std": 7.9379904713,
+          "win_rate": 0.4905660377
+        },
+        "return_mean_bootstrap_95": [
+          -0.003928159,
+          0.0771432223
+        ],
+        "return_on_max_loss": {
+          "count": 106,
+          "cvar05": -0.2391154271,
+          "mean": 0.0334474009,
+          "median": -0.0003255208,
+          "p05": -0.0952745528,
+          "p25": -0.0169378562,
+          "p75": 0.0248874283,
+          "p95": 0.1863542283,
+          "std": 0.2231719575,
+          "win_rate": 0.4905660377
+        },
+        "signal_q5_median": 0.0910859024,
+        "structure": "long_iron_condor",
+        "threshold": 0.1
+      },
+      {
+        "acceleration_bin": "q75_100",
+        "dates": 60,
+        "direction": "up",
+        "directional_acceleration_median": 0.0661874426,
+        "directional_velocity_median": 0.087859406,
+        "pnl_mean_bootstrap_95": [
+          -3.5220208333,
+          1.6600833333
+        ],
+        "pnl_points": {
+          "count": 60,
+          "cvar05": -32.4666666667,
+          "mean": -0.7991666667,
+          "median": 1.3,
+          "p05": -20.9025,
+          "p25": -2.7875,
+          "p75": 5.775,
+          "p95": 9.16,
+          "std": 10.230759087,
+          "win_rate": 0.6333333333
+        },
+        "return_mean_bootstrap_95": [
+          -0.0674440472,
+          0.0263255149
+        ],
+        "return_on_max_loss": {
+          "count": 60,
+          "cvar05": -0.5908046175,
+          "mean": -0.0192830296,
+          "median": 0.0319807473,
+          "p05": -0.3589733792,
+          "p25": -0.0622117818,
+          "p75": 0.0911230337,
+          "p95": 0.1912750819,
+          "std": 0.1864043859,
+          "win_rate": 0.6333333333
+        },
+        "signal_q5_median": 0.9089725379,
+        "structure": "short_iron_condor",
+        "threshold": 0.9
+      }
+    ]
+  },
+  "data_boundary": {
+    "atm_iv_rows": 511932,
+    "complete_exact_contract_60m_structure_marks": {
+      "bear_put_spread": 332348,
+      "bull_call_spread": 332314,
+      "long_call_butterfly": 332128,
+      "long_iron_condor": 332202,
+      "long_iron_fly": 332201,
+      "long_put_butterfly": 332118,
+      "short_iron_condor": 332202,
+      "short_iron_fly": 332201
+    },
+    "complete_local_surface_rows": 511859,
+    "first_date": "2021-01-01 00:00:00",
+    "last_date": "2026-07-15 00:00:00",
+    "minute_rows": 512460,
+    "source_dates": {
+      "dataset_dates": 1371,
+      "first_date": "2021-01-01T00:00:00.000",
+      "last_date": "2026-07-15T00:00:00.000",
+      "special_weekend_dates": 6,
+      "unresolved_daily_expiry_dates": 0,
+      "unresolved_session_envelope_dates": 0
+    },
+    "unconditional_atm_1_3_60m": {
+      "entry_eligible_windows": 430297,
+      "entry_present_windows": 430301,
+      "exact_endpoint_windows": 429703,
+      "family": "iron_condor",
+      "horizon_minutes": 60,
+      "short_offset": 1,
+      "stale_10m_windows": 430039,
+      "stale_1m_windows": 429940,
+      "stale_2m_windows": 429962,
+      "stale_5m_windows": 430001,
+      "strict_path_windows": 429267,
+      "theoretical_windows": 430665,
+      "wing_offset": 3
+    }
+  },
+  "decision": {
+    "acceleration": "diagnostic_only",
+    "cross_down_long_condor": "not_supported_as_standalone_alpha",
+    "net_edge_status": "not_tested",
+    "next_module": "cost_slippage_margin_and_oos_confirmation",
+    "percentile_leverage": "rejected_from_final_hypothesis",
+    "primary_formulation_evidence": "gross_supported"
+  },
+  "first_daily_next_minute_zero_crossings": [
+    {
+      "crossing": "cross_up",
+      "dates": 895,
+      "median_causal_vrp_percentile": 0.6319218241042345,
+      "pnl_points": {
+        "count": 895,
+        "cvar05": -11.878888888888888,
+        "mean": 0.4726256983240222,
+        "median": 0.5999999999999943,
+        "p05": -5.059999999999998,
+        "p95": 6.75,
+        "win_rate": 0.6581005586592179
+      },
+      "return_mean_bootstrap_95": [
+        0.005830652978569745,
+        0.016401676859367754
+      ],
+      "return_on_max_loss": {
+        "count": 895,
+        "cvar05": -0.2140910084123262,
+        "mean": 0.01133484414368665,
+        "median": 0.018113678950655833,
+        "p05": -0.1113889518704066,
+        "p95": 0.12238181372248474,
+        "win_rate": 0.6581005586592179
+      },
+      "role": "primary",
+      "structure": "short_iron_condor"
+    },
+    {
+      "crossing": "cross_up",
+      "dates": 895,
+      "median_causal_vrp_percentile": 0.6319218241042345,
+      "pnl_points": {
+        "count": 895,
+        "cvar05": -9.591111111111111,
+        "mean": -0.4726256983240222,
+        "median": -0.5999999999999943,
+        "p05": -6.75,
+        "p95": 5.05999999999999,
+        "win_rate": 0.33631284916201115
+      },
+      "return_mean_bootstrap_95": [
+        -0.022906239368558946,
+        0.0010046696887188666
+      ],
+      "return_on_max_loss": {
+        "count": 895,
+        "cvar05": -0.3681830834958784,
+        "mean": -0.011511341335087516,
+        "median": -0.00890471950133574,
+        "p05": -0.22706306377279709,
+        "p95": 0.1302549446885529,
+        "win_rate": 0.33631284916201115
+      },
+      "role": "exact_inverse",
+      "structure": "long_iron_condor"
+    },
+    {
+      "crossing": "cross_down",
+      "dates": 684,
+      "median_causal_vrp_percentile": 0.4571738121033896,
+      "pnl_points": {
+        "count": 684,
+        "cvar05": -10.0,
+        "mean": 0.18859649122807035,
+        "median": -0.3500000000000174,
+        "p05": -5.904999999999993,
+        "p95": 6.892499999999988,
+        "win_rate": 0.40058479532163743
+      },
+      "return_mean_bootstrap_95": [
+        -0.02179936437546532,
+        0.013127698799466516
+      ],
+      "return_on_max_loss": {
+        "count": 684,
+        "cvar05": -0.5667514929414175,
+        "mean": -0.004645652310584465,
+        "median": -0.0054869710311074,
+        "p05": -0.2982260833376685,
+        "p95": 0.22881852908891334,
+        "win_rate": 0.40058479532163743
+      },
+      "role": "symmetry_diagnostic",
+      "structure": "long_iron_condor"
+    },
+    {
+      "crossing": "cross_down",
+      "dates": 684,
+      "median_causal_vrp_percentile": 0.4571738121033896,
+      "pnl_points": {
+        "count": 684,
+        "cvar05": -18.149999999999995,
+        "mean": -0.18859649122807035,
+        "median": 0.3500000000000174,
+        "p05": -6.892499999999987,
+        "p95": 5.905,
+        "win_rate": 0.5906432748538012
+      },
+      "return_mean_bootstrap_95": [
+        -0.009669074673341245,
+        0.006536802608583982
+      ],
+      "return_on_max_loss": {
+        "count": 684,
+        "cvar05": -0.31575077766521786,
+        "mean": -0.0013013542730548637,
+        "median": 0.011650661146741683,
+        "p05": -0.14874407535144513,
+        "p95": 0.11665016607051591,
+        "win_rate": 0.5906432748538012
+      },
+      "role": "symmetry_inverse",
+      "structure": "short_iron_condor"
+    }
+  ],
+  "hypothesis": {
+    "alternative": "The first daily sustained non-positive-to-positive normalized-VRP crossing produces positive net return on SPAN-plus-exposure margin and outperforms the exact inverse and matched non-crossing controls.",
+    "claim": "The causal level and direction of normalized intraday VRP contain information about the next 60-minute payoff distribution of a bounded-risk nearest-expiry NIFTY iron condor. The first daily sustained transition from non-positive to positive VRP favours the short ATM +/-1 iron condor protected at ATM +/-3 over its exact inverse, when entered at the next minute and closed after 60 minutes.",
+    "controls": [
+      "exact inverse long iron condor at the same event",
+      "matched positive-VRP non-crossing short-condor entries",
+      "unconditional scheduled-entry short condor",
+      "cross-down long-condor symmetry diagnostic"
+    ],
+    "execution": {
+      "confirmation_marking": "conservative executable marks after charges, volume/OI depth, staleness, slippage, and margin",
+      "entry_time": "exact next minute t+1",
+      "exit_time": "entry plus exactly 60 minutes",
+      "primary_marking_in_formulation": "frictionless one-minute closes",
+      "signal_time": "completed minute t"
+    },
+    "formulation_outcomes": [
+      "gross basket P&L points",
+      "gross return on theoretical maximum expiry loss",
+      "win rate",
+      "5% quantile and CVaR",
+      "date-block bootstrap confidence interval",
+      "yearly stability"
+    ],
+    "frozen_on": "2026-07-18",
+    "hypothesis_id": "H1_VRP_LEVEL_DIRECTION_SHORT_CONDOR_60M",
+    "limitations": [
+      "Dhan WEEK expiryCode=1 rolling history does not expose actual contract expiry identity",
+      "source is a rolling ATM +/-10 surface, not an absolute-strike full chain",
+      "exact frozen contracts can leave the observable rolling surface as spot migrates",
+      "historical bid/ask quotes are unavailable",
+      "formulation marks exclude charges, slippage, staleness penalties, and SPAN capital",
+      "historical SPAN arrival times are not proven point in time",
+      "the full 2021-2026 history influenced formulation and is not a pristine holdout",
+      "expiry IV projected onto 60 minutes assumes a locally flat variance rate and is not a pure 60-minute forward variance quote",
+      "special and shortened sessions make 60-minute trading structurally unavailable on some dates",
+      "missing exact-contract exits are tail-correlated and cannot be treated as missing at random"
+    ],
+    "null": "The first daily sustained non-positive-to-positive normalized-VRP crossing does not produce positive net return on SPAN-plus-exposure margin and does not outperform the exact inverse or matched non-crossing controls.",
+    "primary_outcome": "60-minute net basket P&L divided by entry SPAN-plus-exposure margin",
+    "promotion_requirements": [
+      "positive net mean return on SPAN-plus-exposure margin",
+      "date-block bootstrap lower 95% bound above zero or an explicit inconclusive decision",
+      "outperformance of inverse and matched controls",
+      "survival under base and 1.5x conservative slippage",
+      "acceptable CVaR, drawdown, concentration, weekly and monthly stability",
+      "credible performance across expiry and regulatory regimes",
+      "genuine prospective evidence after the frozen formulation"
+    ],
+    "schema_version": "phase2-final-hypothesis/v1",
+    "signal": {
+      "causal_percentile": "same-minute-of-day rank against prior dates only; recorded as intensity, never used as a lot multiplier",
+      "direction": "upward crossing: V5_(t-1) <= 0 and V5_t > 0",
+      "excluded_features": [
+        "VRP acceleration as an entry requirement",
+        "post-selected upper-tail threshold",
+        "percentile-based leverage schedule"
+      ],
+      "integrated_vrp": "ATM_IV^2 * tau_60 - sum(previous_60_one_minute_log_returns^2)",
+      "iv": "ATM IV independently inverted under parity-forward Black-76 on an ACT/365 expiry clock; provider IV is reconciliation-only",
+      "level": "zero on the normalized variance-rate curve",
+      "rv": "sum of the previous 60 contiguous NIFTY spot one-minute squared log returns, annualized on the same ACT/365 clock",
+      "smoother": "V5_t = median(V_(t-4), ..., V_t), requiring five contiguous observations",
+      "stored_vrp_rate": "V_t = ATM_IV^2 - RV60_ACT365^2",
+      "tau_60": "60 / 525600"
+    },
+    "status": "formulated_not_confirmed",
+    "structure": {
+      "contract_tracking": "expiry, strike, and option type frozen at entry; no rolling-offset substitution",
+      "inverse_comparator": "long iron condor with every weight reversed",
+      "legs": [
+        "+1 ATM-3 put",
+        "-1 ATM-1 put",
+        "-1 ATM+1 call",
+        "+1 ATM+3 call"
+      ],
+      "name": "short_iron_condor"
+    },
+    "universe": {
+      "entry_moneyness": "all legs inside rolling ATM +/-3 at entry",
+      "expiry": "actual nearest eligible weekly expiry required for confirmation; nearest-listed-expiry research proxy used in formulation evidence",
+      "holding_minutes": 60,
+      "latest_entry_time": "14:15",
+      "maximum_primary_entries_per_session": 1,
+      "overnight_positions": false,
+      "underlying": "NIFTY 50 index options"
+    }
+  },
+  "input_artifacts": [
+    "<repository-root>\\research\\phase2\\final_hypothesis.json",
+    "<repository-root>\\audit\\phase2_defined_risk_structure_paths.parquet",
+    "<repository-root>\\audit\\phase2_unconditional_observed_computed.json",
+    "<repository-root>\\audit\\phase2_intraday_volatility.json",
+    "<repository-root>\\audit\\phase2_matched_realized_variance.json",
+    "<repository-root>\\audit\\phase2_defined_risk_vrp_events.json",
+    "<repository-root>\\audit\\phase2_vrp_curve_crossings.json"
+  ],
+  "invariants": {
+    "duplicate_date_crossing_rows": 0,
+    "event_dates": 906,
+    "event_rows": 1579,
+    "maximum_long_short_pnl_inverse_error": 0.0,
+    "maximum_signal_to_entry_minutes": 1.0,
+    "minimum_signal_to_entry_minutes": 1.0
+  },
+  "normalization_evidence": {
+    "interpretation": "Unconditional matched-clock intraday VRP is usually negative; the hypothesis is conditional on level and direction, not an unconditional short-volatility claim.",
+    "matched_60m_act365": {
+      "dates": 1368,
+      "horizon_minutes": 60,
+      "mean_vrp_var_act365": -0.014929617035846237,
+      "median_atm_iv": 0.16095962731484795,
+      "median_rv_act365": 0.18130419174587917,
+      "median_rv_session252": 0.07687693693055787,
+      "median_vrp_var_act365": -0.004814743856320788,
+      "observations": 429669,
+      "positive_vrp_rate_act365": 0.39543928000391
+    }
+  },
+  "schema_version": "phase2-final-hypothesis-closeout/v1",
+  "status": "hypothesis_formulation_closed",
+  "yearly_zero_crossing_summary": [
+    {
+      "crossing": "cross_up",
+      "pnl_points": {
+        "count": 115,
+        "cvar05": -8.825000000000003,
+        "mean": 0.3026086956521735,
+        "median": 0.4999999999999929,
+        "p05": -4.200000000000002,
+        "p95": 3.834999999999998,
+        "win_rate": 0.6782608695652174
+      },
+      "return_on_max_loss": {
+        "count": 115,
+        "cvar05": -0.1673579704114231,
+        "mean": 0.005162699107470541,
+        "median": 0.011376564277588005,
+        "p05": -0.08328740173483243,
+        "p95": 0.07281165162521107,
+        "win_rate": 0.6782608695652174
+      },
+      "role": "primary",
+      "structure": "short_iron_condor",
+      "year": 2021
+    },
+    {
+      "crossing": "cross_up",
+      "pnl_points": {
+        "count": 185,
+        "cvar05": -7.08,
+        "mean": 0.3408108108108096,
+        "median": 0.3000000000000078,
+        "p05": -2.1899999999999946,
+        "p95": 4.189999999999994,
+        "win_rate": 0.5945945945945946
+      },
+      "return_on_max_loss": {
+        "count": 185,
+        "cvar05": -0.13961958710308905,
+        "mean": 0.0065845463726245,
+        "median": 0.010593220338983054,
+        "p05": -0.08170842734433781,
+        "p95": 0.08253142528337702,
+        "win_rate": 0.5945945945945946
+      },
+      "role": "primary",
+      "structure": "short_iron_condor",
+      "year": 2022
+    },
+    {
+      "crossing": "cross_up",
+      "pnl_points": {
+        "count": 168,
+        "cvar05": -12.744444444444447,
+        "mean": 0.14821428571428596,
+        "median": 0.7500000000000098,
+        "p05": -5.7925,
+        "p95": 4.364999999999999,
+        "win_rate": 0.6607142857142857
+      },
+      "return_on_max_loss": {
+        "count": 168,
+        "cvar05": -0.18393022457831074,
+        "mean": 0.0037404116569277274,
+        "median": 0.01735562081168599,
+        "p05": -0.09950125627059728,
+        "p95": 0.06737505416726856,
+        "win_rate": 0.6607142857142857
+      },
+      "role": "primary",
+      "structure": "short_iron_condor",
+      "year": 2023
+    },
+    {
+      "crossing": "cross_up",
+      "pnl_points": {
+        "count": 183,
+        "cvar05": -8.510000000000002,
+        "mean": 1.071857923497267,
+        "median": 0.7999999999999972,
+        "p05": -4.925,
+        "p95": 7.74,
+        "win_rate": 0.73224043715847
+      },
+      "return_on_max_loss": {
+        "count": 183,
+        "cvar05": -0.1952153814533492,
+        "mean": 0.023040610259793197,
+        "median": 0.027675276752768072,
+        "p05": -0.1362519804119257,
+        "p95": 0.13981091993291508,
+        "win_rate": 0.73224043715847
+      },
+      "role": "primary",
+      "structure": "short_iron_condor",
+      "year": 2024
+    },
+    {
+      "crossing": "cross_up",
+      "pnl_points": {
+        "count": 163,
+        "cvar05": -11.516666666666664,
+        "mean": 0.6217791411042957,
+        "median": 0.70000000000001,
+        "p05": -7.104999999999997,
+        "p95": 8.49,
+        "win_rate": 0.6319018404907976
+      },
+      "return_on_max_loss": {
+        "count": 163,
+        "cvar05": -0.22490947239263878,
+        "mean": 0.01314635503331299,
+        "median": 0.022900763358778498,
+        "p05": -0.15063708661737224,
+        "p95": 0.12690474043983932,
+        "win_rate": 0.6319018404907976
+      },
+      "role": "primary",
+      "structure": "short_iron_condor",
+      "year": 2025
+    },
+    {
+      "crossing": "cross_up",
+      "pnl_points": {
+        "count": 81,
+        "cvar05": -22.520000000000003,
+        "mean": 0.03395061728395076,
+        "median": 0.6499999999999488,
+        "p05": -9.7,
+        "p95": 8.3,
+        "win_rate": 0.654320987654321
+      },
+      "return_on_max_loss": {
+        "count": 81,
+        "cvar05": -0.3467155987742149,
+        "mean": 0.016606880567516975,
+        "median": 0.02503912363067329,
+        "p05": -0.16638078902229844,
+        "p95": 0.19240724762726488,
+        "win_rate": 0.654320987654321
+      },
+      "role": "primary",
+      "structure": "short_iron_condor",
+      "year": 2026
+    },
+    {
+      "crossing": "cross_up",
+      "pnl_points": {
+        "count": 115,
+        "cvar05": -7.625,
+        "mean": -0.3026086956521735,
+        "median": -0.4999999999999929,
+        "p05": -3.835000000000001,
+        "p95": 4.200000000000002,
+        "win_rate": 0.3130434782608696
+      },
+      "return_on_max_loss": {
+        "count": 115,
+        "cvar05": -0.2427102087753824,
+        "mean": -0.00920163161071919,
+        "median": -0.007227332457292999,
+        "p05": -0.1284711684370258,
+        "p95": 0.12329593055786589,
+        "win_rate": 0.3130434782608696
+      },
+      "role": "exact_inverse",
+      "structure": "long_iron_condor",
+      "year": 2021
+    },
+    {
+      "crossing": "cross_up",
+      "pnl_points": {
+        "count": 185,
+        "cvar05": -5.914999999999999,
+        "mean": -0.3408108108108096,
+        "median": -0.3000000000000078,
+        "p05": -4.1899999999999995,
+        "p95": 2.189999999999994,
+        "win_rate": 0.4
+      },
+      "return_on_max_loss": {
+        "count": 185,
+        "cvar05": -0.1560396742759848,
+        "mean": -0.004788780187509576,
+        "median": -0.005079825834542733,
+        "p05": -0.11908915826441596,
+        "p95": 0.03662953398323451,
+        "win_rate": 0.4
+      },
+      "role": "exact_inverse",
+      "structure": "long_iron_condor",
+      "year": 2022
+    },
+    {
+      "crossing": "cross_up",
+      "pnl_points": {
+        "count": 168,
+        "cvar05": -7.005555555555556,
+        "mean": -0.14821428571428596,
+        "median": -0.7500000000000098,
+        "p05": -4.364999999999998,
+        "p95": 5.792500000000003,
+        "win_rate": 0.3333333333333333
+      },
+      "return_on_max_loss": {
+        "count": 168,
+        "cvar05": -0.3484696868082165,
+        "mean": -0.0028044153915279917,
+        "median": -0.014107687496700327,
+        "p05": -0.2616531799972097,
+        "p95": 0.13339753659160902,
+        "win_rate": 0.3333333333333333
+      },
+      "role": "exact_inverse",
+      "structure": "long_iron_condor",
+      "year": 2023
+    },
+    {
+      "crossing": "cross_up",
+      "pnl_points": {
+        "count": 183,
+        "cvar05": -11.004999999999999,
+        "mean": -1.071857923497267,
+        "median": -0.7999999999999972,
+        "p05": -7.74,
+        "p95": 4.925000000000001,
+        "win_rate": 0.26229508196721313
+      },
+      "return_on_max_loss": {
+        "count": 183,
+        "cvar05": -0.41468192961792977,
+        "mean": -0.03356484189316828,
+        "median": -0.010966415352981457,
+        "p05": -0.32825122232256854,
+        "p95": 0.1164639208977004,
+        "win_rate": 0.26229508196721313
+      },
+      "role": "exact_inverse",
+      "structure": "long_iron_condor",
+      "year": 2024
+    },
+    {
+      "crossing": "cross_up",
+      "pnl_points": {
+        "count": 163,
+        "cvar05": -10.616666666666667,
+        "mean": -0.6217791411042957,
+        "median": -0.70000000000001,
+        "p05": -8.489999999999998,
+        "p95": 7.105000000000001,
+        "win_rate": 0.36809815950920244
+      },
+      "return_on_max_loss": {
+        "count": 163,
+        "cvar05": -0.49126723011496387,
+        "mean": -0.01867460369462708,
+        "median": -0.009334163036714374,
+        "p05": -0.33967172600822343,
+        "p95": 0.19584388720027043,
+        "win_rate": 0.36809815950920244
+      },
+      "role": "exact_inverse",
+      "structure": "long_iron_condor",
+      "year": 2025
+    },
+    {
+      "crossing": "cross_up",
+      "pnl_points": {
+        "count": 81,
+        "cvar05": -10.660000000000002,
+        "mean": -0.03395061728395076,
+        "median": -0.6499999999999488,
+        "p05": -8.3,
+        "p95": 9.7,
+        "win_rate": 0.3333333333333333
+      },
+      "return_on_max_loss": {
+        "count": 81,
+        "cvar05": -0.23430411949145996,
+        "mean": 0.016036169499621774,
+        "median": -0.00766961651917344,
+        "p05": -0.20221948212083843,
+        "p95": 0.19047619047619038,
+        "win_rate": 0.3333333333333333
+      },
+      "role": "exact_inverse",
+      "structure": "long_iron_condor",
+      "year": 2026
+    },
+    {
+      "crossing": "cross_down",
+      "pnl_points": {
+        "count": 95,
+        "cvar05": -7.219999999999997,
+        "mean": -0.22999999999999987,
+        "median": -0.5499999999999972,
+        "p05": -4.365,
+        "p95": 4.564999999999991,
+        "win_rate": 0.3684210526315789
+      },
+      "return_on_max_loss": {
+        "count": 95,
+        "cvar05": -0.3703005829658396,
+        "mean": -0.009734742946752868,
+        "median": -0.008042895442359269,
+        "p05": -0.15421850974917228,
+        "p95": 0.0910873231518785,
+        "win_rate": 0.3684210526315789
+      },
+      "role": "symmetry_diagnostic",
+      "structure": "long_iron_condor",
+      "year": 2021
+    },
+    {
+      "crossing": "cross_down",
+      "pnl_points": {
+        "count": 126,
+        "cvar05": -7.114285714285709,
+        "mean": 0.3726190476190474,
+        "median": -0.25,
+        "p05": -3.9249999999999976,
+        "p95": 3.0499999999999954,
+        "win_rate": 0.4126984126984127
+      },
+      "return_on_max_loss": {
+        "count": 126,
+        "cvar05": -0.19054004751425566,
+        "mean": 0.011441895396385569,
+        "median": -0.003206863324162855,
+        "p05": -0.08233399554512053,
+        "p95": 0.06487930653099586,
+        "win_rate": 0.4126984126984127
+      },
+      "role": "symmetry_diagnostic",
+      "structure": "long_iron_condor",
+      "year": 2022
+    },
+    {
+      "crossing": "cross_down",
+      "pnl_points": {
+        "count": 128,
+        "cvar05": -4.985714285714286,
+        "mean": 0.27031250000000023,
+        "median": 0.025000000000009237,
+        "p05": -3.4600000000000057,
+        "p95": 5.074999999999993,
+        "win_rate": 0.5078125
+      },
+      "return_on_max_loss": {
+        "count": 128,
+        "cvar05": -0.3720259257507196,
+        "mean": 0.001479840510784377,
+        "median": 0.00040096230954304423,
+        "p05": -0.16895218002812937,
+        "p95": 0.19209512552804936,
+        "win_rate": 0.5078125
+      },
+      "role": "symmetry_diagnostic",
+      "structure": "long_iron_condor",
+      "year": 2023
+    },
+    {
+      "crossing": "cross_down",
+      "pnl_points": {
+        "count": 140,
+        "cvar05": -13.885714285714284,
+        "mean": -0.6282142857142846,
+        "median": -0.6499999999999915,
+        "p05": -11.275000000000002,
+        "p95": 8.854999999999993,
+        "win_rate": 0.3357142857142857
+      },
+      "return_on_max_loss": {
+        "count": 140,
+        "cvar05": -0.7107343711379831,
+        "mean": -0.046930727227831946,
+        "median": -0.009384457239797852,
+        "p05": -0.4789412997903565,
+        "p95": 0.20538484516516822,
+        "win_rate": 0.3357142857142857
+      },
+      "role": "symmetry_diagnostic",
+      "structure": "long_iron_condor",
+      "year": 2024
+    },
+    {
+      "crossing": "cross_down",
+      "pnl_points": {
+        "count": 127,
+        "cvar05": -9.65,
+        "mean": 0.28740157480314965,
+        "median": -0.70000000000001,
+        "p05": -5.284999999999998,
+        "p95": 9.06999999999997,
+        "win_rate": 0.4094488188976378
+      },
+      "return_on_max_loss": {
+        "count": 127,
+        "cvar05": -0.7460110235161649,
+        "mean": -0.009527271435295165,
+        "median": -0.010638297872340493,
+        "p05": -0.46592455163883734,
+        "p95": 0.23817622774576394,
+        "win_rate": 0.4094488188976378
+      },
+      "role": "symmetry_diagnostic",
+      "structure": "long_iron_condor",
+      "year": 2025
+    },
+    {
+      "crossing": "cross_down",
+      "pnl_points": {
+        "count": 68,
+        "cvar05": -6.6625,
+        "mean": 1.7757352941176467,
+        "median": -0.4499999999999993,
+        "p05": -3.7875000000000014,
+        "p95": 18.577499999999997,
+        "win_rate": 0.3382352941176471
+      },
+      "return_on_max_loss": {
+        "count": 68,
+        "cvar05": -0.40302649103926236,
+        "mean": 0.05729913644640774,
+        "median": -0.006936642372214048,
+        "p05": -0.11137750035466025,
+        "p95": 0.7497973879641485,
+        "win_rate": 0.3382352941176471
+      },
+      "role": "symmetry_diagnostic",
+      "structure": "long_iron_condor",
+      "year": 2026
+    },
+    {
+      "crossing": "cross_down",
+      "pnl_points": {
+        "count": 95,
+        "cvar05": -9.490000000000002,
+        "mean": 0.22999999999999987,
+        "median": 0.5499999999999972,
+        "p05": -4.564999999999994,
+        "p95": 4.364999999999999,
+        "win_rate": 0.6105263157894737
+      },
+      "return_on_max_loss": {
+        "count": 95,
+        "cvar05": -0.177478866487927,
+        "mean": 0.004160381766948905,
+        "median": 0.01320528211284507,
+        "p05": -0.10312009854740156,
+        "p95": 0.08732965225563899,
+        "win_rate": 0.6105263157894737
+      },
+      "role": "symmetry_inverse",
+      "structure": "short_iron_condor",
+      "year": 2021
+    },
+    {
+      "crossing": "cross_down",
+      "pnl_points": {
+        "count": 126,
+        "cvar05": -16.02857142857143,
+        "mean": -0.3726190476190474,
+        "median": 0.25,
+        "p05": -3.0499999999999954,
+        "p95": 3.9249999999999976,
+        "win_rate": 0.5793650793650794
+      },
+      "return_on_max_loss": {
+        "count": 126,
+        "cvar05": -0.27762467063977636,
+        "mean": -0.0025322744801433306,
+        "median": 0.008887182241035203,
+        "p05": -0.10414492426593007,
+        "p95": 0.08406432748537994,
+        "win_rate": 0.5793650793650794
+      },
+      "role": "symmetry_inverse",
+      "structure": "short_iron_condor",
+      "year": 2022
+    },
+    {
+      "crossing": "cross_down",
+      "pnl_points": {
+        "count": 128,
+        "cvar05": -7.464285714285716,
+        "mean": -0.27031250000000023,
+        "median": -0.025000000000009237,
+        "p05": -5.0749999999999975,
+        "p95": 3.460000000000002,
+        "win_rate": 0.4921875
+      },
+      "return_on_max_loss": {
+        "count": 128,
+        "cvar05": -0.12221415174393825,
+        "mean": -0.005015005809241806,
+        "median": -0.0006640106241702563,
+        "p05": -0.09150938246083969,
+        "p95": 0.0673094806342123,
+        "win_rate": 0.4921875
+      },
+      "role": "symmetry_inverse",
+      "structure": "short_iron_condor",
+      "year": 2023
+    },
+    {
+      "crossing": "cross_down",
+      "pnl_points": {
+        "count": 140,
+        "cvar05": -17.949999999999996,
+        "mean": 0.6282142857142846,
+        "median": 0.6499999999999915,
+        "p05": -8.854999999999995,
+        "p95": 11.274999999999993,
+        "win_rate": 0.6571428571428571
+      },
+      "return_on_max_loss": {
+        "count": 140,
+        "cvar05": -0.37172954949371056,
+        "mean": 0.00463651119523933,
+        "median": 0.022171130832684988,
+        "p05": -0.2348819362455724,
+        "p95": 0.15908730158730147,
+        "win_rate": 0.6571428571428571
+      },
+      "role": "symmetry_inverse",
+      "structure": "short_iron_condor",
+      "year": 2024
+    },
+    {
+      "crossing": "cross_down",
+      "pnl_points": {
+        "count": 127,
+        "cvar05": -20.599999999999998,
+        "mean": -0.28740157480314965,
+        "median": 0.70000000000001,
+        "p05": -9.069999999999997,
+        "p95": 5.2849999999999975,
+        "win_rate": 0.5826771653543307
+      },
+      "return_on_max_loss": {
+        "count": 127,
+        "cvar05": -0.32812115080405274,
+        "mean": 0.0015791379491485616,
+        "median": 0.01654601861427094,
+        "p05": -0.1824147973238882,
+        "p95": 0.12496175775274657,
+        "win_rate": 0.5826771653543307
+      },
+      "role": "symmetry_inverse",
+      "structure": "short_iron_condor",
+      "year": 2025
+    },
+    {
+      "crossing": "cross_down",
+      "pnl_points": {
+        "count": 68,
+        "cvar05": -34.025000000000006,
+        "mean": -1.7757352941176467,
+        "median": 0.4499999999999993,
+        "p05": -18.577500000000008,
+        "p95": 3.7875,
+        "win_rate": 0.6470588235294118
+      },
+      "return_on_max_loss": {
+        "count": 68,
+        "cvar05": -0.49626247310688476,
+        "mean": -0.017265255138588755,
+        "median": 0.019376884910983723,
+        "p05": -0.2689371541501977,
+        "p95": 0.09689170029447036,
+        "win_rate": 0.6470588235294118
+      },
+      "role": "symmetry_inverse",
+      "structure": "short_iron_condor",
+      "year": 2026
+    }
+  ]
+}

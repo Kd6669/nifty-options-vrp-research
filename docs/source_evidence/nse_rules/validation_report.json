@@ -1,0 +1,25 @@
+{
+  "active_future_rows_as_of_cutoff": 7,
+  "blocked_exceptions": 3,
+  "calendar_rows": 296,
+  "contract_rule_dimension_rows": 10,
+  "dhan_code_1_duplicate_keys": 0,
+  "dhan_code_1_mapping_rows": 4044,
+  "duplicate_date_type_rows": 0,
+  "historical_proven_rows": 289,
+  "holiday_adjusted_rows": 16,
+  "null_market_lot_rows": 0,
+  "resolved_exceptions": 1,
+  "schema_version": "1.0.0",
+  "sha256": {
+    "dhan_expiry_code_1_mapping.json": "c6e2035ef3c5dd397f07361244962168155438fa5e28b4a977be53809dac772d",
+    "dhan_expiry_code_1_mapping.parquet": "bbcc211d6b350864d2335654f0e0f1d0e1b0ec81f09726fa5fec844d63e14414",
+    "nse_actual_expiry_calendar.json": "3be1676d24b583e3fd88a39a66ada638be22dfd01862a5e22e748a3baeefb420",
+    "nse_actual_expiry_calendar.parquet": "0544036457a713e5b9e24e37dafb45793e8e0c09a5bc5034c2f1d80f331d1801",
+    "nse_contract_rule_dimension.json": "7c3f1eb766ead61b6b52cea4a7e60c1d278ba553efe5d1a4000efec042fa5856",
+    "nse_contract_rule_dimension.parquet": "5eaf6dd75aee1676886bb333caa89684110b3fe0ed60c3e8e2172ee1d2d95ba3",
+    "nse_contract_rule_history.json": "be0941fb3e4525924a94378597e2624ab92e6b5cc34afded731ac74645e4fbf0",
+    "source_manifest.json": "a5e44b99ff329b288a4e9744d2f30f802fcac651b3762fbbeb2cbec018096d5d",
+    "unresolved_exceptions.json": "5ae3de67cb6f719e6bdb31fafb02615ce954eb3764b036166f53eedd1ae23d2a"
+  }
+}

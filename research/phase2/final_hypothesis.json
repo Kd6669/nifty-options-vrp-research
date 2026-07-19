@@ -1,0 +1,88 @@
+{
+  "schema_version": "phase2-final-hypothesis/v1",
+  "hypothesis_id": "H1_VRP_LEVEL_DIRECTION_SHORT_CONDOR_60M",
+  "frozen_on": "2026-07-18",
+  "status": "formulated_not_confirmed",
+  "claim": "The causal level and direction of normalized intraday VRP contain information about the next 60-minute payoff distribution of a bounded-risk nearest-expiry NIFTY iron condor. The first daily sustained transition from non-positive to positive VRP favours the short ATM +/-1 iron condor protected at ATM +/-3 over its exact inverse, when entered at the next minute and closed after 60 minutes.",
+  "null": "The first daily sustained non-positive-to-positive normalized-VRP crossing does not produce positive net return on SPAN-plus-exposure margin and does not outperform the exact inverse or matched non-crossing controls.",
+  "alternative": "The first daily sustained non-positive-to-positive normalized-VRP crossing produces positive net return on SPAN-plus-exposure margin and outperforms the exact inverse and matched non-crossing controls.",
+  "universe": {
+    "underlying": "NIFTY 50 index options",
+    "expiry": "actual nearest eligible weekly expiry required for confirmation; nearest-listed-expiry research proxy used in formulation evidence",
+    "entry_moneyness": "all legs inside rolling ATM +/-3 at entry",
+    "holding_minutes": 60,
+    "latest_entry_time": "14:15",
+    "overnight_positions": false,
+    "maximum_primary_entries_per_session": 1
+  },
+  "signal": {
+    "iv": "ATM IV independently inverted under parity-forward Black-76 on an ACT/365 expiry clock; provider IV is reconciliation-only",
+    "rv": "sum of the previous 60 contiguous NIFTY spot one-minute squared log returns, annualized on the same ACT/365 clock",
+    "tau_60": "60 / 525600",
+    "integrated_vrp": "ATM_IV^2 * tau_60 - sum(previous_60_one_minute_log_returns^2)",
+    "stored_vrp_rate": "V_t = ATM_IV^2 - RV60_ACT365^2",
+    "smoother": "V5_t = median(V_(t-4), ..., V_t), requiring five contiguous observations",
+    "level": "zero on the normalized variance-rate curve",
+    "direction": "upward crossing: V5_(t-1) <= 0 and V5_t > 0",
+    "causal_percentile": "same-minute-of-day rank against prior dates only; recorded as intensity, never used as a lot multiplier",
+    "excluded_features": [
+      "VRP acceleration as an entry requirement",
+      "post-selected upper-tail threshold",
+      "percentile-based leverage schedule"
+    ]
+  },
+  "structure": {
+    "name": "short_iron_condor",
+    "legs": [
+      "+1 ATM-3 put",
+      "-1 ATM-1 put",
+      "-1 ATM+1 call",
+      "+1 ATM+3 call"
+    ],
+    "inverse_comparator": "long iron condor with every weight reversed",
+    "contract_tracking": "expiry, strike, and option type frozen at entry; no rolling-offset substitution"
+  },
+  "execution": {
+    "signal_time": "completed minute t",
+    "entry_time": "exact next minute t+1",
+    "exit_time": "entry plus exactly 60 minutes",
+    "primary_marking_in_formulation": "frictionless one-minute closes",
+    "confirmation_marking": "conservative executable marks after charges, volume/OI depth, staleness, slippage, and margin"
+  },
+  "primary_outcome": "60-minute net basket P&L divided by entry SPAN-plus-exposure margin",
+  "formulation_outcomes": [
+    "gross basket P&L points",
+    "gross return on theoretical maximum expiry loss",
+    "win rate",
+    "5% quantile and CVaR",
+    "date-block bootstrap confidence interval",
+    "yearly stability"
+  ],
+  "controls": [
+    "exact inverse long iron condor at the same event",
+    "matched positive-VRP non-crossing short-condor entries",
+    "unconditional scheduled-entry short condor",
+    "cross-down long-condor symmetry diagnostic"
+  ],
+  "promotion_requirements": [
+    "positive net mean return on SPAN-plus-exposure margin",
+    "date-block bootstrap lower 95% bound above zero or an explicit inconclusive decision",
+    "outperformance of inverse and matched controls",
+    "survival under base and 1.5x conservative slippage",
+    "acceptable CVaR, drawdown, concentration, weekly and monthly stability",
+    "credible performance across expiry and regulatory regimes",
+    "genuine prospective evidence after the frozen formulation"
+  ],
+  "limitations": [
+    "Dhan WEEK expiryCode=1 rolling history does not expose actual contract expiry identity",
+    "source is a rolling ATM +/-10 surface, not an absolute-strike full chain",
+    "exact frozen contracts can leave the observable rolling surface as spot migrates",
+    "historical bid/ask quotes are unavailable",
+    "formulation marks exclude charges, slippage, staleness penalties, and SPAN capital",
+    "historical SPAN arrival times are not proven point in time",
+    "the full 2021-2026 history influenced formulation and is not a pristine holdout",
+    "expiry IV projected onto 60 minutes assumes a locally flat variance rate and is not a pure 60-minute forward variance quote",
+    "special and shortened sessions make 60-minute trading structurally unavailable on some dates",
+    "missing exact-contract exits are tail-correlated and cannot be treated as missing at random"
+  ]
+}

@@ -1,0 +1,329 @@
+{
+  "schema_version": "span-source-gap-evidence/v1",
+  "evidence_id": "nse-span-2021-02-24-id1-id4-source-gap",
+  "trading_date": "2021-02-24",
+  "scope": {
+    "segment": "NSE equity derivatives",
+    "expected_slots": [
+      "BOD",
+      "ID1",
+      "ID2",
+      "ID3",
+      "ID4",
+      "EOD"
+    ],
+    "missing_slots": [
+      {"slot": "ID1", "suffix": "i2"},
+      {"slot": "ID2", "suffix": "i3"},
+      {"slot": "ID3", "suffix": "i4"},
+      {"slot": "ID4", "suffix": "i5"}
+    ]
+  },
+  "disposition": {
+    "strict_verdict": "STILL_UNRESOLVED_HISTORICAL_NONPUBLICATION",
+    "official_public_archive_recoverable": false,
+    "current_official_public_unavailability_proven": true,
+    "historical_nonpublication_proven": false,
+    "documented_incident_consistency": "STRONG",
+    "recommended_classification": "official_public_archive_unavailable_documented_incident",
+    "classification_action": "DO_NOT_ALTER_AVAILABILITY_CLASSIFICATIONS",
+    "reason": "The official reports API and exact official static archive paths do not expose i2-i5, while same-date i1 and s remain available and valid. NSE Clearing documents a primary risk-management-system outage spanning the four scheduled intraday runs. No located official statement says that i2-i5 were never generated or published, so present-day 404 responses cannot distinguish nonpublication from later removal or loss."
+  },
+  "authoritative_local_evidence": {
+    "download_manifest": {
+      "path": "data/span/full_20210101_20260715/manifests/download.jsonl",
+      "lines_1_based": [427, 428, 429, 430, 431, 432],
+      "run_id": "0323f2dbc9f6465ca33963f6b776df35",
+      "observed_at_utc_first": "2026-07-15T14:39:22.417371Z",
+      "observed_at_utc_last": "2026-07-15T14:39:23.474341Z",
+      "outer_response": {
+        "http_status": 200,
+        "content_type": "application/zip",
+        "body_size_bytes": 20152723,
+        "body_sha256": "50426777a2e79e646d96b68b91ee2fca1c12af7b22883c3af0e39518d2de2f68",
+        "returned_suffixes": ["i1", "s"]
+      },
+      "missing_cell_states": [
+        {"slot": "ID1", "suffix": "i2", "state": "slot_not_returned", "terminal": true},
+        {"slot": "ID2", "suffix": "i3", "state": "slot_not_returned", "terminal": true},
+        {"slot": "ID3", "suffix": "i4", "state": "slot_not_returned", "terminal": true},
+        {"slot": "ID4", "suffix": "i5", "state": "slot_not_returned", "terminal": true}
+      ]
+    },
+    "retained_archives": [
+      {
+        "slot": "BOD",
+        "suffix": "i1",
+        "relative_path": "data/span/full_20210101_20260715/raw/2021/02/24/nsccl.20210224.i1.zip",
+        "size_bytes": 10156427,
+        "sha256": "22f72f91c52e32f4b05142ad65ec2a6709ccc554f0d9386c3e0bce33df5d4ac4",
+        "zip_testzip_result": null,
+        "zip_crc_ok": true,
+        "outer_bundle_member_crc32": "f17073d0",
+        "members": [
+          {
+            "name": "nsccl.20210224.i01.spn",
+            "crc32": "afcb560f",
+            "compressed_size": 10156233,
+            "uncompressed_size": 61531511
+          }
+        ],
+        "first_16_bytes_hex": "504b03041400000008008da057520f56"
+      },
+      {
+        "slot": "EOD",
+        "suffix": "s",
+        "relative_path": "data/span/full_20210101_20260715/raw/2021/02/24/nsccl.20210224.s.zip",
+        "size_bytes": 9996040,
+        "sha256": "66140ceaf11b914816e12d9864404376d85b7d168c981d0d793aed4204b886b3",
+        "zip_testzip_result": null,
+        "zip_crc_ok": true,
+        "outer_bundle_member_crc32": "2852a55d",
+        "members": [
+          {
+            "name": "nsccl.20210224.s.spn",
+            "crc32": "e91c45c9",
+            "compressed_size": 9995850,
+            "uncompressed_size": 61542449
+          }
+        ],
+        "first_16_bytes_hex": "504b03041400000008003ca45852c945"
+      }
+    ],
+    "extraction_manifest": {
+      "path": "data/span/full_20210101_20260715/manifests/extraction.jsonl",
+      "lines_1_based": [223, 224],
+      "events": [
+        {
+          "slot": "BOD",
+          "row_count": 2275,
+          "instrument_counts": {"CE": 1095, "FUT": 3, "PE": 1177},
+          "fragment_sha256": "0c54fb348ae0544f8a87c8f38cd2acd0b98fb5287d4294e391dcc3e2ae3e86a8"
+        },
+        {
+          "slot": "EOD",
+          "row_count": 2275,
+          "instrument_counts": {"CE": 1095, "FUT": 3, "PE": 1177},
+          "fragment_sha256": "cce0c0f8588c1074ec7a18e75a96fe863dae34db525e3b0d7136dd91054d96df"
+        }
+      ]
+    }
+  },
+  "official_reports_api_observations": [
+    {
+      "id": "six-category-manifest-observation",
+      "method": "GET",
+      "url": "https://www.nseindia.com/api/reports",
+      "request_params": {
+        "date": "24-Feb-2021",
+        "type": "Archives",
+        "archives": "[{\"name\": \"F&O - Span Risk Parameter File (1st intra-day)\", \"type\": \"archives\", \"category\": \"derivatives\", \"section\": \"equity\"}, {\"name\": \"F&O - Span Risk Parameter File (2nd intra-day)\", \"type\": \"archives\", \"category\": \"derivatives\", \"section\": \"equity\"}, {\"name\": \"F&O - Span Risk Parameter File (3rd intra-day)\", \"type\": \"archives\", \"category\": \"derivatives\", \"section\": \"equity\"}, {\"name\": \"F&O - Span Risk Parameter File (4th intra-day)\", \"type\": \"archives\", \"category\": \"derivatives\", \"section\": \"equity\"}, {\"name\": \"F&O - Span Risk Parameter File (End of day)\", \"type\": \"archives\", \"category\": \"derivatives\", \"section\": \"equity\"}, {\"name\": \"F&O - Span Risk Parameter File (Begin of day)\", \"type\": \"archives\", \"category\": \"derivatives\", \"section\": \"equity\"}]"
+      },
+      "archives_utf8_size_bytes": 764,
+      "archives_sha256": "89046931925347834c7f3a33adee440bc8eee7d874142e013c5cf07d98360b07",
+      "response": {
+        "http_status": 200,
+        "content_type": "application/zip",
+        "body_size_bytes": 20152723,
+        "body_sha256": "50426777a2e79e646d96b68b91ee2fca1c12af7b22883c3af0e39518d2de2f68",
+        "returned_members": ["nsccl.20210224.i1.zip", "nsccl.20210224.s.zip"]
+      },
+      "observed_at_utc_range": {
+        "first": "2026-07-15T14:39:22.417371Z",
+        "last": "2026-07-15T14:39:23.474341Z"
+      },
+      "provenance": "append-only download manifest lines 427-432"
+    },
+    {
+      "id": "four-intraday-live-recheck",
+      "method": "GET",
+      "url": "https://www.nseindia.com/api/reports",
+      "request_headers": {
+        "Accept": "application/json, text/plain, */*",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Connection": "keep-alive",
+        "Referer": "https://www.nseindia.com/all-reports-derivatives",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0.0.0 Safari/537.36"
+      },
+      "request_params": {
+        "date": "24-Feb-2021",
+        "type": "Archives",
+        "archives": "[{\"name\":\"F&O - Span Risk Parameter File (1st intra-day)\",\"type\":\"archives\",\"category\":\"derivatives\",\"section\":\"equity\"},{\"name\":\"F&O - Span Risk Parameter File (2nd intra-day)\",\"type\":\"archives\",\"category\":\"derivatives\",\"section\":\"equity\"},{\"name\":\"F&O - Span Risk Parameter File (3rd intra-day)\",\"type\":\"archives\",\"category\":\"derivatives\",\"section\":\"equity\"},{\"name\":\"F&O - Span Risk Parameter File (4th intra-day)\",\"type\":\"archives\",\"category\":\"derivatives\",\"section\":\"equity\"}]"
+      },
+      "archives_utf8_size_bytes": 481,
+      "archives_sha256": "46ebda2e95a855b63376193d85e4181630864d2ea4d40cb081ace26ba9f1497a",
+      "session_prelude": {
+        "url": "https://www.nseindia.com",
+        "method": "GET",
+        "http_status": 200,
+        "delay_before_api_seconds": 2.5
+      },
+      "observation_time": {
+        "observed_at_utc": null,
+        "timestamp_not_recorded": true,
+        "observation_date_context": "2026-07-15",
+        "limitation": "The interactive probe did not emit a UTC timestamp. Its exact observation time cannot be recovered and is intentionally not inferred or invented."
+      },
+      "response": {
+        "http_status": 404,
+        "content_type": "application/json; charset=utf-8",
+        "content_length_header": 68,
+        "body_size_bytes": 68,
+        "first_16_bytes_hex": "7b226572726f72223a224e6f7420466f",
+        "body_sha256": "a859901d666e8265f6f4f3a9bf12a8d3e27e9263fa76fbab71bfdf95aa19340b",
+        "body_utf8": "{\"error\":\"Not Found, may be some files are unavailable\",\"show\":true}"
+      }
+    }
+  ],
+  "official_static_archive_probes": {
+    "request_method": "GET",
+    "request_headers": {
+      "Accept": "*/*",
+      "Range": "bytes=0-15",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0.0.0 Safari/537.36"
+    },
+    "base_url": "https://nsearchives.nseindia.com/archives/nsccl/span/",
+    "observation_time": {
+      "observed_at_utc": null,
+      "timestamp_not_recorded": true,
+      "observation_date_context": "2026-07-15",
+      "applies_to": "positive_control_and_all_target_date_results",
+      "limitation": "The interactive range probes did not emit UTC timestamps. Their exact observation times cannot be recovered and are intentionally not inferred or invented."
+    },
+    "positive_control": {
+      "observation_time_ref": "official_static_archive_probes.observation_time",
+      "url": "https://nsearchives.nseindia.com/archives/nsccl/span/nsccl.20260709.i2.zip",
+      "http_status": 206,
+      "content_type": "application/zip",
+      "content_length_header": 16,
+      "content_range": "bytes 0-15/9694422",
+      "body_size_bytes": 16,
+      "first_16_bytes_hex": "504b0304140000000800a958e95c3c3e",
+      "body_sha256": "a2c996cbf927f243cef10a8a9cd97f5629a05ca67861cc5c58e201d22c6521ce"
+    },
+    "target_date_results": [
+      {
+        "slot": "BOD",
+        "suffix": "i1",
+        "observation_time_ref": "official_static_archive_probes.observation_time",
+        "url": "https://nsearchives.nseindia.com/archives/nsccl/span/nsccl.20210224.i1.zip",
+        "http_status": 206,
+        "content_type": "application/zip",
+        "content_length_header": 16,
+        "content_range": "bytes 0-15/10156427",
+        "body_size_bytes": 16,
+        "first_16_bytes_hex": "504b03041400000008008da057520f56",
+        "body_sha256": "94f55f0816cedde15fc4715aa19bf33ac2af1170edef19300a263c9c8d8c5227",
+        "matches_retained_prefix_and_total_size": true
+      },
+      {
+        "slot": "ID1",
+        "suffix": "i2",
+        "observation_time_ref": "official_static_archive_probes.observation_time",
+        "url": "https://nsearchives.nseindia.com/archives/nsccl/span/nsccl.20210224.i2.zip",
+        "http_status": 404,
+        "content_type": "text/html;charset=UTF-8",
+        "content_length_header": 3815,
+        "body_size_bytes": 3815,
+        "first_16_bytes_hex": "3c21444f43545950452068746d6c3e0d",
+        "body_sha256": "a7bb36b894dc0a4db8dca1c046711db8a7c2710dd15475163128a6800edee37f"
+      },
+      {
+        "slot": "ID2",
+        "suffix": "i3",
+        "observation_time_ref": "official_static_archive_probes.observation_time",
+        "url": "https://nsearchives.nseindia.com/archives/nsccl/span/nsccl.20210224.i3.zip",
+        "http_status": 404,
+        "content_type": "text/html;charset=UTF-8",
+        "content_length_header": 3815,
+        "body_size_bytes": 3815,
+        "first_16_bytes_hex": "3c21444f43545950452068746d6c3e0d",
+        "body_sha256": "a7bb36b894dc0a4db8dca1c046711db8a7c2710dd15475163128a6800edee37f"
+      },
+      {
+        "slot": "ID3",
+        "suffix": "i4",
+        "observation_time_ref": "official_static_archive_probes.observation_time",
+        "url": "https://nsearchives.nseindia.com/archives/nsccl/span/nsccl.20210224.i4.zip",
+        "http_status": 404,
+        "content_type": "text/html;charset=UTF-8",
+        "content_length_header": 3815,
+        "body_size_bytes": 3815,
+        "first_16_bytes_hex": "3c21444f43545950452068746d6c3e0d",
+        "body_sha256": "a7bb36b894dc0a4db8dca1c046711db8a7c2710dd15475163128a6800edee37f"
+      },
+      {
+        "slot": "ID4",
+        "suffix": "i5",
+        "observation_time_ref": "official_static_archive_probes.observation_time",
+        "url": "https://nsearchives.nseindia.com/archives/nsccl/span/nsccl.20210224.i5.zip",
+        "http_status": 404,
+        "content_type": "text/html;charset=UTF-8",
+        "content_length_header": 3815,
+        "body_size_bytes": 3815,
+        "first_16_bytes_hex": "3c21444f43545950452068746d6c3e0d",
+        "body_sha256": "a7bb36b894dc0a4db8dca1c046711db8a7c2710dd15475163128a6800edee37f"
+      },
+      {
+        "slot": "EOD",
+        "suffix": "s",
+        "observation_time_ref": "official_static_archive_probes.observation_time",
+        "url": "https://nsearchives.nseindia.com/archives/nsccl/span/nsccl.20210224.s.zip",
+        "http_status": 206,
+        "content_type": "application/zip",
+        "content_length_header": 16,
+        "content_range": "bytes 0-15/9996040",
+        "body_size_bytes": 16,
+        "first_16_bytes_hex": "504b03041400000008003ca45852c945",
+        "body_sha256": "c34e8815a3b863981fd59bf04c68496457738ff18a1fe6a6604964235d365d0f",
+        "matches_retained_prefix_and_total_size": true
+      }
+    ]
+  },
+  "official_documents": [
+    {
+      "id": "nse-clearing-annual-report-2020-21-incident",
+      "title": "NSE Clearing Limited Annual Report 2020-21",
+      "url": "https://www.nseclearing.in/sites/default/files/disclosure/Annual_Report_2020_21_NSE_Clearing_Limited.pdf",
+      "section": "2.3. Incident dated February 24, 2021",
+      "pdf_text_pages": [15, 16],
+      "printed_page_labels": [12, 13, 14],
+      "facts": [
+        "Risk and Clearing & Settlement systems at NSE Clearing were unavailable.",
+        "Trading was halted at 11:40 due to non-availability of Risk Management.",
+        "Trading resumed at 15:30 and the market closed at 17:00.",
+        "The primary risk-management system was not operational between 10:06 and 15:30."
+      ],
+      "limitation": "The report does not explicitly enumerate SPAN files that were or were not generated or published."
+    },
+    {
+      "id": "nse-clearing-risk-management-faq-span-schedule",
+      "title": "FAQ on Risk Management",
+      "url": "https://www.nseclearing.in/sites/default/files/2025-07/NCL%20-%20FAQ%20RISK%20MANAGEMENT.pdf",
+      "question": "Q2. How often is the SPAN Parameter File run in the Equity Derivatives Segment?",
+      "printed_page_label": 3,
+      "facts": [
+        "Equity-derivatives SPAN files are based on prices at 11:00, 12:30, 14:00, 15:30, EOD and BOD.",
+        "The files shall be run shortly after those price observation times."
+      ],
+      "limitation": "This is a general schedule, not a date-specific statement about February 24, 2021 publication."
+    }
+  ],
+  "inference_boundary": {
+    "proven": [
+      "The retained official six-category response contained only i1 and s.",
+      "The current official reports API returns no object for the four intraday categories on 2021-02-24.",
+      "The exact current official static archive URLs for i2-i5 return 404 while same-date i1 and s return ZIP bytes.",
+      "NSE Clearing documents a primary risk-management-system outage spanning the four scheduled intraday parameter times."
+    ],
+    "not_proven": [
+      "That i2-i5 were never generated.",
+      "That i2-i5 were never published to members or another official channel.",
+      "That i2-i5 did not once exist and later become unavailable."
+    ],
+    "required_for_definitive_closure": [
+      "Written NSE Clearing confirmation of nonpublication, or",
+      "Recovery or authoritative absence evidence from member Extranet path /FAOFTP/FAOCOMMON/Parameter."
+    ]
+  }
+}

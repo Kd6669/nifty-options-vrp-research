@@ -1,0 +1,32 @@
+{
+  "code": {
+    "path": "<repository-root>\\research\\phase5\\build_final_attempt_dataset.py",
+    "sha256": "c7f72043e289088991de66cb9272479dab41fb0a3992114106f8d02f6c577a7b"
+  },
+  "gold_root": "<external-data-root>\\dhan-data-fetch-and-stream-phase2-3\\reports\\nifty_gold_span_six_slot_research_20210101_20260715\\version=2.1.0\\gold",
+  "inputs": [
+    {
+      "path": "<repository-root>\\audit\\phase2_vrp_session_curve_features.parquet",
+      "sha256": "f7cb06db9060d2d9a82adc3403bbc7817a7569601efa40524aa5a4e1d62ec356"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase2_intraday_iv_surface.parquet",
+      "sha256": "8aaa4f0d1c33f35df7c18e22b84d91a26c0e026b635b3f1210fd42c465bc6367"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "<repository-root>\\audit\\phase5_final_attempt_dataset.parquet",
+      "sha256": "65ada7f3ebf7c62265a9e7c1f7d3309ed71faf9e0e9bcdca46f6293581a2a461"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase5_final_attempt_observations.parquet",
+      "sha256": "640b00f67df37efabb4dc2c15cc6911198fc70a8cc820e4d2a0979a0f34b4555"
+    },
+    {
+      "path": "<repository-root>\\audit\\phase5_final_attempt_dataset_summary.json",
+      "sha256": "eb310667797186f440d2c1a11c55547609104e4b932d9e86a7ec139b3d0695ac"
+    }
+  ],
+  "schema_version": "phase5-final-attempt-dataset-manifest/v1"
+}

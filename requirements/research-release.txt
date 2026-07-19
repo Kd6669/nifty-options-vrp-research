@@ -1,0 +1,13 @@
+# Frozen compact research/reviewer environment used for the release packet.
+# Install the local package without resolving its acquisition-only dependencies:
+#   python -m pip install -r requirements/research-release.txt
+#   python -m pip install -e . --no-deps
+duckdb==1.5.2
+matplotlib==3.10.8
+numba==0.64.0
+numpy==2.4.3
+pandas==2.3.3
+pyarrow==20.0.0
+pytest==9.0.2
+ruff==0.12.12
+tzdata==2025.3; platform_system == "Windows"

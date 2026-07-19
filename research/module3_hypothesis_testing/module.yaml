@@ -1,0 +1,40 @@
+schema_version: module-contract/v1
+module_id: module3_vrp_hypothesis_testing
+status: closed_rejected_for_current_dataset
+purpose: >-
+  Test whether normalized intraday VRP level, direction, tail crossings, dynamics, or
+  tail reversals can pay for defined-risk nearest-weekly NIFTY option execution.
+universe:
+  underlying: NIFTY
+  expiry: nearest weekly proxy
+  entry_moneyness: ATM plus or minus 3
+  primary_horizon_minutes: 60
+  maximum_diagnostic_horizon_minutes: 180
+  position_size: one historical exchange lot per trade
+stages:
+  - zero_crossing
+  - tail_level_direction
+  - velocity_acceleration
+  - structure_horizon_discovery
+  - causal_feature_rescue
+  - tail_mean_reversion
+  - unified_180min_comparison
+implementations:
+  execution_models: src/nifty_execution
+  zero_and_tail_crossings: research/phase3
+  structure_horizon_discovery: research/phase4
+  causal_feature_rescue: research/phase5
+  tail_mean_reversion: research/phase6
+  unified_180min_comparison: research/phase7
+contracts: research/module3_hypothesis_testing/contracts/hypotheses.json
+entrypoint: python -m research.module3_hypothesis_testing.run build
+verification: python -m research.module3_hypothesis_testing.run verify
+outputs:
+  - research/module3_hypothesis_testing/results/closeout.json
+  - research/module3_hypothesis_testing/results/closeout_report.md
+  - research/module3_hypothesis_testing/results/manifest.json
+must_not:
+  - reinterpret overlapping signal cells as an additive portfolio
+  - extrapolate performance beyond 180 minutes from rolling ATM plus or minus 10 data
+  - promote any cell that fails the frozen sample, coverage, net-profit, or bootstrap gates
+  - add lot sizing, capital allocation, or risk management to the one-lot hypothesis decision
